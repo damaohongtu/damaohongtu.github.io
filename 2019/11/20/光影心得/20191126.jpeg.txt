@@ -1,0 +1,260 @@
+ExifTool Version Number         : 10.10
+File Name                       : 20191126.jpeg
+Directory                       : .
+File Size                       : 5.0 MB
+File Modification Date/Time     : 2019:11:27 12:28:10+08:00
+File Access Date/Time           : 2019:11:27 13:54:26+08:00
+File Inode Change Date/Time     : 2019:11:27 13:54:13+08:00
+File Permissions                : rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Make                            : Canon
+Camera Model Name               : Canon EOS 80D
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Modify Date                     : 2019:11:26 21:36:37
+Artist                          : 
+Y Cb Cr Positioning             : Co-sited
+Copyright                       : 
+Exposure Time                   : 13
+F Number                        : 29.0
+Exposure Program                : Shutter speed priority AE
+ISO                             : 100
+Sensitivity Type                : Recommended Exposure Index
+Recommended Exposure Index      : 100
+Exif Version                    : 0230
+Date/Time Original              : 2019:11:26 21:36:37
+Create Date                     : 2019:11:26 21:36:37
+Components Configuration        : Y, Cb, Cr, -
+Shutter Speed Value             : 12.3
+Aperture Value                  : 28.1
+Flash                           : Off, Did not fire
+Focal Length                    : 70.0 mm
+Macro Mode                      : Normal
+Self Timer                      : 2 s
+Quality                         : Fine
+Canon Flash Mode                : Off
+Continuous Drive                : Single
+Focus Mode                      : One-shot AF
+Record Mode                     : CR2+JPEG
+Canon Image Size                : Large
+Easy Mode                       : Manual
+Digital Zoom                    : None
+Contrast                        : Normal
+Saturation                      : Normal
+Metering Mode                   : Partial
+Focus Range                     : Not Known
+Canon Exposure Mode             : Shutter speed priority AE
+Lens Type                       : Canon EF-S 18-200mm f/3.5-5.6 IS
+Max Focal Length                : 200 mm
+Min Focal Length                : 18 mm
+Focal Units                     : 1/mm
+Max Aperture                    : 5.2
+Min Aperture                    : 33
+Flash Activity                  : 0
+Flash Bits                      : (none)
+Zoom Source Width               : 0
+Zoom Target Width               : 0
+Manual Flash Output             : n/a
+Color Tone                      : Normal
+SRAW Quality                    : n/a
+Auto ISO                        : 100
+Base ISO                        : 100
+Measured EV                     : 5.25
+Target Aperture                 : 29
+Target Exposure Time            : 1
+Exposure Compensation           : -2/3
+White Balance                   : Fluorescent
+Slow Shutter                    : None
+Shot Number In Continuous Burst : 0
+Optical Zoom Code               : n/a
+Camera Temperature              : 26 C
+Flash Guide Number              : 0
+Flash Exposure Compensation     : 0
+Auto Exposure Bracketing        : Off
+AEB Bracket Value               : 0
+Control Mode                    : Camera Local Control
+Measured EV 2                   : 4
+Bulb Duration                   : 0
+Camera Type                     : EOS High-end
+ND Filter                       : n/a
+Canon Image Type                : Canon EOS 80D
+Canon Firmware Version          : Firmware Version 1.0.3
+Canon Model ID                  : Unknown (0x80000350)
+Thumbnail Image Valid Area      : 0 159 7 112
+AF Area Mode                    : Flexizone Multi
+Num AF Points                   : 45
+Valid AF Points                 : 35
+Canon Image Width               : 6000
+Canon Image Height              : 4000
+AF Image Width                  : 6000
+AF Image Height                 : 4000
+AF Area Widths                  : 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 650 0 0 0 0 0 0 0 0 0 0
+AF Area Heights                 : 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 608 0 0 0 0 0 0 0 0 0 0
+AF Area X Positions             : -2055 -1370 -685 0 685 1370 2055 -2055 -1370 -685 0 685 1370 2055 -2055 -1370 -685 0 685 1370 2055 -2055 -1370 -685 0 685 1370 2055 -2055 -1370 -685 0 685 1370 2055 0 0 0 0 0 0 0 0 0 0
+AF Area Y Positions             : 1280 1280 1280 1280 1280 1280 1280 640 640 640 640 640 640 640 0 0 0 0 0 0 0 -640 -640 -640 -640 -640 -640 -640 -1280 -1280 -1280 -1280 -1280 -1280 -1280 0 0 0 0 0 0 0 0 0 0
+AF Points In Focus              : 8,9,10,15,16,17
+AF Points Selected              : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34
+Time Zone                       : +08:00
+Time Zone City                  : Hong Kong
+Daylight Savings                : Off
+Bracket Mode                    : Off
+Bracket Value                   : 0
+Bracket Shot Number             : 0
+Raw Jpg Size                    : Large
+WB Bracket Mode                 : Off
+WB Bracket Value AB             : 0
+WB Bracket Value GM             : 0
+Live View Shooting              : On
+Focus Distance Upper            : 160.86 m
+Focus Distance Lower            : 37.94 m
+Flash Exposure Lock             : Off
+Internal Serial Number          : UD1138601
+Dust Removal Data               : (Binary data 1024 bytes, use -b option to extract)
+Crop Left Margin                : 0
+Crop Right Margin               : 0
+Crop Top Margin                 : 0
+Crop Bottom Margin              : 0
+Exposure Level Increments       : 1/3 Stop
+ISO Speed Increments            : 1/3 Stop
+AEB Auto Cancel                 : On
+AEB Sequence                    : 0,-,+
+AEB Shot Count                  : 3 shots
+Safety Shift                    : Disable
+AI Servo Tracking Sensitivity   : Standard
+Acceleration Tracking           : 0
+AI Servo Tracking Method        : Main focus point priority
+AI Servo First Image Priority   : Equal priority
+AI Servo Second Image Priority  : Equal priority
+AF Assist Beam                  : Emits
+Lens Drive No AF                : Focus search on
+Select AF Area Select Mode      : Disable; Flags 0x47
+AF Area Select Method           : AF area selection button
+Orientation Linked AF Point     : Same for vertical and horizontal
+Auto AF Point Color Tracking    : On-Shot AF only
+Manual AF Point Select Pattern  : Stops at AF area edges
+AF Point Display During Focus   : Selected (constant)
+VF Display Illumination         : Unknown (0 0)
+AF Microadjustment              : Disable; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0
+Viewfinder Warnings             : Monochrome, WB corrected, [6], [7]
+Dial Direction Tv Av            : Normal
+Retract Lens On Power Off       : Enable
+Custom Controls                 : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Aspect Ratio                    : 3:2
+Cropped Image Width             : 6000
+Cropped Image Height            : 4000
+Cropped Image Left              : 0
+Cropped Image Top               : 0
+Tone Curve                      : Standard
+Sharpness                       : 0
+Sharpness Frequency             : n/a
+Sensor Red Level                : 0
+Sensor Blue Level               : 0
+White Balance Red               : 0
+White Balance Blue              : 0
+Color Temperature               : 5200
+Picture Style                   : Faithful
+Digital Gain                    : 0
+WB Shift AB                     : 0
+WB Shift GM                     : 0
+Measured RGGB                   : 1286 1024 1024 415
+VRD Offset                      : 0
+Sensor Width                    : 6288
+Sensor Height                   : 4056
+Sensor Left Border              : 276
+Sensor Top Border               : 46
+Sensor Right Border             : 6275
+Sensor Bottom Border            : 4045
+Black Mask Left Border          : 0
+Black Mask Top Border           : 0
+Black Mask Right Border         : 0
+Black Mask Bottom Border        : 0
+Color Data Version              : 13
+Custom Picture Style File Name  : 
+AF Micro Adj Mode               : Disable
+AF Micro Adj Value              : 0
+Vignetting Corr Version         : 0
+Peripheral Lighting             : On
+Chromatic Aberration Corr       : On
+Peripheral Lighting Value       : 0
+Original Image Width            : 100
+Original Image Height           : 0
+Peripheral Lighting Setting     : On
+Chromatic Aberration Setting    : On
+Peripheral Illumination Corr    : Off
+Auto Lighting Optimizer         : Strong
+Highlight Tone Priority         : Off
+Long Exposure Noise Reduction   : Off
+High ISO Noise Reduction        : Standard
+Ambience Selection              : Standard
+Multi Exposure                  : Off
+Multi Exposure Control          : Additive
+Multi Exposure Shots            : 0
+Grainy B/W Filter               : Off
+Soft Focus Filter               : Off
+Toy Camera Filter               : Off
+Miniature Filter                : Off
+Miniature Filter Orientation    : Horizontal
+Miniature Filter Position       : 0
+Miniature Filter Parameter      : 0
+Fisheye Filter                  : Off
+Painting Filter                 : Off
+Watercolor Filter               : Off
+HDR                             : Off
+HDR Effect                      : Natural
+User Comment                    : 
+Sub Sec Time                    : 15
+Sub Sec Time Original           : 15
+Sub Sec Time Digitized          : 15
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 6000
+Exif Image Height               : 4000
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+Focal Plane X Resolution        : 6514.65798
+Focal Plane Y Resolution        : 6734.006734
+Focal Plane Resolution Unit     : inches
+Custom Rendered                 : Normal
+Exposure Mode                   : Auto
+Scene Capture Type              : Standard
+Owner Name                      : 
+Serial Number                   : 464026001250
+Lens Info                       : 18-200mm f/0
+Lens Model                      : EF-S18-200mm f/3.5-5.6 IS
+Lens Serial Number              : 0000592182
+GPS Version ID                  : 2.3.0.0
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 12528
+Thumbnail Length                : 14759
+Rating                          : 0
+Image Width                     : 6000
+Image Height                    : 4000
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 29.0
+Drive Mode                      : Self-timer Operation
+Image Size                      : 6000x4000
+Lens                            : 18.0 - 200.0 mm
+Lens ID                         : Canon EF-S 18-200mm f/3.5-5.6 IS
+Megapixels                      : 24.0
+Scale Factor To 35 mm Equivalent: 1.6
+Shooting Mode                   : Shutter speed priority AE
+Shutter Speed                   : 13
+Create Date                     : 2019:11:26 21:36:37.15
+Date/Time Original              : 2019:11:26 21:36:37.15
+Modify Date                     : 2019:11:26 21:36:37.15
+Thumbnail Image                 : (Binary data 14759 bytes, use -b option to extract)
+Circle Of Confusion             : 0.019 mm
+Depth Of Field                  : inf (8.04 m - inf)
+Field Of View                   : 18.8 deg
+Focal Length                    : 70.0 mm (35 mm equivalent: 108.8 mm)
+Hyperfocal Distance             : 8.74 m
+Lens                            : 18.0 - 200.0 mm (35 mm equivalent: 28.0 - 310.9 mm)
+Light Value                     : 6.0

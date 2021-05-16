@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="2aen8txJ9makMaGgtEKHpowVyKdkJYiySE3ojNCZAwU" />
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="分析Java相关的代码片段、细节等。">
+<meta name="keywords" content="代码分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java相关代码分析">
+<meta property="og:url" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/index.html">
+<meta property="og:site_name" content="MaoGuo&#39;s Blog">
+<meta property="og:description" content="分析Java相关的代码片段、细节等。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/log_framework.jpg">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/dbs.png">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/collections.png">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/log.png">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/file-tree.png">
+<meta property="og:updated_time" content="2020-05-07T03:50:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java相关代码分析">
+<meta name="twitter:description" content="分析Java相关的代码片段、细节等。">
+<meta name="twitter:image" content="https://damaoguo.github.io/2019/12/08/Java相关代码分析/log_framework.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://damaoguo.github.io/2019/12/08/Java相关代码分析/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java相关代码分析 | MaoGuo's Blog</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ea8bf9b92c205ae2c147d91b5242a6b0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/damaoguo/damaoguo.github.io" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MaoGuo's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://damaoguo.github.io/2019/12/08/Java相关代码分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="袤锅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/boy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MaoGuo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java相关代码分析
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-08 13:11:02" itemprop="dateCreated datePublished" datetime="2019-12-08T13:11:02+08:00">2019-12-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-07 11:50:32" itemprop="dateModified" datetime="2020-05-07T11:50:32+08:00">2020-05-07</time>
+              
+            
+          </span>
+
+          
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>分析Java相关的代码片段、细节等。</p>
+<a id="more"></a>
+<h2 id="Java，Spring，MySQL中的时间问题"><a href="#Java，Spring，MySQL中的时间问题" class="headerlink" title="Java，Spring，MySQL中的时间问题"></a>Java，Spring，MySQL中的时间问题</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><h4 id="Java8之前"><a href="#Java8之前" class="headerlink" title="Java8之前"></a>Java8之前</h4><ul>
+<li>java.util.Date<ul>
+<li><code>Date</code>如果不格式化，打印出的日期可读性差</li>
+<li>使用<code>SimpleDateFormat</code>对时间进行格式化，但<code>SimpleDateFormat</code>是线程不安全的</li>
+</ul>
+</li>
+<li>案例</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.DateFormat;</span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 关于java.util.Date、java.sql.Timestamp和String之间的互相转换的方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DateUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将String字符串转换为java.util.Date格式日期</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> strDate</span></span><br><span class="line"><span class="comment">     *            表示日期的字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dateFormat</span></span><br><span class="line"><span class="comment">     *            传入字符串的日期表示格式（如："yyyy-MM-dd HH:mm:ss"）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> java.util.Date类型日期对象（如果转换失败则返回null）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.util.<span class="function">Date <span class="title">strToUtilDate</span><span class="params">(String strDate, String dateFormat)</span> </span>&#123;</span><br><span class="line">        SimpleDateFormat sf = <span class="keyword">new</span> SimpleDateFormat(dateFormat);</span><br><span class="line">        java.util.Date date = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            date = sf.parse(strDate);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> date;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将String字符串转换为java.sql.Timestamp格式日期,用于数据库保存</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> strDate</span></span><br><span class="line"><span class="comment">     *            表示日期的字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dateFormat</span></span><br><span class="line"><span class="comment">     *            传入字符串的日期表示格式（如："yyyy-MM-dd HH:mm:ss"）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> java.sql.Timestamp类型日期对象（如果转换失败则返回null）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.sql.<span class="function">Timestamp <span class="title">strToSqlDate</span><span class="params">(String strDate, String dateFormat)</span> </span>&#123;</span><br><span class="line">        SimpleDateFormat sf = <span class="keyword">new</span> SimpleDateFormat(dateFormat);</span><br><span class="line">        java.util.Date date = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            date = sf.parse(strDate);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        java.sql.Timestamp dateSQL = <span class="keyword">new</span> java.sql.Timestamp(date.getTime());</span><br><span class="line">        <span class="keyword">return</span> dateSQL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将java.util.Date对象转化为String字符串</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> date</span></span><br><span class="line"><span class="comment">     *            要格式的java.util.Date对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> strFormat</span></span><br><span class="line"><span class="comment">     *            输出的String字符串格式的限定（如："yyyy-MM-dd HH:mm:ss"）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 表示日期的字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">dateToStr</span><span class="params">(java.util.Date date, String strFormat)</span> </span>&#123;</span><br><span class="line">        SimpleDateFormat sf = <span class="keyword">new</span> SimpleDateFormat(strFormat);</span><br><span class="line">        String str = sf.format(date);</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将java.sql.Timestamp对象转化为String字符串</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> time</span></span><br><span class="line"><span class="comment">     *            要格式的java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> strFormat</span></span><br><span class="line"><span class="comment">     *            输出的String字符串格式的限定（如："yyyy-MM-dd HH:mm:ss"）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 表示日期的字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">dateToStr</span><span class="params">(java.sql.Timestamp time, String strFormat)</span> </span>&#123;</span><br><span class="line">        DateFormat df = <span class="keyword">new</span> SimpleDateFormat(strFormat);</span><br><span class="line">        String str = df.format(time);</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将java.sql.Timestamp对象转化为java.util.Date对象</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> time</span></span><br><span class="line"><span class="comment">     *            要转化的java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转化后的java.util.Date对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.util.<span class="function">Date <span class="title">timeToDate</span><span class="params">(java.sql.Timestamp time)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> time;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将java.util.Date对象转化为java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> date</span></span><br><span class="line"><span class="comment">     *            要转化的java.util.Date对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转化后的java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.sql.<span class="function">Timestamp <span class="title">dateToTime</span><span class="params">(java.util.Date date)</span> </span>&#123;</span><br><span class="line">        String strDate = dateToStr(date, <span class="string">"yyyy-MM-dd HH:mm:ss SSS"</span>);</span><br><span class="line">        <span class="keyword">return</span> strToSqlDate(strDate, <span class="string">"yyyy-MM-dd HH:mm:ss SSS"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回表示系统当前时间的java.util.Date对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>  返回表示系统当前时间的java.util.Date对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.util.<span class="function">Date <span class="title">nowDate</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> java.util.Date();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回表示系统当前时间的java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>  返回表示系统当前时间的java.sql.Timestamp对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> java.sql.<span class="function">Timestamp <span class="title">nowTime</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dateToTime(<span class="keyword">new</span> java.util.Date());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java8及其之后-重点关注表示范围"><a href="#Java8及其之后-重点关注表示范围" class="headerlink" title="Java8及其之后(重点关注表示范围)"></a>Java8及其之后(重点关注表示范围)</h4><ul>
+<li>java.time.LocalDate</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Field and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static LocalDate</code></td>
+<td><code>MAX</code> The maximum supported <code>LocalDate</code>, ‘+999999999-12-31’.</td>
+</tr>
+<tr>
+<td><code>static LocalDate</code></td>
+<td><code>MIN</code> The minimum supported <code>LocalDate</code>, ‘-999999999-01-01’.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>java.time.LocalTime</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Field and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static LocalTime</code></td>
+<td><code>MAX</code> The maximum supported <code>LocalTime</code>, ‘23:59:59.999999999’.</td>
+</tr>
+<tr>
+<td><code>static LocalTime</code></td>
+<td><code>MIDNIGHT</code> The time of midnight at the start of the day, ‘00:00’.</td>
+</tr>
+<tr>
+<td><code>static LocalTime</code></td>
+<td><code>MIN</code> The minimum supported <code>LocalTime</code>, ‘00:00’.</td>
+</tr>
+<tr>
+<td><code>static LocalTime</code></td>
+<td><code>NOON</code> The time of noon in the middle of the day, ‘12:00’.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>java.time.LocalDateTime</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Field and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static LocalDateTime</code></td>
+<td><code>MAX</code> The maximum supported <code>LocalDateTime</code>, ‘+999999999-12-31T23:59:59.999999999’.</td>
+</tr>
+<tr>
+<td><code>static LocalDateTime</code></td>
+<td><code>MIN</code> The minimum supported <code>LocalDateTime</code>, ‘-999999999-01-01T00:00:00’.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>java.time.Instant</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Field and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static Instant</code></td>
+<td><code>EPOCH</code> Constant for the 1970-01-01T00:00:00Z epoch instant.</td>
+</tr>
+<tr>
+<td><code>static Instant</code></td>
+<td><code>MAX</code> The maximum supported <code>Instant</code>, ‘1000000000-12-31T23:59:59.999999999Z’.</td>
+</tr>
+<tr>
+<td><code>static Instant</code></td>
+<td><code>MIN</code> The minimum supported <code>Instant</code>, ‘-1000000000-01-01T00:00Z’.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>案例</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//案例</span></span><br></pre></td></tr></table></figure>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><h3 id="支持的数据类型"><a href="#支持的数据类型" class="headerlink" title="支持的数据类型"></a>支持的数据类型</h3><ul>
+<li>TIME（不常用）(hhh:mm:ss)</li>
+</ul>
+<blockquote>
+<p>MySQL retrieves and displays TIME values in ‘hh:mm:ss’ format (or ‘hhh:mm:ss’ format for large hours values). TIME values may range from ‘-838:59:59’ to ‘838:59:59’. </p>
+</blockquote>
+<ul>
+<li>DATE（常用，精度到天，不保存时区信息）</li>
+</ul>
+<blockquote>
+<p><code>The supported range is &#39;1000-01-01&#39; to &#39;9999-12-31&#39;</code></p>
+</blockquote>
+<ul>
+<li>DATETIME（常用，支持到了微秒级别，不保存时区信息）</li>
+</ul>
+<blockquote>
+<p><code>The DATETIME type is used for values that contain both date and time parts. MySQL retrieves and displays DATETIME values in &#39;YYYY-MM-DD hh:mm:ss&#39; format. The supported range is &#39;1000-01-01 00:00:00&#39; to &#39;9999-12-31 23:59:59&#39;.</code></p>
+</blockquote>
+<ul>
+<li>TIMESTAMP（常用，支持到了微秒级别，保存了时区信息）</li>
+</ul>
+<blockquote>
+<p><code>The TIMESTAMP data type is used for values that contain both date and time parts. TIMESTAMP has a range of &#39;1970-01-01 00:00:01&#39; UTC to &#39;2038-01-19 03:14:07&#39; UTC.</code></p>
+</blockquote>
+<ul>
+<li><p>自动更新</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> t1 (</span><br><span class="line">  ts <span class="keyword">TIMESTAMP</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span>,</span><br><span class="line">  dt DATETIME <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> t2 (</span><br><span class="line">  dt1 DATETIME <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span>,         <span class="comment">-- default NULL</span></span><br><span class="line">  dt2 DATETIME <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="comment">-- default 0</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>YEAR（不常用）(<code>1901</code> to <code>2155</code>, or 0000)</li>
+</ul>
+<h3 id="Java包"><a href="#Java包" class="headerlink" title="Java包"></a><a href="https://docs.oracle.com/javase/8/docs/api/java/sql/package-frame.html" target="_blank" rel="noopener">Java包</a></h3><ul>
+<li>java.sql.Date</li>
+</ul>
+<blockquote>
+<ul>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" target="_blank" rel="noopener">java.lang.Object</a></li>
+<li><ul>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html" target="_blank" rel="noopener">java.util.Date</a></li>
+<li><ul>
+<li>java.sql.Date</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>java.sql.Timestamp（和MySQL中的范围有区别）</li>
+</ul>
+<blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Constructor and Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Timestamp(int year, int month, int date,int hour,int minute,int second,int nano)</code> Deprecated.  instead use the constructor <code>Timestamp(long millis)</code></td>
+</tr>
+<tr>
+<td><code>Timestamp(long time)</code> Constructs a <code>Timestamp</code> object  using a milliseconds time value.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</blockquote>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-types.html" target="_blank" rel="noopener">MySQL官方文档</a></li>
+</ul>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>精度（尤其是在使用MySQL时候作为判断条件时）</li>
+<li>线程安全性</li>
+<li>时区</li>
+</ul>
+<h2 id="使用mongoDB存储SpringBoot日志"><a href="#使用mongoDB存储SpringBoot日志" class="headerlink" title="使用mongoDB存储SpringBoot日志"></a>使用mongoDB存储SpringBoot日志</h2><h3 id="统一日志框架"><a href="#统一日志框架" class="headerlink" title="统一日志框架"></a>统一日志框架</h3><p>在系统开发的过程中,会使用到不同的技术,不同的技术会使用不同的日志框架.为了更好地处理日志信息,首先需要将日志框架进行统一.</p>
+<p><img src="/2019/12/08/Java相关代码分析/log_framework.jpg" alt=""></p>
+<p>为了将其他的日志框架装换为slf4j,只需要在pom.xml进行如下配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--统一日志框架: Slf4j+logback--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jul-to-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j-over-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jcl-over-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Spring-Boot连接mongoDB"><a href="#Spring-Boot连接mongoDB" class="headerlink" title="Spring Boot连接mongoDB"></a>Spring Boot连接mongoDB</h3><h4 id="mongoDB安装和使用"><a href="#mongoDB安装和使用" class="headerlink" title="mongoDB安装和使用"></a>mongoDB安装和使用</h4><ul>
+<li><p>安装—-使用docker</p>
+</li>
+<li><p>新建数据库</p>
+<ul>
+<li>use admin</li>
+</ul>
+<p><img src="/2019/12/08/Java相关代码分析/dbs.png" alt=""></p>
+</li>
+</ul>
+<h4 id="mongoDB的连接"><a href="#mongoDB的连接" class="headerlink" title="mongoDB的连接"></a>mongoDB的连接</h4><p>mongoDB的连接和其他数据库的连接存在一定的差异,主要是体现在mongoDB为每一个数据库设置了用户和密码,在建立建立连接通常采用一下方式.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//spring.data.mongodb.uri=mongodb://用户名:密码t@ip:27017/数据库</span></span><br><span class="line">MongoClientURI mongoClientURI=<span class="keyword">new</span> MongoClientURI(mongoUrl);</span><br></pre></td></tr></table></figure>
+<h3 id="将日志信息写入mogoDB"><a href="#将日志信息写入mogoDB" class="headerlink" title="将日志信息写入mogoDB"></a>将日志信息写入mogoDB</h3><h4 id="重写logback-xml"><a href="#重写logback-xml" class="headerlink" title="重写logback.xml"></a>重写logback.xml</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- use Spring default values --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">include</span> <span class="attr">resource</span>=<span class="string">"org/springframework/boot/logging/logback/defaults.xml"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"CONSOLE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;CONSOLE_LOG_PATTERN&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">charset</span>&gt;</span>utf8<span class="tag">&lt;/<span class="name">charset</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"MONGODB"</span> <span class="attr">class</span>=<span class="string">"com.mao.api.util.MongoAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">collectionName</span>&gt;</span>logging<span class="tag">&lt;/<span class="name">collectionName</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"INFO"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"CONSOLE"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"MONGODB"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="定义Template"><a href="#定义Template" class="headerlink" title="定义Template"></a>定义Template</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mao.api.core.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mongodb.MongoClientURI;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.MongoDbFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.MongoTemplate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.SimpleMongoDbFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.convert.DefaultDbRefResolver;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.convert.MappingMongoConverter;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.mapping.MongoMappingContext;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Classname</span> MongoConfig</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span> TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 19-5-23 下午4:46</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Created</span> by mao&lt;tianmao818@qq.com&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MongoConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.data.mongodb.uri&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String mongoUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MongoTemplate <span class="title">mongoTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        MongoClientURI mongoClientURI=<span class="keyword">new</span> MongoClientURI(mongoUrl);</span><br><span class="line">        MongoDbFactory mongoDbFactory = <span class="keyword">new</span> SimpleMongoDbFactory(mongoClientURI);</span><br><span class="line">        DefaultDbRefResolver dbRefResolver = <span class="keyword">new</span> DefaultDbRefResolver(mongoDbFactory);</span><br><span class="line">        MappingMongoConverter converter = <span class="keyword">new</span> MappingMongoConverter(dbRefResolver, <span class="keyword">new</span> MongoMappingContext());</span><br><span class="line">        converter.setTypeMapper(<span class="keyword">new</span> DefaultMongoTypeMapper(<span class="keyword">null</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MongoTemplate(mongoDbFactory, converter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="定义日志Appender"><a href="#定义日志Appender" class="headerlink" title="定义日志Appender"></a>定义日志Appender</h4><p>(重写append,start,stop,setApplicationContext)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mao.api.util;<span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Classname</span> MongoAppender</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span> TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span> 19-5-23 下午4:49</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Created</span> by mao&lt;tianmao818@qq.com&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.spi.ILoggingEvent;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.UnsynchronizedAppenderBase;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.BeansException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContextAware;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.mongodb.core.MongoTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MongoAppender</span> <span class="keyword">extends</span> <span class="title">UnsynchronizedAppenderBase</span>&lt;<span class="title">ILoggingEvent</span>&gt; <span class="keyword">implements</span> <span class="title">ApplicationContextAware</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> MongoTemplate mongoTemplate;</span><br><span class="line">    <span class="keyword">private</span> String collectionName;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">append</span><span class="params">(ILoggingEvent event)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!started) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//日志存储内容</span></span><br><span class="line">        LogEntity log = <span class="keyword">new</span> LogEntity();</span><br><span class="line">        log.threadName = event.getThreadName();</span><br><span class="line">        log.level = event.getLevel().levelStr;</span><br><span class="line">        log.formattedMessage = event.getFormattedMessage();</span><br><span class="line">        log.loggerName = event.getLoggerName();</span><br><span class="line">        log.timestamp = event.getTimeStamp();</span><br><span class="line">        <span class="comment">//使用模板保存日志</span></span><br><span class="line">        mongoTemplate.save(log, collectionName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.stop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setApplicationContext</span><span class="params">(ApplicationContext applicationContext)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (applicationContext.getAutowireCapableBeanFactory().getBean(MongoTemplate.class) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            mongoTemplate = applicationContext.getAutowireCapableBeanFactory().getBean(MongoTemplate.class);</span><br><span class="line">            LoggerFactory.getLogger(<span class="keyword">this</span>.getClass()).info(<span class="string">"[ApplicationContext] Autowire MongoTemplate, MongoAppender is ready."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">LogEntity</span> </span>&#123;</span><br><span class="line">        String threadName;</span><br><span class="line">        String level;</span><br><span class="line">        String formattedMessage;</span><br><span class="line">        String loggerName;</span><br><span class="line">        Long timestamp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getCollectionName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> collectionName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCollectionName</span><span class="params">(String collectionName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.collectionName = collectionName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><h4 id="查看collections"><a href="#查看collections" class="headerlink" title="查看collections"></a>查看collections</h4><p><img src="/2019/12/08/Java相关代码分析/collections.png" alt=""></p>
+<h4 id="查看日志细节"><a href="#查看日志细节" class="headerlink" title="查看日志细节"></a>查看日志细节</h4><p><img src="/2019/12/08/Java相关代码分析/log.png" alt=""></p>
+<h2 id="使用递归的方法生成菜单"><a href="#使用递归的方法生成菜单" class="headerlink" title="使用递归的方法生成菜单"></a>使用递归的方法生成菜单</h2><p>摘抄于：<a href="https://www.cnblogs.com/lucky-pin/p/10740037.html" target="_blank" rel="noopener">https://www.cnblogs.com/lucky-pin/p/10740037.html</a></p>
+<p><strong>递归生成一个如图的菜单，编写两个类数据模型Menu、和创建树形的MenuTree。通过以下过程实现：</strong></p>
+<p><img src="/2019/12/08/Java相关代码分析/file-tree.png" alt=""></p>
+<ul>
+<li><p>首先从菜单数据中获取所有根节点。</p>
+</li>
+<li><p>为根节点建立次级子树并拼接上。</p>
+</li>
+<li><p>递归为子节点建立次级子树并接上，直至为末端节点拼接上空的“树”。</p>
+</li>
+</ul>
+<p>首先，编写数据模型Menu。每条菜单有自己的id、父节点parentId、菜单名称text、菜单还拥有次级菜单children。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Menu</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String parentId;</span><br><span class="line">    <span class="keyword">private</span> String text;</span><br><span class="line">    <span class="keyword">private</span> String url;</span><br><span class="line">    <span class="keyword">private</span> String yxbz;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Menu&gt; children;     </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Menu</span><span class="params">(String id,String parentId,String text,String url,String yxbz)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id;</span><br><span class="line">        <span class="keyword">this</span>.parentId=parentId;</span><br><span class="line">        <span class="keyword">this</span>.text=text;</span><br><span class="line">        <span class="keyword">this</span>.url=url;</span><br><span class="line">        <span class="keyword">this</span>.yxbz=yxbz;   </span><br><span class="line">    &#125;</span><br><span class="line">        <span class="comment">/*省略get\set*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建树形结构的类MenuTree。方法getRootNode获取所有根节点，方法builTree将根节点汇总创建树形结构，buildChilTree为节点建立次级树并拼接上当前树，递归调用buildChilTree不断为当前树开枝散叶直至找不到新的子树。完成递归，获取树形结构。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MenuTree</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Menu&gt; menuList = <span class="keyword">new</span> ArrayList&lt;Menu&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MenuTree</span><span class="params">(List&lt;Menu&gt; menuList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.menuList=menuList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//建立树形结构</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Menu&gt; <span class="title">builTree</span><span class="params">()</span></span>&#123;</span><br><span class="line">        List&lt;Menu&gt; treeMenus =<span class="keyword">new</span>  ArrayList&lt;Menu&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Menu menuNode : getRootNode()) &#123;</span><br><span class="line">            menuNode=buildChilTree(menuNode);</span><br><span class="line">            treeMenus.add(menuNode);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> treeMenus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//递归，建立子树形结构</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Menu <span class="title">buildChilTree</span><span class="params">(Menu pNode)</span></span>&#123;</span><br><span class="line">        List&lt;Menu&gt; chilMenus =<span class="keyword">new</span>  ArrayList&lt;Menu&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Menu menuNode : menuList) &#123;</span><br><span class="line">            <span class="keyword">if</span>(menuNode.getParentId().equals(pNode.getId())) &#123;</span><br><span class="line">                chilMenus.add(buildChilTree(menuNode));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        pNode.setChildren(chilMenus);</span><br><span class="line">        <span class="keyword">return</span> pNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取根节点</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;Menu&gt; <span class="title">getRootNode</span><span class="params">()</span> </span>&#123;         </span><br><span class="line">        List&lt;Menu&gt; rootMenuLists =<span class="keyword">new</span>  ArrayList&lt;Menu&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Menu menuNode : menuList) &#123;</span><br><span class="line">            <span class="keyword">if</span>(menuNode.getParentId().equals(<span class="string">"0"</span>)) &#123;</span><br><span class="line">                rootMenuLists.add(menuNode);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rootMenuLists;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　最后，插入一些数据试试效果。得到的json就可以生成图一菜单了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123;</span><br><span class="line">        List&lt;Menu&gt;  menuList= <span class="keyword">new</span> ArrayList&lt;Menu&gt;();</span><br><span class="line">        <span class="comment">/*插入一些数据*/</span></span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D000"</span>,<span class="string">"0"</span>,<span class="string">"系统管理"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D100"</span>,<span class="string">"GN001D000"</span>,<span class="string">"权限管理"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D110"</span>,<span class="string">"GN001D100"</span>,<span class="string">"密码修改"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D120"</span>,<span class="string">"GN001D100"</span>,<span class="string">"新加用户"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D200"</span>,<span class="string">"GN001D000"</span>,<span class="string">"系统监控"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN001D210"</span>,<span class="string">"GN001D200"</span>,<span class="string">"在线用户"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN002D000"</span>,<span class="string">"0"</span>,<span class="string">"订阅区"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        menuList.add(<span class="keyword">new</span> Menu(<span class="string">"GN003D000"</span>,<span class="string">"0"</span>,<span class="string">"未知领域"</span>,<span class="string">"/admin"</span>,<span class="string">"Y"</span>));</span><br><span class="line">        <span class="comment">/*让我们创建树*/</span></span><br><span class="line">        MenuTree menuTree =<span class="keyword">new</span> MenuTree(menuList);</span><br><span class="line">        menuList=menuTree.builTree();</span><br><span class="line">        <span class="comment">/*转为json看看效果*/</span></span><br><span class="line">        String jsonOutput= JSON.toJSONString(menuList);</span><br><span class="line">        System.out.println(jsonOutput);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+
+    
+    
+    
+
+    
+      <div>
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我知道是不会有人点的，但万一有人想不开呢？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="袤锅 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="袤锅 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/代码分析/" rel="tag"><i class="fa fa-tag"></i> 代码分析</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/08/ML和DL训练场/" rel="next" title="ML和DL训练场">
+                <i class="fa fa-chevron-left"></i> ML和DL训练场
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/06/ExtractFlowWithPython/" rel="prev" title="ExtractFlowWithPython">
+                ExtractFlowWithPython <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+		  <div>
+  <font color='#FFC0CB' size=20>Mao&Ping Adventure:</font><canvas id="canvasDiyBlock" style="width:60%;">x</canvas>。
+</div>
+<script>
+	/*生成倒计时数字*/
+	function getTimeDiff(){
+		var date1= '2020/10/04 00:00:00';  //开始时间  
+		var date2 = new Date();    //结束时间  
+		var date3 = date2.getTime() - new Date(date1).getTime();   //时间差的毫秒数        
+
+		//计算出相差天数  
+		var days=Math.floor(date3/(24*3600*1000))  
+		//计算出小时数  
+		var leave1=date3%(24*3600*1000)    //计算天数后剩余的毫秒数  
+		var hours=Math.floor(leave1/(3600*1000))  
+		//计算相差分钟数  
+		var leave2=leave1%(3600*1000)        //计算小时数后剩余的毫秒数  
+		var minutes=Math.floor(leave2/(60*1000))  
+		//计算相差秒数  
+		var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数  
+		var seconds=Math.round(leave3/1000) 
+		return ("00000"+days).substr(-5)+":"+("00"+hours).substr(-2)+":"+("00"+minutes).substr(-2)+":"+("00"+seconds).substr(-2)
+	}
+(function () {
+  var digit =
+    [
+      [
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 1, 1, 0, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 0, 1, 1, 0],
+        [0, 0, 1, 1, 1, 0, 0]
+      ],//0
+      [
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 1, 1, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1]
+      ],//1
+      [
+        [0, 1, 1, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 1, 1, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1]
+      ],//2
+      [
+        [1, 1, 1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 0]
+      ],//3
+      [
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 1, 0],
+        [0, 0, 1, 1, 1, 1, 0],
+        [0, 1, 1, 0, 1, 1, 0],
+        [1, 1, 0, 0, 1, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 1, 1]
+      ],//4
+      [
+        [1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 0]
+      ],//5
+      [
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 1, 1, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0],
+        [1, 1, 0, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 0]
+      ],//6
+      [
+        [1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 0, 1, 1, 0, 0, 0]
+      ],//7
+      [
+        [0, 1, 1, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 0]
+      ],//8
+      [
+        [0, 1, 1, 1, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [1, 1, 0, 0, 0, 1, 1],
+        [0, 1, 1, 1, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1],
+        [0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 0, 1, 1, 0, 0],
+        [0, 1, 1, 0, 0, 0, 0]
+      ],//9
+      [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+      ]//:
+    ];
+
+  var canvas = document.getElementById('canvasDiyBlock');
+
+  if (canvas.getContext) {
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100, W = 1200;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10, 10, 50, 50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height / 20 - 1;
+	var timeDiff = getTimeDiff();
+    (function () {
+      var temp = /(\d)(\d)(\d)(\d)(\d):(\d)(\d):(\d)(\d):(\d)(\d)/.exec(timeDiff);
+      //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+	  // 天(万,千,百,十,个) 小时(十,个) 分钟(十，个) 秒(十 个)
+      data.push(temp[1], temp[2], temp[3], temp[4], temp[5], 10, temp[6], temp[7], 10, temp[8], temp[9], 10, temp[10], temp[11]);
+    })();
+	
+
+    /*生成点阵数字*/
+    function renderDigit(index, num) {
+      for (var i = 0; i < digit[num].length; i++) {
+        for (var j = 0; j < digit[num][i].length; j++) {
+          if (digit[num][i][j] == 1) {
+            cxt.beginPath();
+            cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0, 2 * Math.PI);
+            cxt.closePath();
+            cxt.fill();
+          }
+        }
+      }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime() {
+      var changeNumArray = [];
+	  var timeDiff = getTimeDiff();
+      var temp = /(\d)(\d)(\d)(\d)(\d):(\d)(\d):(\d)(\d):(\d)(\d)/.exec(timeDiff);
+      var NewData = [];
+      NewData.push(temp[1], temp[2], temp[3], temp[4], temp[5], 10, temp[6], temp[7], 10, temp[8], temp[9], 10, temp[10], temp[11]);
+
+      for (var i = data.length - 1; i >= 0; i--) {
+        //时间发生变化
+        if (NewData[i] !== data[i]) {
+          //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+          changeNumArray.push(i + '_' + (Number(data[i]) + 1) % 10);
+        }
+      }
+      //增加小球
+      for (var i = 0; i < changeNumArray.length; i++) {
+        addBalls.apply(this, changeNumArray[i].split('_'));
+      }
+      data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls() {
+      for (var i = 0; i < balls.length; i++) {
+        balls[i].stepY += balls[i].disY;
+        balls[i].x += balls[i].stepX;
+        balls[i].y += balls[i].stepY;
+        if (balls[i].x > W + R || balls[i].y > H + R) {
+          balls.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index, num) {
+      var numArray = [1, 2, 3];
+      var colorArray = ["#3BE", "#09C", "#A6C", "#93C", "#9C0", "#690", "#FB3", "#F80", "#F44", "#C00"];
+      for (var i = 0; i < digit[num].length; i++) {
+        for (var j = 0; j < digit[num][i].length; j++) {
+          if (digit[num][i][j] == 1) {
+            var ball = {
+              x: 14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1),
+              y: i * 2 * (R + 1) + (R + 1),
+              stepX: Math.floor(Math.random() * 4 - 2),
+              stepY: -2 * numArray[Math.floor(Math.random() * numArray.length)],
+              color: colorArray[Math.floor(Math.random() * colorArray.length)],
+              disY: 1
+            };
+            balls.push(ball);
+          }
+        }
+      }
+    }
+
+    /*渲染*/
+    function render() {
+      //重置画布宽度，达到清空画布的效果
+      canvas.height = 100;
+      //渲染时钟
+      for (var i = 0; i < data.length; i++) {
+        renderDigit(i, data[i]);
+      }
+      //渲染小球
+      for (var i = 0; i < balls.length; i++) {
+        cxt.beginPath();
+        cxt.arc(balls[i].x, balls[i].y, R, 0, 2 * Math.PI);
+        cxt.fillStyle = balls[i].color;
+        cxt.closePath();
+        cxt.fill();
+      }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function () {
+      //更新时钟
+      updateDigitTime();
+      //更新小球状态
+      updateBalls();
+      //渲染
+      render();
+    }, 50);
+  }
+})();
+</script>
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjEzNC8xMjY2OQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/boy.jpg"
+                alt="袤锅" />
+            
+              <p class="site-author-name" itemprop="name">袤锅</p>
+              <p class="site-description motion-element" itemprop="description">我尽我力，我尽我心</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/damaoguo" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:tianmao818@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" title="Hexo个性化设置" target="_blank">Hexo个性化设置</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java，Spring，MySQL中的时间问题"><span class="nav-number">1.</span> <span class="nav-text">Java，Spring，MySQL中的时间问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java"><span class="nav-number">1.1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java8之前"><span class="nav-number">1.1.1.</span> <span class="nav-text">Java8之前</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java8及其之后-重点关注表示范围"><span class="nav-number">1.1.2.</span> <span class="nav-text">Java8及其之后(重点关注表示范围)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring"><span class="nav-number">1.2.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL"><span class="nav-number">1.3.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支持的数据类型"><span class="nav-number">1.4.</span> <span class="nav-text">支持的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java包"><span class="nav-number">1.5.</span> <span class="nav-text">Java包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">1.6.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">1.7.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用mongoDB存储SpringBoot日志"><span class="nav-number">2.</span> <span class="nav-text">使用mongoDB存储SpringBoot日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#统一日志框架"><span class="nav-number">2.1.</span> <span class="nav-text">统一日志框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot连接mongoDB"><span class="nav-number">2.2.</span> <span class="nav-text">Spring Boot连接mongoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mongoDB安装和使用"><span class="nav-number">2.2.1.</span> <span class="nav-text">mongoDB安装和使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mongoDB的连接"><span class="nav-number">2.2.2.</span> <span class="nav-text">mongoDB的连接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将日志信息写入mogoDB"><span class="nav-number">2.3.</span> <span class="nav-text">将日志信息写入mogoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重写logback-xml"><span class="nav-number">2.3.1.</span> <span class="nav-text">重写logback.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义Template"><span class="nav-number">2.3.2.</span> <span class="nav-text">定义Template</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义日志Appender"><span class="nav-number">2.3.3.</span> <span class="nav-text">定义日志Appender</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">2.4.</span> <span class="nav-text">效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看collections"><span class="nav-number">2.4.1.</span> <span class="nav-text">查看collections</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看日志细节"><span class="nav-number">2.4.2.</span> <span class="nav-text">查看日志细节</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用递归的方法生成菜单"><span class="nav-number">3.</span> <span class="nav-text">使用递归的方法生成菜单</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">袤锅</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.2.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+</body>
+</html>
