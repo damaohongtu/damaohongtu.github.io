@@ -72,16 +72,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[系统设计之Follow]]></title>
-    <url>%2F2020%2F08%2F29%2F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B9%8BFollow%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[系统设计之消息订阅]]></title>
-    <url>%2F2020%2F08%2F29%2F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B9%8B%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[系统设计之秒杀]]></title>
     <url>%2F2020%2F08%2F29%2F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B9%8B%E7%A7%92%E6%9D%80%2F</url>
     <content type="text"><![CDATA[秒杀的关键要考虑两个方面：（1）不能够超卖，超卖（库存变成负数、优惠券变成负数）必然带来损失，是不允许的；（2）需要考虑性能！ 1. 分布式锁为了防止超卖，需要加锁，Java本身的内存锁在分布式的环境下并不能发挥加锁的功能，也就是说需要实现分布式锁。常见的方法有基于Redis的分布式锁和基于Zookeeper的分布式锁。 1.1 基于Redis分布式锁1.1.1 Redis分布式锁原理https://xiaomi-info.github.io/ Redis 锁主要利用 Redis 的 setnx 命令。 加锁命令：SETNX key value，当键不存在时，对键进行设置操作并返回成功，否则返回失败。KEY 是锁的唯一标识，一般按业务来决定命名。 解锁命令：DEL key，通过删除键值对释放锁，以便其他线程可以通过 SETNX 命令来获取锁。 锁超时：EXPIRE key timeout, 设置 key 的超时时间，以保证即使锁没有被显式释放，锁也可以在一定时间后自动释放，避免资源被永远锁住。 则加锁解锁伪代码如下： 12345678if (setnx(key, 1) == 1)&#123; expire(key, 30) try &#123; //TODO 业务逻辑 &#125; finally &#123; del(key) &#125;&#125; 以上存在以下问题： SETNX 和 EXPIRE 非原子性 锁错误解除 超时解锁导致并发 不可重入 1.1.2 Redis分布式锁实现1.1.3 Redis主从模式存在的问题1.2 基于Zookeeper分布式锁1.2.1 Zookeeper原理及应用场景1.2.2 Zookeeper常用的命令1.2.3 Zookeeper分布式锁原理1.2.4 Zookeeper分布式锁实现2. 秒杀性能2.1 秒杀前，页面访问压力大？解决方案：页面静态化，CDN+Redis+Ngnix多级缓存 2.2 秒杀时，下单过于集中，作弊软件刷单？解决方案：前端加答题环节,把URL动态化，就连写代码的人都不知道，你就通过MD5之类的加密算法加密随机的字符串去做url，然后通过前端代码获取url后台校验才能通过 2.3 秒杀时，下单对系统冲击大，影响其他正常功能？解决方案：独立的秒杀系统 2.4 秒杀时，快速精准减库存？解决方案：基于缓存如Redis实现快速精准减库存。 我们要开始秒杀前你通过定时任务或者运维同学提前把商品的库存加载到Redis中去，让整个流程都在Redis里面去做，然后等秒杀介绍了，再异步的去修改库存就好了。但是用了Redis就有一个问题了，我们上面说了我们采用主从，就是我们会去读取库存然后再判断然后有库存才去减库存，正常情况没问题，但是高并发的情况问题就很大了。Lua脚本是类似Redis事务，有一定的原子性，不会被其他命令插队，可以完成一些Redis事务性的操作。这点是关键。知道原理了，我们就写一个脚本把判断库存扣减库存的操作都写在一个脚本丢给Redis去做，那到0了后面的都Return False了是吧，一个失败了你修改一个开关，直接挡住所有的请求，然后再做后面的事情嘛。 2.5 秒杀后，快速过滤没有抢到的下单请求？解决方案：库存减完后，快速通知Ngnix，过滤下单请求。 2.6 秒杀后，下单模块压力大？解决方案：下单请求写入RocketMq，下单后使用RocketMq通知下游服务，完成下单。 2.8 限流&amp;降级&amp;熔断&amp;隔离]]></content>
@@ -140,6 +130,17 @@
     <title><![CDATA[jupyter远程环境搭建]]></title>
     <url>%2F2020%2F07%2F25%2Fjupyter%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[搭建远程jupyter notebook，用于代码片段备份，学习碎片日常总结。并在服务器上配置crontab定时任务，推送任务到GitHub。 一、配置远程jupyter（一）生成jupyter notebook配置文件1jupyter notebook --generate-config 记住生成配置文件的目录，一般是在/root/.jupyter 中 （二）生成密文密码 打开ipython3 12345In [1]: from notebook.auth import passwdIn [2]: passwd()Enter password: #输入密码Verify password: #确认密码Out[2]: '###此处为你的密文密码###########' （三）修改配置文件vim /root/.jupyter/jupyter_notebook_config.py插入 1234c.NotebookApp.ip='*'c.NotebookApp.password = u'sha1:ce...刚才复制的那个密文'c.NotebookApp.open_browser = Falsec.NotebookApp.port =8888 （四）启动jupyter在服务器终端输入: nohup jupyter notebook —allow-root &amp; （五）实现远程访问由于本人在开启jupyter时，给的端口是8889，所以需要给阿里云服务器添加安全规则，开放8889端口 终端输入：服务器ip地址:8889 此时，就可以开心的访问服务器端的jupyter以上参考原文链接：https://blog.csdn.net/web_9705/article/details/80421044 二、配置定时任务（一）添加crontab任务 不要使用crontab -e来添加任务，直接用vim编辑好了使用crontab 文件名添加，使用crontab -l验证。 （二）编写推送脚本 （三）推送结果]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[高性能and高可用思想]]></title>
+    <url>%2F2020%2F05%2F16%2F%E9%AB%98%E6%80%A7%E8%83%BDand%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%9D%E6%83%B3%2F</url>
+    <content type="text"><![CDATA[1. 高性能2. 高可用限流技术]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>高性能高可用</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[2020年6月入职前的规划]]></title>
