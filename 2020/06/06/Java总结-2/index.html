@@ -180,7 +180,7 @@
 <meta property="og:image" content="https://damaoguo.github.io/2016/11/20/Java%E6%80%BB%E7%BB%93/io/aio_write_2.png?lastModify=1574234543">
 <meta property="og:image" content="https://damaoguo.github.io/2016/11/20/Java%E6%80%BB%E7%BB%93/io/nio_copy.png?lastModify=1574234543">
 <meta property="og:image" content="https://damaoguo.github.io/2020/06/06/Java总结-2/rpc-design.jpeg">
-<meta property="og:updated_time" content="2021-06-01T09:00:40.872Z">
+<meta property="og:updated_time" content="2021-06-01T15:27:27.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MaoGuo&#39;s Blog">
 <meta name="twitter:description" content="Java总结-2">
@@ -475,7 +475,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-06-01 17:00:40" itemprop="dateModified" datetime="2021-06-01T17:00:40+08:00">2021-06-01</time>
+                <time title="修改时间：2021-06-01 23:27:27" itemprop="dateModified" datetime="2021-06-01T23:27:27+08:00">2021-06-01</time>
               
             
           </span>
@@ -2125,6 +2125,7 @@
 <li>提⾼响应速度。 当任务到达时，任务可以不需要的等到线程创建就能⽴即执⾏。</li>
 <li>提⾼线程的可管理性。 线程是稀缺资源，如果⽆限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使⽤线程池可以进⾏统⼀的分配，调优和监控.</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * returns workersExecutorService.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * returns the service stored in the appContext or creates it if</span></span><br><span class="line"><span class="comment"> * necessary.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> ExecutorService for the &#123;<span class="doctag">@code</span> SwingWorkers&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> ExecutorService <span class="title">getWorkersExecutorService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> AppContext appContext = AppContext.getAppContext();</span><br><span class="line">    ExecutorService executorService =</span><br><span class="line">        (ExecutorService) appContext.get(SwingWorker.class);</span><br><span class="line">    <span class="keyword">if</span> (executorService == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">//this creates daemon threads.</span></span><br><span class="line">        ThreadFactory threadFactory =</span><br><span class="line">            <span class="keyword">new</span> ThreadFactory() &#123;</span><br><span class="line">                <span class="keyword">final</span> ThreadFactory defaultFactory =</span><br><span class="line">                    Executors.defaultThreadFactory();</span><br><span class="line">                <span class="function"><span class="keyword">public</span> Thread <span class="title">newThread</span><span class="params">(<span class="keyword">final</span> Runnable r)</span> </span>&#123;</span><br><span class="line">                    Thread thread =</span><br><span class="line">                        defaultFactory.newThread(r);</span><br><span class="line">                    thread.setName(<span class="string">"SwingWorker-"</span></span><br><span class="line">                        + thread.getName());</span><br><span class="line">                    thread.setDaemon(<span class="keyword">true</span>);</span><br><span class="line">                    <span class="keyword">return</span> thread;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">        executorService =</span><br><span class="line">            <span class="keyword">new</span> ThreadPoolExecutor(MAX_WORKER_THREADS, MAX_WORKER_THREADS,</span><br><span class="line">                                   <span class="number">10L</span>, TimeUnit.MINUTES,</span><br><span class="line">                                   <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;(),</span><br><span class="line">                                   threadFactory);</span><br><span class="line">        appContext.put(SwingWorker.class, executorService);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Don't use ShutdownHook here as it's not enough. We should track</span></span><br><span class="line">        <span class="comment">// AppContext disposal instead of JVM shutdown, see 6799345 for details</span></span><br><span class="line">        <span class="keyword">final</span> ExecutorService es = executorService;</span><br><span class="line">        appContext.addPropertyChangeListener(AppContext.DISPOSED_PROPERTY_NAME,</span><br><span class="line">            <span class="keyword">new</span> PropertyChangeListener() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">propertyChange</span><span class="params">(PropertyChangeEvent pce)</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">boolean</span> disposed = (Boolean)pce.getNewValue();</span><br><span class="line">                    <span class="keyword">if</span> (disposed) &#123;</span><br><span class="line">                        <span class="keyword">final</span> WeakReference&lt;ExecutorService&gt; executorServiceRef =</span><br><span class="line">                            <span class="keyword">new</span> WeakReference&lt;ExecutorService&gt;(es);</span><br><span class="line">                        <span class="keyword">final</span> ExecutorService executorService =</span><br><span class="line">                            executorServiceRef.get();</span><br><span class="line">                        <span class="keyword">if</span> (executorService != <span class="keyword">null</span>) &#123;</span><br><span class="line">                            AccessController.doPrivileged(</span><br><span class="line">                                <span class="keyword">new</span> PrivilegedAction&lt;Void&gt;() &#123;</span><br><span class="line">                                    <span class="function"><span class="keyword">public</span> Void <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                                        executorService.shutdown();</span><br><span class="line">                                        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            );</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> executorService;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="25-如何线程安全的实现一个计数器？"><a href="#25-如何线程安全的实现一个计数器？" class="headerlink" title="25.如何线程安全的实现一个计数器？"></a>25.如何线程安全的实现一个计数器？</h4><h4 id="26-volatile关键字？"><a href="#26-volatile关键字？" class="headerlink" title="26.volatile关键字？"></a>26.volatile关键字？</h4><p>参考：volatile: <a href="http://ifeve.com/volatile/" target="_blank" rel="noopener">http://ifeve.com/volatile/</a></p>
 <p>Java语言规范第三版中对volatile的定义如下： java编程语言允许线程访问共享变量，为了确保共享变量能被准确和一致的更新，线程应该确保通过排他锁单独获得这个变量。Java语言提供了volatile，在某些情况下比锁更加方便。如果一个字段被声明成volatile，java线程内存模型确保所有线程看到这个变量的值是一致的。Volatile变量修饰符如果使用恰当的话，它比synchronized的使用和执行成本会更低，因为它不会引起线程上下文的切换和调度。</p>
 <ul>
@@ -2269,6 +2270,57 @@
 </table>
 </div>
 <h4 id="38-并发队列"><a href="#38-并发队列" class="headerlink" title="38. 并发队列"></a>38. 并发队列</h4><p><img src="/2020/06/06/Java总结-2/并发队列.png" alt=""></p>
+<p><strong>线程池阻塞队列的设置：</strong></p>
+<ul>
+<li><strong>无界队列</strong></li>
+</ul>
+<p>队列大小无限制，常用的为无界的LinkedBlockingQueue，使用该队列做为阻塞队列时要尤其当心，当任务耗时较长时可能会导致大量新任务在队列中堆积最终导致OOM。阅读代码发现，Executors.newFixedThreadPool 采用就是 LinkedBlockingQueue，而楼主踩到的就是这个坑，当QPS很高，发送数据很大，大量的任务被添加到这个无界LinkedBlockingQueue 中，导致cpu和内存飙升服务器挂掉。</p>
+<ul>
+<li><strong>有界队列</strong></li>
+</ul>
+<p>常用的有两类，一类是遵循FIFO原则的队列如ArrayBlockingQueue，另一类是优先级队列如PriorityBlockingQueue。PriorityBlockingQueue中的优先级由任务的Comparator决定。<br>使用有界队列时队列大小需和线程池大小互相配合，线程池较小有界队列较大时可减少内存消耗，降低cpu使用率和上下文切换，但是可能会限制系统吞吐量。</p>
+<p>在我们的修复方案中，选择的就是这个类型的队列，虽然会有部分任务被丢失，但是我们线上是排序日志搜集任务，所以对部分对丢失是可以容忍的。</p>
+<ul>
+<li><strong>同步移交队列</strong></li>
+</ul>
+<p>如果不希望任务在队列中等待而是希望将任务直接移交给工作线程，可使用SynchronousQueue作为等待队列。SynchronousQueue不是一个真正的队列，而是一种线程之间移交的机制。要将一个元素放入SynchronousQueue中，必须有另一个线程正在等待接收这个元素。只有在使用无界线程池或者有饱和策略时才建议使用该队列。</p>
+<p><strong><span style="color:red">Summary of BlockingQueue methods</span></strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th><em>Throws exception</em></th>
+<th><em>Special value</em></th>
+<th><em>Blocks</em></th>
+<th><em>Times out</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Insert</strong></td>
+<td>add(e)</td>
+<td>offer(e)</td>
+<td>put(e)</td>
+<td>offer(e, time, unit)</td>
+</tr>
+<tr>
+<td><strong>Remove</strong></td>
+<td>remove()</td>
+<td>poll()</td>
+<td>take()</td>
+<td>poll(time, unit)</td>
+</tr>
+<tr>
+<td><strong>Examine</strong></td>
+<td>element()</td>
+<td>peek()</td>
+<td><em>not applicable</em></td>
+<td><em>not applicable</em></td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="（四）JVM"><a href="#（四）JVM" class="headerlink" title="（四）JVM"></a>（四）JVM</h3><h4 id="1-虚拟机的参数"><a href="#1-虚拟机的参数" class="headerlink" title="1.虚拟机的参数"></a>1.虚拟机的参数</h4><div class="table-container">
 <table>
 <thead>
@@ -3575,7 +3627,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
