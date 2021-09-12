@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="2020年8月1日，第一次在长沙见到平平。 2020年10月4日（八月十八，我的生日），平平和我在一起了。">
+  <meta name="description" content="Welcome to my blog, enter password to read.">
 <meta name="keywords" content="平&amp;茂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Our Adventure">
 <meta property="og:url" content="https://damaoguo.github.io/2020/08/19/Our-Adventure/index.html">
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
-<meta property="og:description" content="2020年8月1日，第一次在长沙见到平平。 2020年10月4日（八月十八，我的生日），平平和我在一起了。">
+<meta property="og:description" content="Welcome to my blog, enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-04-01T16:58:50.957Z">
+<meta property="og:updated_time" content="2021-09-12T15:24:26.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Our Adventure">
-<meta name="twitter:description" content="2020年8月1日，第一次在长沙见到平平。 2020年10月4日（八月十八，我的生日），平平和我在一起了。">
+<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
 
 
 
@@ -411,7 +411,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-04-02 00:58:50" itemprop="dateModified" datetime="2021-04-02T00:58:50+08:00">2021-04-02</time>
+                <time title="修改时间：2021-09-12 23:24:26" itemprop="dateModified" datetime="2021-09-12T23:24:26+08:00">2021-09-12</time>
               
             
           </span>
@@ -472,65 +472,20 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>2020年8月1日，第一次在长沙见到平平。</p>
-<p>2020年10月4日（八月十八，我的生日），平平和我在一起了。</p>
-<a id="more"></a>
-<script type="text/javascript">
-function getValue()
-  {
-    var dateBegin = new Date("2020-08-01 00:00:00");//将-转化为/，使用new Date
-    var dateEnd = new Date();//获取当前时间
-    var dateDiff = dateEnd.getTime() - dateBegin.getTime();//时间差的毫秒数
-    var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));//计算出相差天数
-    var leave1=dateDiff%(24*3600*1000) //计算天数后剩余的毫秒数
-    var hours=Math.floor(leave1/(3600*1000))//计算出小时数
-    //计算相差分钟数
-    var leave2=leave1%(3600*1000) //计算小时数后剩余的毫秒数
-    var minutes=Math.floor(leave2/(60*1000))//计算相差分钟数
-    //计算相差秒数
-    var leave3=leave2%(60*1000) //计算分钟数后剩余的毫秒数
-    var seconds=Math.round(leave3/1000)
-      var x=document.getElementById("myHeader")
-    x.innerHTML="我们认识的:"+dayDiff+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒"
-      alert(x.innerHTML)
-  }
-</script>
-我们认识了多久？<a id="myHeader" onclick="getValue()">点我看看</a>
-
-2020.12.09 平平来杭州啦。<br>
-
-2020.12.12 special day.<br>
-
-2021.3.26 specail day.<br>
-
-plan A. step-1<div id="showtime1"></div><br>
-
-plan A: step-2.<div id="showtime2"></div><br>
-
-<script type="text/javascript">
-var showtime = function (start_time) {
-    var nowtime = new Date(),  //获取当前时间
-        endtime = new Date(start_time);  //定义结束时间
-    var lefttime = endtime.getTime() - nowtime.getTime(),  //距离结束时间的毫秒数
-        leftd = Math.floor(lefttime/(1000*60*60*24)),  //计算天数
-        lefth = Math.floor(lefttime/(1000*60*60)%24),  //计算小时数
-        leftm = Math.floor(lefttime/(1000*60)%60),  //计算分钟数
-        lefts = Math.floor(lefttime/1000%60);  //计算秒数
-    return leftd + "天" + lefth + ":" + leftm + ":" + lefts;  //返回倒计时的字符串
-}
-var div1 = document.getElementById("showtime1");
-setInterval (function () {
-    div1.innerHTML = showtime("2021/7/13");
-}, 1000);  //反复执行函数本身
-var div2 = document.getElementById("showtime2");
-setInterval (function () {
-    div2.innerHTML = showtime("2021/9/25");
-}, 1000);  //反复执行函数本身
-</script>
-
-
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read." />
+    <label for="pass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
