@@ -119,22 +119,21 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmpoverview.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmpchunk.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/msgtype.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/msgtype2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/command.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/user.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/command2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunk.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunkformat.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/handshake.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/connect.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/publish.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/play.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/video_tag.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/relation.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/nalu.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/ngnix.png">
-<meta property="og:updated_time" content="2021-10-04T03:31:47.411Z">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunkformat2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/handshake2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/connect2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/publish2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/play2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/videotag2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/relation2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/nalu2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/ngnix2.png">
+<meta property="og:updated_time" content="2021-10-04T03:47:50.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直播技术研究">
 <meta name="twitter:description" content="直播技术积累。">
@@ -429,7 +428,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-04 11:31:47" itemprop="dateModified" datetime="2021-10-04T11:31:47+08:00">2021-10-04</time>
+                <time title="修改时间：2021-10-04 11:47:50" itemprop="dateModified" datetime="2021-10-04T11:47:50+08:00">2021-10-04</time>
               
             
           </span>
@@ -495,7 +494,7 @@
 <h1 id="1-读《在线音视频技术精要》"><a href="#1-读《在线音视频技术精要》" class="headerlink" title="1. 读《在线音视频技术精要》"></a>1. 读《在线音视频技术精要》</h1><iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:800px; height:1000px;" src="https://www.processon.com/embed/6159bb9b0791295710b4b041"></iframe>
 
 <h1 id="2-技术细节"><a href="#2-技术细节" class="headerlink" title="2. 技术细节"></a>2. 技术细节</h1><h2 id="2-1-Rtmp协议"><a href="#2-1-Rtmp协议" class="headerlink" title="2.1 Rtmp协议"></a>2.1 Rtmp协议</h2><p>  RTMP是Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于TCP，是一个协议族，包括RTMP基本协议及RTMPT/RTMPS/RTMPE等多种变种。RTMP是一种设计用来进行实时数据通信的网络协议，主要用来在Flash/AIR平台和支持RTMP协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括Adobe Media Server/Ultrant Media Server/red5等。RTMP与HTTP一样，都属于TCP/IP四层模型的应用层。</p>
-<p><img src="/2020/09/12/直播技术研究/rtmpoverview.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/rtmpoverview.png" style="zoom:50%;"></p>
 <h3 id="2-1-1-RTMP协议分析"><a href="#2-1-1-RTMP协议分析" class="headerlink" title="2.1.1 RTMP协议分析"></a>2.1.1 RTMP协议分析</h3><h4 id="2-1-1-1-一些定义"><a href="#2-1-1-1-一些定义" class="headerlink" title="2.1.1.1 一些定义"></a>2.1.1.1 一些定义</h4><div class="table-container">
 <table>
 <thead>
@@ -568,29 +567,29 @@
 </table>
 </div>
 <h4 id="2-1-1-2-RTMP-Format"><a href="#2-1-1-2-RTMP-Format" class="headerlink" title="2.1.1.2 RTMP Format"></a>2.1.1.2 RTMP Format</h4><h5 id="2-1-1-2-1-Message-和-Chunk关系"><a href="#2-1-1-2-1-Message-和-Chunk关系" class="headerlink" title="2.1.1.2.1 Message 和 Chunk关系"></a>2.1.1.2.1 Message 和 Chunk关系</h5><p>RTMP以Message为基本单位，通过把Message拆分成Chunk来进行网络发送。每个Chunk中都带有MessageID代表属于哪个Message，接受端按照这个id来将Chunk组装成Message。</p>
-<p><img src="/2020/09/12/直播技术研究/rtmpchunk.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/rtmpchunk.png" style="zoom:50%;"></p>
 <ul>
 <li><p><strong>Message 消息类型</strong></p>
 <p>Chunk承载的Message不同，其Message Header也不同，不同的fmt取值可以用来区分Chunk的类型。</p>
 </li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/msgtype.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/msgtype2.png" alt=""></p>
 <ul>
 <li>协议控制协议</li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/command.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/command.png" style="zoom:50%;"></p>
 <ul>
 <li>用户控制协议</li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/user.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/user.png" style="zoom:50%;"></p>
 <ul>
 <li>Command message</li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/command2.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/command2.png" style="zoom:50%;"></p>
 <ul>
 <li><em>Chunk</em></li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/chunk.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/chunk.png" style="zoom:50%;"></p>
 <h5 id="2-1-1-2-2-Message-format中构建Chunks的必要字段"><a href="#2-1-1-2-2-Message-format中构建Chunks的必要字段" class="headerlink" title="2.1.1.2.2 Message format中构建Chunks的必要字段"></a>2.1.1.2.2 Message format中构建Chunks的必要字段</h5><ul>
 <li>Timestamp</li>
 <li>Length</li>
@@ -604,8 +603,7 @@
 <li>1个字节的包头只记录了Head_Type 。</li>
 <li>包体最大长度默认为128字节,通过chunkSize可改变包体最大长度,通常当一段AFM数据超过128字节后,超过128的部分就放到了其他的RTMP封包中,包头为一个字节.</li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/chunkformat.png" alt=""></p>
-<p><img src="/2020/09/12/直播技术研究/" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/chunkformat2.png" style="zoom:50%;"></p>
 <p>完整的RTMP包头有12字节，由下面5个部分组成:</p>
 <div class="table-container">
 <table>
@@ -823,25 +821,25 @@
 </ul>
 <h4 id="2-1-1-4-AMF数据"><a href="#2-1-1-4-AMF数据" class="headerlink" title="2.1.1.4 AMF数据"></a>2.1.1.4 AMF数据</h4><p>Rtmp包默认的最大长度为128字节,(或通过chunksize改变rtmp包最大长度), 当AMF数据超过128Byte的时候就可能有多个rtmp包组成, 如果需要解码的rtmp包太长则被TCP协议分割成多个TCP包.那么解码的时候需要先将包含rtmp包的tcp封包合并, 再把合并的数据解码, 解码后可得到AMF格式的数据, 将这些AMF数据取出来就可以对AMF数据解码了.</p>
 <p>​    RTMP封包包括包头和AMF数据2部分，AMF数据里面可以是命令也可以是音视频数据。组成服务器和Flash客户端之间的所有数据都是用AMF格式的数据在传送,例如connect() publish()等命令. <strong>AMF数据由2部分组成： ObjType 加上ObjValue</strong>。ObjType的大小为一个字节。ObjValue的大小不固定，和ObjType相关。</p>
-<h3 id="2-1-2-使用过程"><a href="#2-1-2-使用过程" class="headerlink" title="2.1.2 使用过程"></a>2.1.2 使用过程</h3><h4 id="2-1-2-1-握手过程"><a href="#2-1-2-1-握手过程" class="headerlink" title="2.1.2.1 握手过程"></a>2.1.2.1 握手过程</h4><p><img src="/2020/09/12/直播技术研究/handshake.png" alt=""></p>
-<h4 id="2-1-2-2-Connect"><a href="#2-1-2-2-Connect" class="headerlink" title="2.1.2.2 Connect"></a>2.1.2.2 Connect</h4><p><img src="/2020/09/12/直播技术研究/connect.png" alt=""></p>
-<h4 id="2-1-2-3-Publish"><a href="#2-1-2-3-Publish" class="headerlink" title="2.1.2.3 Publish"></a>2.1.2.3 Publish</h4><p><img src="/2020/09/12/直播技术研究/publish.png" alt=""></p>
-<h4 id="2-1-2-4-Play"><a href="#2-1-2-4-Play" class="headerlink" title="2.1.2.4 Play"></a>2.1.2.4 Play</h4><p><img src="/2020/09/12/直播技术研究/play.png" alt=""></p>
+<h3 id="2-1-2-使用过程"><a href="#2-1-2-使用过程" class="headerlink" title="2.1.2 使用过程"></a>2.1.2 使用过程</h3><h4 id="2-1-2-1-握手过程"><a href="#2-1-2-1-握手过程" class="headerlink" title="2.1.2.1 握手过程"></a>2.1.2.1 握手过程</h4><p><img src="/2020/09/12/直播技术研究/handshake2.png" alt=""></p>
+<h4 id="2-1-2-2-Connect"><a href="#2-1-2-2-Connect" class="headerlink" title="2.1.2.2 Connect"></a>2.1.2.2 Connect</h4><p><img src="/2020/09/12/直播技术研究/connect2.png" alt=""></p>
+<h4 id="2-1-2-3-Publish"><a href="#2-1-2-3-Publish" class="headerlink" title="2.1.2.3 Publish"></a>2.1.2.3 Publish</h4><p><img src="/2020/09/12/直播技术研究/publish2.png" alt=""></p>
+<h4 id="2-1-2-4-Play"><a href="#2-1-2-4-Play" class="headerlink" title="2.1.2.4 Play"></a>2.1.2.4 Play</h4><p><img src="/2020/09/12/直播技术研究/play2.png" alt=""></p>
 <p> To start a video stream, the client sends a “createStream” invocation followed by a ping message, followed by a “play” invocation with the file name as argument. The server will then reply with a series of “onStatus” commands followed by the video data as encapsulated within RTMP messages. After a connection is established, media is sent by encapsulating the content of FLV tags into RTMP messages of type 8 and 9 for audio and video respectively.</p>
 <h3 id="2-1-3-疑问解答"><a href="#2-1-3-疑问解答" class="headerlink" title="2.1.3 疑问解答"></a>2.1.3 疑问解答</h3><h4 id="2-1-3-1-Chunk-size和GOP大小关系？"><a href="#2-1-3-1-Chunk-size和GOP大小关系？" class="headerlink" title="2.1.3.1 Chunk size和GOP大小关系？"></a>2.1.3.1 Chunk size和GOP大小关系？</h4><ul>
 <li>从<strong>flv</strong>封装说起</li>
 </ul>
 <p>FLV文件中的每种标签类型（tag type）都构成一个流。 在FLV文件中，同步在一起的音频和视频流不得超过一个。 FLV文件不能定义单个类型的多个独立流。一个FLV文件需要什么？</p>
 <p>FLV Header + FLv script tag + FLV Video tag + FLV Audio tag</p>
-<p><img src="/2020/09/12/直播技术研究/video_tag.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/videotag2.png" style="zoom:50%;"></p>
 <p><strong>FLV Video Tag，</strong>这部分封装着图像数据，也就是H.264的数据封装在这里。H.264是由一个一个NALU组成，NALU的类型有（SPS、PPS、I帧的SLICE、非I帧的SLICE），封装H.264就是将这些NALU一个一个取出来，然后封装成Tag。需要注意的是，SPS与PPS必须封装在一个Tag中。</p>
 <ul>
 <li>H.264码流结构</li>
 </ul>
 <p>H.264 的功能分为两层，即视频编码层（VCL）和网络提取层（NAL，Network Abstraction Layer）。VCL 数据即编码处理的输出，它表示被压缩编码后的视频数据序列。在 VCL 数据传输或存储之前，这些编码的 VCL 数据，先被映射或封装进 NAL 单元中。简单的说，VCL负责数据的编码压缩，NAL负责数据的封装传输。从大到小依次为：序列、帧(I、P、B帧)、片组、片(I、P、B、SP、SI片)、NALU、宏块、亚宏块、块、像素。</p>
-<p><img src="/2020/09/12/直播技术研究/relation.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/relation2.png" style="zoom:33%;"></p>
 <p>拿到RBSP或SODB之后，就可以根据NALU Header中得到的NALU Type，去解析它们，重建图像。一张图片可以包含一个或多个分片(SLICE)，而每一个分片(SLICE)又会被分为了若干宏块(Macroblock)。</p>
-<p><img src="/2020/09/12/直播技术研究/nalu.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/nalu2.png" style="zoom:33%;"></p>
 <ul>
 <li>关系</li>
 </ul>
@@ -852,7 +850,7 @@
 <h4 id="2-1-4-2-ffmpeg推流："><a href="#2-1-4-2-ffmpeg推流：" class="headerlink" title="2.1.4.2 ffmpeg推流："></a>2.1.4.2 ffmpeg推流：</h4><p><a href="https://blog.csdn.net/bvngh3247/article/details/80405423" target="_blank" rel="noopener">https://blog.csdn.net/bvngh3247/article/details/80405423</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i /home/hjh/nginx/video.mp4 -vcodec copy -acodec copy -b:v 800k -b:a 32k -f flv rtmp://localhost:1935/videotest/test</span><br></pre></td></tr></table></figure>
 <p><a href="https://www.jianshu.com/p/c141fc7881e7" target="_blank" rel="noopener">https://www.jianshu.com/p/c141fc7881e7</a></p>
-<h4 id="2-1-4-3-nginx实现RTMP推流"><a href="#2-1-4-3-nginx实现RTMP推流" class="headerlink" title="2.1.4.3 nginx实现RTMP推流"></a>2.1.4.3 nginx实现RTMP推流</h4><p><img src="/2020/09/12/直播技术研究/ngnix.png" alt=""></p>
+<h4 id="2-1-4-3-nginx实现RTMP推流"><a href="#2-1-4-3-nginx实现RTMP推流" class="headerlink" title="2.1.4.3 nginx实现RTMP推流"></a>2.1.4.3 nginx实现RTMP推流</h4><p><img src="/2020/09/12/直播技术研究/ngnix2.png" style="zoom:50%;"></p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><p>rtmp协议官方文档 </p>
 </li>
