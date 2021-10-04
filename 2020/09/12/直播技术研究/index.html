@@ -133,7 +133,23 @@
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/relation2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/nalu2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/ngnix2.png">
-<meta property="og:updated_time" content="2021-10-04T03:47:50.412Z">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/dct.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/8x8.jpg">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/dct1.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/av.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/zigzag.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix1.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix3.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix4.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix5.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix6.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix7.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix8.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/matrix9.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/zipx10.jpg">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/zipx50.jpg">
+<meta property="og:updated_time" content="2021-10-04T07:30:49.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直播技术研究">
 <meta name="twitter:description" content="直播技术积累。">
@@ -428,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-04 11:47:50" itemprop="dateModified" datetime="2021-10-04T11:47:50+08:00">2021-10-04</time>
+                <time title="修改时间：2021-10-04 15:30:49" itemprop="dateModified" datetime="2021-10-04T15:30:49+08:00">2021-10-04</time>
               
             
           </span>
@@ -491,7 +507,7 @@
       
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>直播技术积累。</p>
 <a id="more"></a>
-<h1 id="1-读《在线音视频技术精要》"><a href="#1-读《在线音视频技术精要》" class="headerlink" title="1. 读《在线音视频技术精要》"></a>1. 读《在线音视频技术精要》</h1><iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:800px; height:1000px;" src="https://www.processon.com/embed/6159bb9b0791295710b4b041"></iframe>
+<h1 id="1-读《在线音视频技术精要》"><a href="#1-读《在线音视频技术精要》" class="headerlink" title="1. 读《在线音视频技术精要》"></a>1. 读《在线音视频技术精要》</h1><iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:600px; height:1000px;" src="https://www.processon.com/embed/6159bb9b0791295710b4b041"></iframe>
 
 <h1 id="2-技术细节"><a href="#2-技术细节" class="headerlink" title="2. 技术细节"></a>2. 技术细节</h1><h2 id="2-1-Rtmp协议"><a href="#2-1-Rtmp协议" class="headerlink" title="2.1 Rtmp协议"></a>2.1 Rtmp协议</h2><p>  RTMP是Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于TCP，是一个协议族，包括RTMP基本协议及RTMPT/RTMPS/RTMPE等多种变种。RTMP是一种设计用来进行实时数据通信的网络协议，主要用来在Flash/AIR平台和支持RTMP协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括Adobe Media Server/Ultrant Media Server/red5等。RTMP与HTTP一样，都属于TCP/IP四层模型的应用层。</p>
 <p><img src="/2020/09/12/直播技术研究/rtmpoverview.png" style="zoom:50%;"></p>
@@ -871,6 +887,90 @@
 <li><p>新一代视频压缩编码标准H.264.pdf</p>
 </li>
 </ul>
+<h2 id="2-2-DCT-离散余弦变换-原理与应用讲解"><a href="#2-2-DCT-离散余弦变换-原理与应用讲解" class="headerlink" title="2.2 DCT 离散余弦变换 原理与应用讲解"></a>2.2 DCT 离散余弦变换 原理与应用讲解</h2><p>JPEG是joint Photographic Experts Group(联合图像专家组)的缩写，文件后辍名为”．jpg”或”．jpeg”它是一种有损压缩。支持多种压缩级别，压缩比率通常在10：1到40：1之间，压缩比越大，品质就越低；相反地，压缩比越小，品质就越好。那么，JPEG是如何压缩的呢？靠的就是传说中的DCT(离散余弦变换)。</p>
+<p>下图是JPEG压缩/解压缩的流程图。</p>
+<p><img src="/2020/09/12/直播技术研究/dct.png" style="zoom:50%;"></p>
+<h3 id="2-2-1-JPEG压缩流程"><a href="#2-2-1-JPEG压缩流程" class="headerlink" title="2.2.1 JPEG压缩流程"></a>2.2.1 JPEG压缩流程</h3><h4 id="2-2-1-1-以8x8的图象块为基本单位进行编码"><a href="#2-2-1-1-以8x8的图象块为基本单位进行编码" class="headerlink" title="2.2.1.1 以8x8的图象块为基本单位进行编码"></a><strong>2.2.1.1 以8x8的图象块为基本单位进行编码</strong></h4><p>每个图像块共64个像素。像素可以用RGB或YUV表示，需要3个byte。所以严格来说，上图3个箭头代表的数据，指的是RGB/YUV的某一个值，比如Y。</p>
+<p><img src="/2020/09/12/直播技术研究/8x8.jpg" style="zoom:50%;"></p>
+<h4 id="2-2-1-2-将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样"><a href="#2-2-1-2-将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样" class="headerlink" title="2.2.1.2  将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样"></a>2.2.1.2  <strong>将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样</strong></h4><p>YUV是什么？它也是一种很不错的图像数据表示方法，特别是在视频领域。</p>
+<ul>
+<li><p>Y：指颜色的明视度、亮度、灰度值；</p>
+</li>
+<li><p>U：指色调；</p>
+</li>
+<li><p>V：指饱和度。</p>
+</li>
+</ul>
+<p>YUV是一个统称，其实有很多具体格式，比如YUV420, YUV444, YUV422。YUV的某些格式，和RGB比起来，其数据量要少很多。比如YUV420，每个像素需要一个Y，每4个像素需要一个U/V，因此一个8*8图像块，数据量只要8x8x3/2 = 96byte。而RGB需要8x8x3 = 192byte。少了一半的数据量。现在很多视频都是YUV420作为色域。</p>
+<p>YUV与RGB可以互相转换。</p>
+<p>Y=0.299R+0.587G+0.114B</p>
+<p>U=0.148R-0.289G+0.473B</p>
+<p>V=0.615R-0.515G-0.1B</p>
+<h4 id="2-2-1-3-FDCT与IDCT"><a href="#2-2-1-3-FDCT与IDCT" class="headerlink" title="2.2.1.3 FDCT与IDCT"></a>2.2.1.3 FDCT与IDCT</h4><p>一个是正变换，一个是逆变换。反正都可以称为离散余弦变换。根据8*8的二维DCT定义：</p>
+<p><img src="/2020/09/12/直播技术研究/dct1.png"></p>
+<p>其中：0&lt;= u, v &lt; 8，</p>
+<p><img src="/2020/09/12/直播技术研究/av.png"></p>
+<script type="math/tex; mode=display">
+g_{x,y} 是输入的8x8像素的坐标， G_{u,v}是输出的8x8变换结果的坐标。</script><p>输入就是8x8的数据矩阵，经过计算，输出还是一个8x8的数据矩阵。其实上式可以简化为：</p>
+<script type="math/tex; mode=display">
+F(u,v) = Af(x,y)A^{T}, A和A的转置矩阵都是已知的。</script><p>称G（0,0），也就是输出8x8矩阵的（0,0）坐标的值，为直流系数，其他为交流系数。之所以称它为直流系数，是因为当u, v = 0时，cos()结果都为0，所以最后结果就是输入矩阵的8x8的每个数值的和，再乘于a(u) x a(v) x 1/4 = 1/8。当然，输入数据其实是有3个的，也就是YUV，因此对每个8x8的原始图像数据，需要做3次DCT。</p>
+<h4 id="2-2-1-4-量化和反量化"><a href="#2-2-1-4-量化和反量化" class="headerlink" title="2.2.1.4 量化和反量化"></a>2.2.1.4 量化和反量化</h4><p><strong>定义：</strong>将DCT变换后的临时结果，除以各自量化步长并四舍五入后取整，得到量化系数。</p>
+<p><strong>为什么可以量化？！</strong></p>
+<p>因为经过DCT后，数据就不同了，左上方都是大数值，右下方都是小数值。比如左上方都是几十几百的，右下方附近，都是个位数，那么，大数值和小数值就可以分别量化。在术语里，左上方称为<strong>低频数据</strong>，右下方称为<strong>高频数据</strong>。</p>
+<p>比如cos(ax)，a是常数，x是变量。那么，根据频率f = a/2π，a越大，函数的频率越高。看上方DCT公式：u,v 越大，则越在右下方对吧。当计算某个G(u, v)时，x, y是变量，u, v相当于常数，当u/v越大，则频率越高！这就是为什么右下方称为高频数据了！</p>
+<p>JPEG系统分别规定了亮度分量和色度分量的量化表，色度分量相应的量化步长比亮度分量大。</p>
+<p><strong>对量化系数的处理和组织</strong></p>
+<p>思想：JPEG采用定长和变长相结合的编码方法。</p>
+<p><strong>直流系数：</strong>通常相邻8*8图象块的DC分量很接近，因此JPEG对量化后的直流分量采用无失真DPCM编码。通常JPEG要保存所需比特数和实际差值。</p>
+<p><strong>交流系数：</strong>经过量化后，AC分量出现较多的0。JPEG采用对0系数的行程长度编码。而对非0值，则要保存所需数和实际值。</p>
+<p>ZIG-ZAG排序：为使连续的0个数增多，采用Z形编码。</p>
+<p><img src="/2020/09/12/直播技术研究/zigzag.png" style="zoom:50%;"></p>
+<h3 id="2-2-2-应用举例"><a href="#2-2-2-应用举例" class="headerlink" title="2.2.2 应用举例"></a>2.2.2 应用举例</h3><h4 id="2-2-2-1-编码"><a href="#2-2-2-1-编码" class="headerlink" title="2.2.2.1 编码"></a>2.2.2.1 编码</h4><p>某个图象的一个8*8方块的亮度值。</p>
+<p><img src="/2020/09/12/直播技术研究/matrix1.png" style="zoom:50%;"></p>
+<p>由于一个字节是0~255，为了减小绝对值波动，先把数值移位一下，变成-128~127。</p>
+<p><img src="/2020/09/12/直播技术研究/matrix2.png" style="zoom:50%;"></p>
+<p>接着，根据DCT变换公式，各种计算，获得临时结果。</p>
+<p><img src="/2020/09/12/直播技术研究/matrix3.png" style="zoom:50%;"></p>
+<p>根据亮度量化表量化后得到的量化系数矩阵：</p>
+<p><img src="/2020/09/12/直播技术研究/matrix4.png" style="zoom:50%;"></p>
+<p>获得量化结果：</p>
+<p><img src="/2020/09/12/直播技术研究/matrix5.png" style="zoom:50%;"></p>
+<p>可见，新的数据，很小，很多是0。正如上文所说，这么多0，完全可以用游程编码，大大缩小数据量。</p>
+<h4 id="2-2-2-2-解码"><a href="#2-2-2-2-解码" class="headerlink" title="2.2.2.2 解码"></a>2.2.2.2 解码</h4><p>先游程编码恢复为：</p>
+<p><img src="/2020/09/12/直播技术研究/matrix6.png" style="zoom:50%;"></p>
+<p>然后，根据量化表，恢复：</p>
+<p><img src="/2020/09/12/直播技术研究/matrix7.png" style="zoom:50%;"></p>
+<p>再根据反离散余弦变换的公式：</p>
+<script type="math/tex; mode=display">
+f_{x,y} = \frac{1}{4}\sum_{u=0}^{7}\sum_{v=0}^{7}\alpha(u)\alpha(v)F_{u,v}cos[\frac{(2x+1)u\pi}{16}]cos[\frac{(2y+1)v\pi}{16}]</script><p>结果为：</p>
+<p><img src="/2020/09/12/直播技术研究/matrix8.png" style="zoom:50%;"></p>
+<p>再右移127，恢复原始。</p>
+<p><img src="/2020/09/12/直播技术研究/matrix9.png" style="zoom:50%;"></p>
+<h4 id="2-2-2-3-其他"><a href="#2-2-2-3-其他" class="headerlink" title="2.2.2.3 其他"></a>2.2.2.3 其他</h4><p>JPEG压缩是有损失的，从上面的例子就看出来，输出结果并不是完全等于输入。此外，JPEG压缩比例是可以控制的，只不过图像质量会变差。比如：</p>
+<ul>
+<li>压缩率：10</li>
+</ul>
+<p><img src="/2020/09/12/直播技术研究/zipx10.jpg" style="zoom:50%;"></p>
+<ul>
+<li>压缩率：50</li>
+</ul>
+<p><img src="/2020/09/12/直播技术研究/zipx50.jpg" style="zoom:50%;"></p>
+<h1 id="3-寻师经典"><a href="#3-寻师经典" class="headerlink" title="3. 寻师经典"></a>3. 寻师经典</h1><ul>
+<li><p>直播：<a href="https://www.jianshu.com/p/40d4d4f172e6" target="_blank" rel="noopener">雷霄骅</a>  🕯🕯🕯</p>
+<h3 id="来自-https-www-jianshu-com-p-40d4d4f172e6"><a href="#来自-https-www-jianshu-com-p-40d4d4f172e6" class="headerlink" title="来自 https://www.jianshu.com/p/40d4d4f172e6"></a>来自 <a href="https://www.jianshu.com/p/40d4d4f172e6" target="_blank" rel="noopener">https://www.jianshu.com/p/40d4d4f172e6</a></h3></li>
+<li><p><a href="https://webrtc.org.cn/" target="_blank" rel="noopener">Webrtc官网</a><a href="https://webrtc.org.cn/" target="_blank" rel="noopener">https://webrtc.org.cn/</a></p>
+</li>
+<li><p><a href="https://webrtc.github.io/samples/" target="_blank" rel="noopener">webrtc例子</a> <a href="https://webrtc.github.io/samples/" target="_blank" rel="noopener">https://webrtc.github.io/samples/</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/leixiaohua1020/article/details/18893769" target="_blank" rel="noopener">音视频编解码技术</a> <a href="https://blog.csdn.net/leixiaohua1020/article/details/18893769" target="_blank" rel="noopener">https://blog.csdn.net/leixiaohua1020/article/details/18893769</a></p>
+</li>
+<li>直播行业报告<a href="https://www.iimedia.cn/c400/73426.html" target="_blank" rel="noopener">https://www.iimedia.cn/c400/73426.html</a></li>
+<li>七牛云：徐立</li>
+<li>章亦春</li>
+<li>音视频：宋利-研究员</li>
+</ul>
+<p>宋利，教授，博士生导师，上海交通大学图像通信与网络工程研究所副所长，人工智能研究院、未来媒体网络协同创新中心双聘教授，中国视频用户体验联盟副秘书长及标准组组长。研究方向是媒体智能信号处理、媒体通信与计算系统，主持国家级科研项目10余项，发表学术论文200余篇，授权发明专利40项，软件著作权5项。获国家科技进步二等奖(2015)、上海市科技进步一等奖(2011)、上海市技术发明一等奖(2011)、日本大川基金研究奖(2013)、国际会议优秀论文奖(VCIP2016, WCSP2010)、国际竞赛奖(ICME 2017, 2020)、TVP腾讯云最具价值专家(2019, 2020)。担任IEEE Trans on Broadcasting特邀编委, Springer Multidimensional Systems and Signal Processing编委、是IEEE 高级会员、LiveVideoStackCon(2019,2020)上海峰会主席、中国智慧家庭产业联盟、中国超高清产业联盟、上海市超高清产业联盟、上海市物联网协会、上海市信息家电协会的技术咨询专家，领域知名公众号“媒矿工厂”创建者。更多信息参见其实验室主页：</p>
+<p><a href="http://medialab.sjtu.edu.cn/" target="_blank" rel="noopener">http://medialab.sjtu.edu.cn/</a></p>
 
       
     </div>
@@ -1532,7 +1632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-读《在线音视频技术精要》"><span class="nav-number">1.</span> <span class="nav-text">1. 读《在线音视频技术精要》</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-技术细节"><span class="nav-number">2.</span> <span class="nav-text">2. 技术细节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Rtmp协议"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Rtmp协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-RTMP协议分析"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 RTMP协议分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-1-一些定义"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">2.1.1.1 一些定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-2-RTMP-Format"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">2.1.1.2 RTMP Format</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-2-1-Message-和-Chunk关系"><span class="nav-number">2.1.1.2.1.</span> <span class="nav-text">2.1.1.2.1 Message 和 Chunk关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-2-2-Message-format中构建Chunks的必要字段"><span class="nav-number">2.1.1.2.2.</span> <span class="nav-text">2.1.1.2.2 Message format中构建Chunks的必要字段</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-3-RTMP包头"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">2.1.1.3 RTMP包头</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-1-Head-Type-包头类型"><span class="nav-number">2.1.1.3.1.</span> <span class="nav-text">2.1.1.3.1 Head_Type - 包头类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-2-TiMMER-时间戳"><span class="nav-number">2.1.1.3.2.</span> <span class="nav-text">2.1.1.3.2 TiMMER - 时间戳</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-3-AMFSize-数据大小"><span class="nav-number">2.1.1.3.3.</span> <span class="nav-text">2.1.1.3.3 AMFSize - 数据大小</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-4-AMFType-数据类型"><span class="nav-number">2.1.1.3.4.</span> <span class="nav-text">2.1.1.3.4 AMFType - 数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-5-StreamID-流ID"><span class="nav-number">2.1.1.3.5.</span> <span class="nav-text">2.1.1.3.5 StreamID - 流ID</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-6-封包分析"><span class="nav-number">2.1.1.3.6.</span> <span class="nav-text">2.1.1.3.6 封包分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-4-AMF数据"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">2.1.1.4 AMF数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-使用过程"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 使用过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-1-握手过程"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">2.1.2.1 握手过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-2-Connect"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">2.1.2.2 Connect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-3-Publish"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">2.1.2.3 Publish</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-4-Play"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">2.1.2.4 Play</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-疑问解答"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 疑问解答</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-1-Chunk-size和GOP大小关系？"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">2.1.3.1 Chunk size和GOP大小关系？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-2-播放器如何播放RTMP流？"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">2.1.3.2 播放器如何播放RTMP流？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-3-RTMP协议延时从何而来？"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">2.1.3.3 RTMP协议延时从何而来？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-Demo"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-1-ffmpeg安装："><span class="nav-number">2.1.4.1.</span> <span class="nav-text">2.1.4.1 ffmpeg安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-2-ffmpeg推流："><span class="nav-number">2.1.4.2.</span> <span class="nav-text">2.1.4.2 ffmpeg推流：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-3-nginx实现RTMP推流"><span class="nav-number">2.1.4.3.</span> <span class="nav-text">2.1.4.3 nginx实现RTMP推流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">2.1.5.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-读《在线音视频技术精要》"><span class="nav-number">1.</span> <span class="nav-text">1. 读《在线音视频技术精要》</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-技术细节"><span class="nav-number">2.</span> <span class="nav-text">2. 技术细节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Rtmp协议"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Rtmp协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-RTMP协议分析"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 RTMP协议分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-1-一些定义"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">2.1.1.1 一些定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-2-RTMP-Format"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">2.1.1.2 RTMP Format</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-2-1-Message-和-Chunk关系"><span class="nav-number">2.1.1.2.1.</span> <span class="nav-text">2.1.1.2.1 Message 和 Chunk关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-2-2-Message-format中构建Chunks的必要字段"><span class="nav-number">2.1.1.2.2.</span> <span class="nav-text">2.1.1.2.2 Message format中构建Chunks的必要字段</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-3-RTMP包头"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">2.1.1.3 RTMP包头</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-1-Head-Type-包头类型"><span class="nav-number">2.1.1.3.1.</span> <span class="nav-text">2.1.1.3.1 Head_Type - 包头类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-2-TiMMER-时间戳"><span class="nav-number">2.1.1.3.2.</span> <span class="nav-text">2.1.1.3.2 TiMMER - 时间戳</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-3-AMFSize-数据大小"><span class="nav-number">2.1.1.3.3.</span> <span class="nav-text">2.1.1.3.3 AMFSize - 数据大小</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-4-AMFType-数据类型"><span class="nav-number">2.1.1.3.4.</span> <span class="nav-text">2.1.1.3.4 AMFType - 数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-5-StreamID-流ID"><span class="nav-number">2.1.1.3.5.</span> <span class="nav-text">2.1.1.3.5 StreamID - 流ID</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-1-3-6-封包分析"><span class="nav-number">2.1.1.3.6.</span> <span class="nav-text">2.1.1.3.6 封包分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-4-AMF数据"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">2.1.1.4 AMF数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-使用过程"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 使用过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-1-握手过程"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">2.1.2.1 握手过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-2-Connect"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">2.1.2.2 Connect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-3-Publish"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">2.1.2.3 Publish</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-4-Play"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">2.1.2.4 Play</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-疑问解答"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 疑问解答</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-1-Chunk-size和GOP大小关系？"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">2.1.3.1 Chunk size和GOP大小关系？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-2-播放器如何播放RTMP流？"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">2.1.3.2 播放器如何播放RTMP流？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-3-RTMP协议延时从何而来？"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">2.1.3.3 RTMP协议延时从何而来？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-Demo"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-1-ffmpeg安装："><span class="nav-number">2.1.4.1.</span> <span class="nav-text">2.1.4.1 ffmpeg安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-2-ffmpeg推流："><span class="nav-number">2.1.4.2.</span> <span class="nav-text">2.1.4.2 ffmpeg推流：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-3-nginx实现RTMP推流"><span class="nav-number">2.1.4.3.</span> <span class="nav-text">2.1.4.3 nginx实现RTMP推流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">2.1.5.</span> <span class="nav-text">参考资料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-DCT-离散余弦变换-原理与应用讲解"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 DCT 离散余弦变换 原理与应用讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-JPEG压缩流程"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 JPEG压缩流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-1-以8x8的图象块为基本单位进行编码"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">2.2.1.1 以8x8的图象块为基本单位进行编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-2-将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">2.2.1.2  将RGB转换为亮度-色调-饱和度系统（YUV），并重新采样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-3-FDCT与IDCT"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">2.2.1.3 FDCT与IDCT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-4-量化和反量化"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">2.2.1.4 量化和反量化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-应用举例"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 应用举例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-1-编码"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">2.2.2.1 编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-2-解码"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">2.2.2.2 解码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-3-其他"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">2.2.2.3 其他</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-寻师经典"><span class="nav-number">3.</span> <span class="nav-text">3. 寻师经典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#来自-https-www-jianshu-com-p-40d4d4f172e6"><span class="nav-number">3.0.1.</span> <span class="nav-text">来自 https://www.jianshu.com/p/40d4d4f172e6</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
