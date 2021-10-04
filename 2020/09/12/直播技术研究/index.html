@@ -117,14 +117,15 @@
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
 <meta property="og:description" content="直播技术积累。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmp-overview.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmp-chunk.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/msg-type.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmpoverview.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmpchunk.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/msgtype.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/command.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/user.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/command_2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/command2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunk.png">
-<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunk_format.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/chunkformat.png">
+<meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/handshake.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/connect.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/publish.png">
@@ -133,11 +134,11 @@
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/relation.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/nalu.png">
 <meta property="og:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/ngnix.png">
-<meta property="og:updated_time" content="2021-10-04T03:04:49.790Z">
+<meta property="og:updated_time" content="2021-10-04T03:31:47.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直播技术研究">
 <meta name="twitter:description" content="直播技术积累。">
-<meta name="twitter:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmp-overview.png">
+<meta name="twitter:image" content="https://damaoguo.github.io/2020/09/12/直播技术研究/rtmpoverview.png">
 
 
 
@@ -428,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-04 11:04:49" itemprop="dateModified" datetime="2021-10-04T11:04:49+08:00">2021-10-04</time>
+                <time title="修改时间：2021-10-04 11:31:47" itemprop="dateModified" datetime="2021-10-04T11:31:47+08:00">2021-10-04</time>
               
             
           </span>
@@ -494,7 +495,7 @@
 <h1 id="1-读《在线音视频技术精要》"><a href="#1-读《在线音视频技术精要》" class="headerlink" title="1. 读《在线音视频技术精要》"></a>1. 读《在线音视频技术精要》</h1><iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:800px; height:1000px;" src="https://www.processon.com/embed/6159bb9b0791295710b4b041"></iframe>
 
 <h1 id="2-技术细节"><a href="#2-技术细节" class="headerlink" title="2. 技术细节"></a>2. 技术细节</h1><h2 id="2-1-Rtmp协议"><a href="#2-1-Rtmp协议" class="headerlink" title="2.1 Rtmp协议"></a>2.1 Rtmp协议</h2><p>  RTMP是Real Time Messaging Protocol（实时消息传输协议）的首字母缩写。该协议基于TCP，是一个协议族，包括RTMP基本协议及RTMPT/RTMPS/RTMPE等多种变种。RTMP是一种设计用来进行实时数据通信的网络协议，主要用来在Flash/AIR平台和支持RTMP协议的流媒体/交互服务器之间进行音视频和数据通信。支持该协议的软件包括Adobe Media Server/Ultrant Media Server/red5等。RTMP与HTTP一样，都属于TCP/IP四层模型的应用层。</p>
-<p><img src="/2020/09/12/直播技术研究/rtmp-overview.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/rtmpoverview.png" alt=""></p>
 <h3 id="2-1-1-RTMP协议分析"><a href="#2-1-1-RTMP协议分析" class="headerlink" title="2.1.1 RTMP协议分析"></a>2.1.1 RTMP协议分析</h3><h4 id="2-1-1-1-一些定义"><a href="#2-1-1-1-一些定义" class="headerlink" title="2.1.1.1 一些定义"></a>2.1.1.1 一些定义</h4><div class="table-container">
 <table>
 <thead>
@@ -567,13 +568,13 @@
 </table>
 </div>
 <h4 id="2-1-1-2-RTMP-Format"><a href="#2-1-1-2-RTMP-Format" class="headerlink" title="2.1.1.2 RTMP Format"></a>2.1.1.2 RTMP Format</h4><h5 id="2-1-1-2-1-Message-和-Chunk关系"><a href="#2-1-1-2-1-Message-和-Chunk关系" class="headerlink" title="2.1.1.2.1 Message 和 Chunk关系"></a>2.1.1.2.1 Message 和 Chunk关系</h5><p>RTMP以Message为基本单位，通过把Message拆分成Chunk来进行网络发送。每个Chunk中都带有MessageID代表属于哪个Message，接受端按照这个id来将Chunk组装成Message。</p>
-<p><img src="/2020/09/12/直播技术研究/rtmp-chunk.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/rtmpchunk.png" alt=""></p>
 <ul>
 <li><p><strong>Message 消息类型</strong></p>
 <p>Chunk承载的Message不同，其Message Header也不同，不同的fmt取值可以用来区分Chunk的类型。</p>
 </li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/msg-type.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/msgtype.png" alt=""></p>
 <ul>
 <li>协议控制协议</li>
 </ul>
@@ -585,7 +586,7 @@
 <ul>
 <li>Command message</li>
 </ul>
-<p><img src="/2020/09/12/直播技术研究/command_2.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/command2.png" alt=""></p>
 <ul>
 <li><em>Chunk</em></li>
 </ul>
@@ -596,14 +597,15 @@
 <li>Type id</li>
 <li>Message stream ID</li>
 </ul>
-<h4 id="2-1-1-3-RTMP包头"><a href="#2-1-1-3-RTMP包头" class="headerlink" title="2.1.1.3 RTMP包头"></a>2.1.1.3 RTMP包头</h4><p><img src="/2020/09/12/直播技术研究/chunk_format.png" alt=""></p>
-<p>RTMP协议封包由一个包头和一个包体组成。包头可以是4种长度的任意一种:12, 8, 4, 1 byte(s).完整的RTMP包头应该是12bytes,包含了时间戳,Head_Type,AMFSize,AMFType,StreamID信息, </p>
+<h4 id="2-1-1-3-RTMP包头"><a href="#2-1-1-3-RTMP包头" class="headerlink" title="2.1.1.3 RTMP包头"></a>2.1.1.3 RTMP包头</h4><p>RTMP协议封包由一个包头和一个包体组成。包头可以是4种长度的任意一种:12, 8, 4, 1 byte(s).完整的RTMP包头应该是12bytes,包含了时间戳,Head_Type,AMFSize,AMFType,StreamID信息, </p>
 <ul>
 <li>8字节的包头只纪录了时间戳,Head_Type,AMFSize,AMFType, </li>
 <li>4个字节的包头记录了时间戳,Head_Type。</li>
 <li>1个字节的包头只记录了Head_Type 。</li>
 <li>包体最大长度默认为128字节,通过chunkSize可改变包体最大长度,通常当一段AFM数据超过128字节后,超过128的部分就放到了其他的RTMP封包中,包头为一个字节.</li>
 </ul>
+<p><img src="/2020/09/12/直播技术研究/chunkformat.png" alt=""></p>
+<p><img src="/2020/09/12/直播技术研究/" alt=""></p>
 <p>完整的RTMP包头有12字节，由下面5个部分组成:</p>
 <div class="table-container">
 <table>
