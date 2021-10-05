@@ -117,8 +117,8 @@
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
 <meta property="og:description" content="python使用相关的技巧">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/python-tricks//cronetab_task.png">
-<meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/python-tricks//git_push.png">
+<meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/cronetab_task.png">
+<meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/git_push.png">
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/git_log.png">
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/acc_loss.png">
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/test.png">
@@ -126,11 +126,11 @@
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/confusematrix.png">
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/liuliyan.png">
 <meta property="og:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/tensorboard.png">
-<meta property="og:updated_time" content="2021-10-05T14:01:11.252Z">
+<meta property="og:updated_time" content="2021-10-05T14:14:58.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python tricks">
 <meta name="twitter:description" content="python使用相关的技巧">
-<meta name="twitter:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/python-tricks//cronetab_task.png">
+<meta name="twitter:image" content="https://damaoguo.github.io/2018/09/05/python-tricks/cronetab_task.png">
 
 
 
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-05 22:01:11" itemprop="dateModified" datetime="2021-10-05T22:01:11+08:00">2021-10-05</time>
+                <time title="修改时间：2021-10-05 22:14:58" itemprop="dateModified" datetime="2021-10-05T22:14:58+08:00">2021-10-05</time>
               
             
           </span>
@@ -502,9 +502,9 @@
 <h3 id="1-6-5-实现远程访问"><a href="#1-6-5-实现远程访问" class="headerlink" title="1.6.5 实现远程访问"></a>1.6.5 实现远程访问</h3><p>由于本人在开启jupyter时，给的端口是8889，所以需要给阿里云服务器添加安全规则，开放8889端口</p>
 <p>终端输入：服务器ip地址:8889</p>
 <p>此时，就可以开心的访问服务器端的jupyter<br>以上参考原文链接：<a href="https://blog.csdn.net/web_9705/article/details/80421044" target="_blank" rel="noopener">https://blog.csdn.net/web_9705/article/details/80421044</a></p>
-<h3 id="1-6-6-配置定时任务"><a href="#1-6-6-配置定时任务" class="headerlink" title="1.6.6 配置定时任务"></a>1.6.6 配置定时任务</h3><h4 id="1-6-6-1添加crontab任务"><a href="#1-6-6-1添加crontab任务" class="headerlink" title="1.6.6.1添加crontab任务"></a>1.6.6.1添加crontab任务</h4><p><img src="python-tricks//cronetab_task.png" alt=""></p>
+<h3 id="1-6-6-配置定时任务"><a href="#1-6-6-配置定时任务" class="headerlink" title="1.6.6 配置定时任务"></a>1.6.6 配置定时任务</h3><h4 id="1-6-6-1添加crontab任务"><a href="#1-6-6-1添加crontab任务" class="headerlink" title="1.6.6.1添加crontab任务"></a>1.6.6.1添加crontab任务</h4><p><img src="/2018/09/05/python-tricks/cronetab_task.png" alt=""></p>
 <p>不要使用crontab -e来添加任务，直接用vim编辑好了使用crontab 文件名添加，使用crontab -l验证。</p>
-<h4 id="1-6-6-2-编写推送脚本"><a href="#1-6-6-2-编写推送脚本" class="headerlink" title="1.6.6.2 编写推送脚本"></a>1.6.6.2 编写推送脚本</h4><p><img src="python-tricks//git_push.png" alt=""></p>
+<h4 id="1-6-6-2-编写推送脚本"><a href="#1-6-6-2-编写推送脚本" class="headerlink" title="1.6.6.2 编写推送脚本"></a>1.6.6.2 编写推送脚本</h4><p><img src="/2018/09/05/python-tricks/git_push.png" alt=""></p>
 <h4 id="1-6-6-3-推送结果"><a href="#1-6-6-3-推送结果" class="headerlink" title="1.6.6.3 推送结果"></a>1.6.6.3 推送结果</h4><p><img src="/2018/09/05/python-tricks/git_log.png" alt=""></p>
 <h2 id="1-7-pip-导出依赖包"><a href="#1-7-pip-导出依赖包" class="headerlink" title="1.7 pip 导出依赖包"></a>1.7 pip 导出依赖包</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换环境</span></span><br><span class="line"><span class="built_in">source</span> activate tensorflow</span><br><span class="line"><span class="comment"># 导出依赖</span></span><br><span class="line">pip freeze &gt; tesorflow.requires</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
@@ -1020,7 +1020,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1071,7 +1071,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1144,7 +1144,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
