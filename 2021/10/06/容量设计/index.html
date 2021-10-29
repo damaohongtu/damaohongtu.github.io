@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
 <meta property="og:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-10-29T15:34:47.951Z">
+<meta property="og:updated_time" content="2021-10-29T15:55:03.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容量设计">
 <meta name="twitter:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
@@ -411,7 +411,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-29 23:34:47" itemprop="dateModified" datetime="2021-10-29T23:34:47+08:00">2021-10-29</time>
+                <time title="修改时间：2021-10-29 23:55:03" itemprop="dateModified" datetime="2021-10-29T23:55:03+08:00">2021-10-29</time>
               
             
           </span>
@@ -476,72 +476,6 @@
 <a id="more"></a>
 <p>系统设计整体至少考虑应对5到10倍或近1到3年系统规模增长，要保障后续通过增加机器资源等快速方式能实现系统水平扩容。 例如分库分表的规模提前设计好提前量，避免临时数据库能力不足导致需要临时重构扩容（增加分库分表以及修改路由以及迁移数据）；服务<strong>逻辑层设计持有数据状态</strong>导致无法加机器做服务层扩容。互联网产品发展变化较快，不一定会如期爆发，容量架构设计上也要注意不要过度提前设计，避免提前复杂化引发研发效率以及机器成本问题。针对线上流量峰值，建议系统常态保持近期峰值3倍左右容量余量，上线前和上线后要定期做压测摸高，写流量可用影子表等方式做压测，压测可单接口以及模拟线上流量分布压测结合，根据压测结果优化架构或扩容，持续保持容量富余。对于可能超过系统现有容量的突发峰值，限流策略是线上要配置的策略。入口侧入口流量调用 、不同渠道服务依赖调用、对依赖服务的调用都要评估可极限调研的上限值，通过中间件等合适方式限制超过阈值调用，避免引发雪崩效应。特定业务系统，对于超过峰值流量，可以通过消息架构以及合适体验设计做削峰填谷；针对恶意攻击流量也要考虑在入口层部署防DDOS攻击的流量清洗层。</p>
 <p>通过容量设计，回答以下问题：单台节点到底最大处理能力是多少？目前线上有多少容量正在被使用？在一次大促前当前的机器数是否能够支撑？什么时候需要增加机器，加多少？考虑到特定的硬件配置，数据库服务器每秒可管理多少个查询？在性能降低到影响终端用户体验之前，它每秒可应答多少次查询？</p>
-<h1 id="1-容量设计的目标"><a href="#1-容量设计的目标" class="headerlink" title="1. 容量设计的目标"></a>1. 容量设计的目标</h1><p>如表1所示，SLA（Service Level Agreement，服务级别协议）是指提供服务的企业与客户之间就服务的品质、水准、性能等方面所达成的双方共同认可的协议或契约。对互联网公司来说就是网站服务可用性的一个保证。如表1所示，一般提供服务提供商都会以几个 9 来恒定自己的服务质量，即有 99.9 / 99.99 / 99.999 几个标准，这里的 9 越多代表一年下来产品的可用时间越长质量更可靠。容量规划是保障服务可用性的重要前提。</p>
-<p><strong>表1: 可用性时间表</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>水平</strong></th>
-<th><strong>允许不可用的时间窗口</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td><strong>每年</strong></td>
-<td><strong>每季度</strong></td>
-<td><strong>每月</strong></td>
-<td><strong>每周</strong></td>
-<td><strong>每天</strong></td>
-<td><strong>每小时</strong></td>
-</tr>
-<tr>
-<td>99%</td>
-<td>3.65days</td>
-<td>21.6hours</td>
-<td>7.2hours</td>
-<td>1.68hours</td>
-<td>14.4minutes</td>
-<td>36seconds</td>
-</tr>
-<tr>
-<td>99.9%</td>
-<td>8.67hours</td>
-<td>2.16hours</td>
-<td>43.2minutes</td>
-<td>10.1minutes</td>
-<td>1.44minutes</td>
-<td>3.6seconds</td>
-</tr>
-<tr>
-<td>99.99%</td>
-<td>52.6minutes</td>
-<td>12.96minutes</td>
-<td>4.32minutes</td>
-<td>60.5seconds</td>
-<td>8.64seconds</td>
-<td>0.36seconds</td>
-</tr>
-<tr>
-<td>99.999%</td>
-<td>5.26minutes</td>
-<td>1.30minutes</td>
-<td>25.6seconds</td>
-<td>6.05seconds</td>
-<td>0.87seconds</td>
-<td>0.04seonds</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>一般情况下，公司服务器的总体资源利用率长期处在较低水平，CPU利用率都在20%左右，总的来看，我们有大量的计算资源和存储资源闲置，造成巨大浪费，这也直接导致我们的服务成本偏高。因此做容量设计是有必要的。部分系统峰值变化较大且需要持续尽可能承载保障，可考虑引入弹性伸缩策略，预约 或根据流量变化触发系统自动扩缩容，以确保以尽量小成本来自动化满足变化峰值。</p>
-<p>容量设计的基本目标有两个，一是使运维人员了解系统的承载力，二是以合理的成本来满足业务的需求。用运筹学中的优化命题来定义，优化命题的目标是集群实际负荷 &lt;=集群理想负荷(见公式1)，求解这样一个不等式优化命题，同时系统需要满足一定的不等式约束条件.</p>
 
       
     </div>
@@ -976,17 +910,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1175,22 +1100,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
