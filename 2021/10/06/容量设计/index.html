@@ -117,13 +117,10 @@
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
 <meta property="og:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
-<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic2.png">
-<meta property="og:updated_time" content="2021-10-29T14:43:07.271Z">
+<meta property="og:updated_time" content="2021-10-29T15:20:02.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容量设计">
 <meta name="twitter:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
-<meta name="twitter:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
 
 
 
@@ -414,7 +411,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-29 22:43:07" itemprop="dateModified" datetime="2021-10-29T22:43:07+08:00">2021-10-29</time>
+                <time title="修改时间：2021-10-29 23:20:02" itemprop="dateModified" datetime="2021-10-29T23:20:02+08:00">2021-10-29</time>
               
             
           </span>
@@ -545,51 +542,6 @@
 </div>
 <p>一般情况下，公司服务器的总体资源利用率长期处在较低水平，CPU利用率都在20%左右，总的来看，我们有大量的计算资源和存储资源闲置，造成巨大浪费，这也直接导致我们的服务成本偏高。因此做容量设计是有必要的。部分系统峰值变化较大且需要持续尽可能承载保障，可考虑引入弹性伸缩策略，预约 或根据流量变化触发系统自动扩缩容，以确保以尽量小成本来自动化满足变化峰值。</p>
 <p>容量设计的基本目标有两个，一是使运维人员了解系统的承载力，二是以合理的成本来满足业务的需求。用运筹学中的优化命题来定义，优化命题的目标是集群实际负荷 &lt;=集群理想负荷(见公式1)，求解这样一个不等式优化命题，同时系统需要满足一定的不等式约束条件.</p>
-<h1 id="2-容量影响因素"><a href="#2-容量影响因素" class="headerlink" title="2. 容量影响因素"></a>2. 容量影响因素</h1><p>这里讨论容量设计的一些因素，重点关注并发性，每秒事务数（TPS），每笔事务完成的工作量等因素如何在其中发挥作用。 当然，许多其他因素可以决定系统的容量，包括事务的复杂性，延迟和外部服务调用，内存分配和利用率等。</p>
-<h2 id="2-1-吞吐量和TPS"><a href="#2-1-吞吐量和TPS" class="headerlink" title="2.1 吞吐量和TPS"></a>2.1 吞吐量和TPS</h2><p>通常，吞吐量定义为在给定时间间隔内处理的消息数。 吞吐量是对单位时间操作数的度量，时间单位可以是秒，分钟，小时等。TPS是原子操作数，在这种情况下是每秒的“事务”。 对于无状态服务器，这将是影响服务器容量的主要特征。从理论上讲，如果用户在一分钟内执行60次事务，则TPS应该为60/60 TPS = 1 TPS。 当然，由于已登录系统的所有并发用户不一定在给定时间使用该系统，因此这可能并不准确。 另外，还要考虑用户的思考时间和节奏时间。 但是，如果不考虑上述因素，考虑到用户在60秒钟内统一访问系统，则可以将其视为平均1 TPS； 当然呢如果所有用户在一秒钟内到达，这意味着最大峰值负载为60 TPS。</p>
-<h2 id="2-2-Work-done-per-transaction"><a href="#2-2-Work-done-per-transaction" class="headerlink" title="2.2 Work done per transaction"></a>2.2 <strong>Work done per transaction</strong></h2><h2 id="2-3-Think-Time"><a href="#2-3-Think-Time" class="headerlink" title="2.3 Think Time"></a>2.3 <strong>Think Time</strong></h2><p>用户提交请求，然后在返回给用户之前在服务器端对其进行处理。 然后，用户等待响应，并在再次提交之前对其进行“处理”。 这种延迟是用户认为介于请求之间的时间，可以在计算最佳系统负载时加以考虑。 对于容量规划，平均思考时间对于获得准确的吞吐量数字很有用。</p>
-<h2 id="2-4-活跃用户和并发"><a href="#2-4-活跃用户和并发" class="headerlink" title="2.4 活跃用户和并发"></a>2.4 <strong>活跃用户和并发</strong></h2><p>系统存在一个准确或者不准确的用户总数（如直播商家总数为近20w的ICBU卖家数）-这可能不会直接影响服务器容量，但是是数据库大小确定中的重要指标。</p>
-<p>并发活动用户是在任何给定时间同时并发访问系统的不同用户的数量。如图1所示，并发用户是在给定时间使用系统的活跃用户的子集。如果200个活动用户登录到系统中，并具有10秒的思考时间，则大约有20个实际并发用户命中系统。每个并发用户都会消耗一定级别的内存，需要将其考虑在内，系统的吞吐量会随着并发用户数量的增加而增加，直到达到如图所示的峰值容量为止。之后，系统将经历性能下降，因此系统可以处理的最大并发性对容量设计非常重要。</p>
-<p><img src="/2021/10/06/容量设计/pic1.png" style="zoom:50%;"></p>
-<p><strong>图1：吞吐量随时间的变化图</strong></p>
-<h2 id="2-5-消息大小"><a href="#2-5-消息大小" class="headerlink" title="2.5 消息大小"></a>2.5 消息大小</h2><p>消息的大小也是确定系统所需容量的重要因素。 较大的消息意味着更多的处理能力要求，更多的内存要求。 作为容量规划的基础，表2提供了对消息大小评估的标准。</p>
-<p> <strong>表2：消息大小</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>消息大小</strong></th>
-<th><strong>消息大小评估</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Less than 50 KB</td>
-<td>Small</td>
-</tr>
-<tr>
-<td>Between 50 KB and 1 MB</td>
-<td>Moderate</td>
-</tr>
-<tr>
-<td>Between 1 MB and 5 MB</td>
-<td>Large</td>
-</tr>
-<tr>
-<td>Larger than 5 MB</td>
-<td>Extra Large</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="2-6-延时"><a href="#2-6-延时" class="headerlink" title="2.6 延时"></a>2.6 <strong>延时</strong></h2><p><img src="/2021/10/06/容量设计/pic2.png" style="zoom:50%;"></p>
-<p><strong>图2：延时随并发数变化图</strong></p>
-<h1 id="3-测量"><a href="#3-测量" class="headerlink" title="3. 测量"></a>3. 测量</h1><p>没有测量系统、应用层度量指标的历史数据，则容量设计无法存在。不知道系统的最高性能上限从而避免接近它们，则规划也是没有效果的。 要找到基础架构每部分的上限。</p>
-<h2 id="3-1-测量工具"><a href="#3-1-测量工具" class="headerlink" title="3.1 测量工具"></a><strong>3.1 测量工具</strong></h2><h2 id="3-2-测量标准"><a href="#3-2-测量标准" class="headerlink" title="3.2 测量标准"></a><strong>3.2 测量标准</strong></h2><h3 id="3-2-1-计算密集型"><a href="#3-2-1-计算密集型" class="headerlink" title="3.2.1 计算密集型"></a><strong>3.2.1 计算密集型</strong></h3><p>计算主要消耗的是CPU资源，计算密集型也称为CPU bound，业务处理过程中主要使用了CPU资源，CPU资源随着业务的繁忙程度而发生变化，此类业务对处理器的要求非常高。针对计算密集型业务，一般使用CPU使用率衡量容量。</p>
-<h3 id="3-2-2-I-O密集型"><a href="#3-2-2-I-O密集型" class="headerlink" title="3.2.2 I/O密集型"></a><strong>3.2.2 I/O密集型</strong></h3><p>I/O密集型称为I/O bound，在业务处理的过程中，主要使用的是I/O资源，比如硬盘读写、使用网卡上传和下载，因此CPU的利用率不高，即使在业务繁忙的时段，CPU负载也很低。针对I/O密集型业务，一般使用磁盘使用率衡量容量。</p>
-<h3 id="3-2-3-数据密集型"><a href="#3-2-3-数据密集型" class="headerlink" title="3.2.3 数据密集型"></a><strong>3.2.3 数据密集型</strong></h3><p>数据密集型业务也称为Data Intensive，主要体现在大数据应用中，比如搜索引擎从海量的数据中找到有用的信息，通常这类业务非常占用内存资源。缓存也是数据密集型业务。</p>
-<h3 id="3-2-4-传输密集型"><a href="#3-2-4-传输密集型" class="headerlink" title="3.2.4 传输密集型"></a><strong>3.2.4 传输密集型</strong></h3><p>针对传输密集型业务，一般采用网卡使用率来衡量容量。</p>
-<h3 id="3-2-5-缓存密集型"><a href="#3-2-5-缓存密集型" class="headerlink" title="3.2.5 缓存密集型"></a><strong>3.2.5 缓存密集型</strong></h3><p>针对缓存密集型业务，一般使用内存来衡量容量。</p>
 
       
     </div>
@@ -1233,7 +1185,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-容量影响因素"><span class="nav-number">2.</span> <span class="nav-text">2. 容量影响因素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-吞吐量和TPS"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 吞吐量和TPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Work-done-per-transaction"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Work done per transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Think-Time"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Think Time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-活跃用户和并发"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 活跃用户和并发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-消息大小"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 消息大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-延时"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 延时</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-测量"><span class="nav-number">3.</span> <span class="nav-text">3. 测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-测量工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 测量工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-测量标准"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 测量标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-计算密集型"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 计算密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-I-O密集型"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 I/O密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-数据密集型"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3 数据密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-传输密集型"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.2.4 传输密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-缓存密集型"><span class="nav-number">3.2.5.</span> <span class="nav-text">3.2.5 缓存密集型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li></ol></div>
             
 
           </div>
