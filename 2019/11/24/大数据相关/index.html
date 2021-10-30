@@ -109,13 +109,13 @@
 
 
 
-  <meta name="description" content="重点参考：  https://github.com/CheckChe0803/BigData-Interview                                                          Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档">
+  <meta name="description" content="Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档   文档   文档   文档">
 <meta name="keywords" content="BigData">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据相关">
 <meta property="og:url" content="https://damaoguo.github.io/2019/11/24/大数据相关/index.html">
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
-<meta property="og:description" content="重点参考：  https://github.com/CheckChe0803/BigData-Interview                                                          Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档">
+<meta property="og:description" content="Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档   文档   文档   文档">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/hadoop.jpg">
 <meta property="og:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/hive.jpg">
@@ -152,10 +152,10 @@
 <meta property="og:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/hbase逻辑结构.png">
 <meta property="og:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/kafka压缩.png">
 <meta property="og:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/kafka在zk中的存储结构.png">
-<meta property="og:updated_time" content="2020-01-08T02:04:42.000Z">
+<meta property="og:updated_time" content="2021-10-30T14:10:38.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大数据相关">
-<meta name="twitter:description" content="重点参考：  https://github.com/CheckChe0803/BigData-Interview                                                          Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档">
+<meta name="twitter:description" content="Hadoop   Hive   Spark   Flink   HBase   Kafka   Zookeeper         文档   文档   文档   文档   文档   文档   文档">
 <meta name="twitter:image" content="https://damaoguo.github.io/2019/11/24/大数据相关/hadoop.jpg">
 
 
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-08 10:04:42" itemprop="dateModified" datetime="2020-01-08T10:04:42+08:00">2020-01-08</time>
+                <time title="修改时间：2021-10-30 22:10:38" itemprop="dateModified" datetime="2021-10-30T22:10:38+08:00">2021-10-30</time>
               
             
           </span>
@@ -516,11 +516,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>重点参考：</p>
-<ul>
-<li><a href="https://github.com/CheckChe0803/BigData-Interview" target="_blank" rel="noopener">https://github.com/CheckChe0803/BigData-Interview</a></li>
-</ul>
-<table>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><table>
     <tr>
      <th><img width="50px" src="/2019/11/24/大数据相关/hadoop.jpg"></th>
      <th><img width="50px" src="/2019/11/24/大数据相关/hive.jpg"></th>
@@ -551,8 +547,179 @@
 </table>
 
 <a id="more"></a>
-<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><h3 id="HDFS架构？-2"><a href="#HDFS架构？-2" class="headerlink" title="HDFS架构？[2]"></a><a href="https://hadoop.apache.org/docs/" target="_blank" rel="noopener">HDFS架构？</a><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://hadoop.apache.org/docs/">[2]</span></a></sup></h3><h4 id="HDFS-1"><a href="#HDFS-1" class="headerlink" title="HDFS-1"></a><a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html" target="_blank" rel="noopener">HDFS-1</a></h4><ul>
-<li>架构图</li>
+<h1 id="0-理论基础"><a href="#0-理论基础" class="headerlink" title="0. 理论基础"></a>0. 理论基础</h1><h2 id="0-1-经典论文阅读"><a href="#0-1-经典论文阅读" class="headerlink" title="0.1 经典论文阅读"></a>0.1 经典论文阅读</h2><table>
+    <tr>
+        <th width="10%">编号</th>
+        <th width="10%">缩写</th>
+        <th width="60%">论文</th>
+        <th width="20%">分类</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>GFS(2003)</td>
+        <td>The Google File System</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>MapReduce(2004)</td>
+        <td>MapReduce：Simplified data processing on large cluster</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>3</td>
+        <td>BigTable(2006)</td>
+        <td> Bigtable: A distributed storage system for structured data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Chubby(2006)</td>
+        <td>The Chubby lock service for loosely-coupled distributed system</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Thrift(2009)</td>
+        <td> Thrift: Scalable cross-language services implementation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Hive(2009)</td>
+        <td>Hive: a warehousing solution over a map-reduce framework</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Spark(2010)</td>
+        <td>Spark: Cluster computing with working sets</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>MegaStore(2011)</td>
+        <td>Megastore: Providing scalable，highly available storage for interactive</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>S4(2010)</td>
+        <td> S4: Distributed stream computing platform</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Storm(2014)</td>
+        <td>Storm@Twitter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Kafka</td>
+        <td>Kafka: A distributed messaging system for log processing</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>DataFlow(2015)</td>
+        <td>The dataflow model:a practical approach to balancing correctness</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Raft(2014)</td>
+        <td> In search of an understandable consensus algorithm</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>14</td>
+        <td>Brog(2015)</td>
+        <td>Large-scale cluster management at Google with Borg</td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>15</td>
+        <td>K8s(2016)</td>
+        <td>Borg, Omega, and Kubernetes</td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>  
+    <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> 
+</table>
+
+
+
+<h2 id="0-2-分布式一致性协议"><a href="#0-2-分布式一致性协议" class="headerlink" title="0.2 分布式一致性协议"></a>0.2 分布式一致性协议</h2><p>常见的分布式一致性协议有: 两阶段提交协议，三阶段提交协议，向量时钟，RWN协议，paxos协议，Raft协议. zk采用的是paxos协议.</p>
+<h3 id="0-2-1-两阶段提交协议-2PC"><a href="#0-2-1-两阶段提交协议-2PC" class="headerlink" title="0.2.1 两阶段提交协议(2PC)"></a>0.2.1 两阶段提交协议(2PC)</h3><p>两阶段提交协议，简称2PC，是比较常用的解决分布式事务问题的方式，要么所有参与进程都提交事务，要么都取消事务，即实现ACID中的原子性(A)的常用手段。</p>
+<h3 id="0-2-2-三阶段提交协议-3PC"><a href="#0-2-2-三阶段提交协议-3PC" class="headerlink" title="0.2.2 三阶段提交协议(3PC)"></a>0.2.2 三阶段提交协议(3PC)</h3><p>3PC就是在2PC基础上将2PC的提交阶段细分位两个阶段：预提交阶段和提交阶段</p>
+<h3 id="0-2-3-向量时钟"><a href="#0-2-3-向量时钟" class="headerlink" title="0.2.3 向量时钟"></a>0.2.3 向量时钟</h3><p>通过向量空间祖先继承的关系比较, 使数据保持最终一致性,这就是向量时钟的基本定义。</p>
+<h3 id="0-2-4-NWR协议"><a href="#0-2-4-NWR协议" class="headerlink" title="0.2.4 NWR协议"></a>0.2.4 NWR协议</h3><p>NWR是一种在分布式存储系统中用于控制一致性级别的一种策略。在Amazon的Dynamo云存储系统中，就应用NWR来控制一致性。<br>让我们先来看看这三个字母的含义：<br>N：在分布式存储系统中，有多少份备份数据<br>W：代表一次成功的更新操作要求至少有w份数据写入成功<br>R： 代表一次成功的读数据操作要求至少有R份数据成功读取<br>NWR值的不同组合会产生不同的一致性效果，当W+R&gt;N的时候，整个系统对于客户端来讲能保证强一致性。当W+R 以常见的N=3、W=2、R=2为例：<br>N=3，表示，任何一个对象都必须有三个副本（Replica），W=2表示，对数据的修改操作（Write）只需要在3个Replica中的2个上面完成就返回，R=2表示，从三个对象中要读取到2个数据对象，才能返回。<br>在分布式系统中，数据的单点是不允许存在的。即线上正常存在的Replica数量是1的情况是非常危险的，因为一旦这个Replica再次错误，就 可能发生数据的永久性错误。假如我们把N设置成为2，那么，只要有一个存储节点发生损坏，就会有单点的存在。所以N必须大于2。N约高，系统的维护和整体 成本就越高。工业界通常把N设置为3。<br>当W是2、R是2的时候，W+R&gt;N，这种情况对于客户端就是强一致性的。</p>
+<h3 id="paxos协议"><a href="#paxos协议" class="headerlink" title="paxos协议"></a>paxos协议</h3><p>Paxos算法是<strong>Lamport</strong>于1990年提出的一种基于<strong>消息传递的一致性算法</strong>，</p>
+<ul>
+<li>数据库高可用性难题<ul>
+<li>痛点：如何处理主备库之间的数据同步。</li>
+<li>如何选择主节点</li>
+</ul>
+</li>
+<li>基本需求：<ul>
+<li>数据不丢失</li>
+<li>服务持续可用</li>
+<li>自动的主备切换</li>
+</ul>
+</li>
+<li>目标：<strong>谋求尽早形成多数派</strong></li>
+</ul>
+<p><a href="https://zh.wikipedia.org/wiki/Paxos算法" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Paxos%E7%AE%97%E6%B3%95</a></p>
+<p><a href="https://www.zhihu.com/question/19787937/answer/107750652" target="_blank" rel="noopener">https://www.zhihu.com/question/19787937/answer/107750652</a></p>
+<p><a href="http://chuansong.me/n/2189245" target="_blank" rel="noopener">架构师需要了解的Paxos原理，历程及实践</a></p>
+<h3 id="Raft协议"><a href="#Raft协议" class="headerlink" title="Raft协议"></a>Raft协议</h3><p>Raft是一个通过管理一个副本日志的一致性算法。它提供了跟(multi-)Paxos一样有效的功能，但是它的架构和Paxos不一样；它比Paxos更加容易理解，并且能用于生产环境中。为了加强理解，raft把一致性的问题分成了三个子问题，例如<strong>leader election, log replication, and safety</strong>,在Raft集群中，<strong>有且仅有一个Leader</strong>，在Leader运行正常的情况下，一个节点服务器要么就是Leader，要么就是Follower。Follower直到Leader故障了，才有可能变成candidate。</p>
+<p><strong>角色：</strong></p>
+<ul>
+<li><strong>follower</strong></li>
+<li><strong>leader</strong></li>
+<li><strong>candidate：</strong>If followers don’t hear from a leader then they can become a candidate.</li>
+</ul>
+<p>子问题：</p>
+<ul>
+<li>Leader Election.</li>
+<li>Log Replication</li>
+<li></li>
+</ul>
+<p><em>In Search of an Understandable Consensus Algorithm</em><sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Ongaro, D., & Ousterhout, J. (2014). In search of an understandable consensus algorithm. In *2014 {USENIX} Annual Technical Conference ({USENIX}{ATC} 14)* (pp. 305-319).">[10]</span></a></sup></p>
+<p><a href="https://raft.github.io/" target="_blank" rel="noopener">https://raft.github.io/</a></p>
+<p><a href="http://thesecretlivesofdata.com/raft/" target="_blank" rel="noopener">Raft协议的动画</a></p>
+<p><a href="https://blog.csdn.net/chdhust/article/details/52651741" target="_blank" rel="noopener">参考文章</a></p>
+<h1 id="1-Hadoop"><a href="#1-Hadoop" class="headerlink" title="1. Hadoop"></a>1. Hadoop</h1><h2 id="1-1-HDFS-1"><a href="#1-1-HDFS-1" class="headerlink" title="1.1 HDFS-1"></a>1.1 <a href="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html" target="_blank" rel="noopener">HDFS-1</a></h2><ul>
+<li>架构图 <a href="https://hadoop.apache.org/docs/" target="_blank" rel="noopener">HDFS架构？</a><sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://hadoop.apache.org/docs/">[2]</span></a></sup></li>
 </ul>
 <blockquote>
 <p>HDFS has a master/slave architecture. An HDFS cluster consists of <font color="red">a single NameNode, a master server</font> that manages the file system namespace and regulates access to files by clients. In addition, there are<font color="red"> a number of DataNodes,</font> usually one per node in the cluster, which manage storage attached to the nodes that they run on. HDFS exposes a file system namespace and allows user data to be stored in files. Internally, a file is split into one or more blocks and these blocks are stored in a set of DataNodes. The NameNode executes file system namespace operations like <font color="red">opening, closing, and renaming files and directories.</font> It also <font color="red">determines the mapping of blocks to DataNodes.</font> The DataNodes are responsible for <font color="red">serving read and write requests</font> from the file system’s clients. The DataNodes also perform<font color="red"> block creation, deletion, and replication </font>upon instruction from the NameNode.</p>
@@ -580,7 +747,7 @@
 <font color="red">**DataNode**</font>
 
 <p>负责数据块的实际存储和读写工作，Block 默认是64MB（HDFS2.0改成了128MB），当客户端上传一个大文件时，HDFS 会自动将其切割成固定大小的 Block，为了保证数据可用性，每个 Block 会以多备份的形式存储，默认是3份。</p>
-<h4 id="HDFS-2"><a href="#HDFS-2" class="headerlink" title="HDFS-2"></a><a href="https://hadoop.apache.org/docs/r2.10.0/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" target="_blank" rel="noopener">HDFS-2</a></h4><ul>
+<h2 id="1-2-HDFS-2"><a href="#1-2-HDFS-2" class="headerlink" title="1.2 HDFS-2"></a>1.2 <a href="https://hadoop.apache.org/docs/r2.10.0/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html" target="_blank" rel="noopener">HDFS-2</a></h2><ul>
 <li>架构图和上面一样</li>
 <li><a href="">HDFS High Availability</a></li>
 </ul>
@@ -611,7 +778,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="HDFS比较（主要体现在jdk版本，HA等）"><a href="#HDFS比较（主要体现在jdk版本，HA等）" class="headerlink" title="HDFS比较（主要体现在jdk版本，HA等）"></a>HDFS<a href="https://cwiki.apache.org/confluence/display/HADOOP2/Roadmap" target="_blank" rel="noopener">比较</a>（主要体现在jdk版本，HA等）</h3><div class="table-container">
+<h2 id="1-3-HDFS比较（主要体现在jdk版本，HA等）"><a href="#1-3-HDFS比较（主要体现在jdk版本，HA等）" class="headerlink" title="1.3 HDFS比较（主要体现在jdk版本，HA等）"></a>1.3 HDFS<a href="https://cwiki.apache.org/confluence/display/HADOOP2/Roadmap" target="_blank" rel="noopener">比较</a>（主要体现在jdk版本，HA等）</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -635,11 +802,11 @@
 </tbody>
 </table>
 </div>
-<h3 id="HDFS相关的例子？"><a href="#HDFS相关的例子？" class="headerlink" title="HDFS相关的例子？"></a>HDFS相关的例子？</h3><ul>
+<h2 id="1-4-HDFS相关的例子？"><a href="#1-4-HDFS相关的例子？" class="headerlink" title="1.4 HDFS相关的例子？"></a>1.4 HDFS相关的例子？</h2><ul>
 <li>常用命令</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">查看文件系统的基本信息和统计信息：hdfs dfsadmin -report</span><br><span class="line">建立文件夹: hadoop fs -mkdir /user/tpc-h1G</span><br><span class="line">上传文件:hadoop fs -put *.tbl /user/tpc-h1G</span><br></pre></td></tr></table></figure>
-<h3 id="Yarn架构？（资源管理）"><a href="#Yarn架构？（资源管理）" class="headerlink" title="Yarn架构？（资源管理）"></a>Yarn架构？（资源管理）</h3><blockquote>
+<h2 id="1-5-Yarn架构？（资源管理）"><a href="#1-5-Yarn架构？（资源管理）" class="headerlink" title="1.5 Yarn架构？（资源管理）"></a>1.5 Yarn架构？（资源管理）</h2><blockquote>
 <p>The fundamental idea of YARN is to split up the functionalities of resource management and job scheduling/monitoring into separate daemons. The idea is to have a global ResourceManager (<em>RM</em>) and per-application ApplicationMaster (<em>AM</em>). An application is either a single job or a DAG of jobs.</p>
 </blockquote>
 <ul>
@@ -649,7 +816,7 @@
 <li>Yarn架构图</li>
 </ul>
 <p><img src="https://hadoop.apache.org/docs/r3.2.1/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif" alt=""></p>
-<h4 id="ResourceManager（RM）"><a href="#ResourceManager（RM）" class="headerlink" title="ResourceManager（RM）"></a>ResourceManager（RM）</h4><p>RM 是一个全局的资源管理器，负责整个系统的资源管理和分配，它主要有两个组件构成：</p>
+<h3 id="1-5-1-ResourceManager（RM）"><a href="#1-5-1-ResourceManager（RM）" class="headerlink" title="1.5.1 ResourceManager（RM）"></a>1.5.1 ResourceManager（RM）</h3><p>RM 是一个全局的资源管理器，负责整个系统的资源管理和分配，它主要有两个组件构成：</p>
 <ul>
 <li>调度器 Scheduler</li>
 </ul>
@@ -658,8 +825,8 @@
 <li>应用程序管理器 Applications Manager，ASM。</li>
 </ul>
 <p>应用程序管理器负责管理整个系统中所有应用程序，包括应用程序提交、与调度器协商资源以 AM、监控 AM 运行状态并在失败时重新启动它等。</p>
-<h4 id="NodeManager（NM）"><a href="#NodeManager（NM）" class="headerlink" title="NodeManager（NM）"></a>NodeManager（NM）</h4><p>NM 是每个节点上运行的资源和任务管理器，一方面，它会定时向 RM 汇报本节点上的资源使用情况和各个 Container 的运行状态；另一方面，它接收并处理来自 AM 的 Container 启动/停止等各种请求。</p>
-<h4 id="ApplicationMaster（AM）"><a href="#ApplicationMaster（AM）" class="headerlink" title="ApplicationMaster（AM）"></a>ApplicationMaster（AM）</h4><p>提交的每个作业都会包含一个 AM，主要功能包括：</p>
+<h3 id="1-5-2-NodeManager（NM）"><a href="#1-5-2-NodeManager（NM）" class="headerlink" title="1.5.2 NodeManager（NM）"></a>1.5.2 NodeManager（NM）</h3><p>NM 是每个节点上运行的资源和任务管理器，一方面，它会定时向 RM 汇报本节点上的资源使用情况和各个 Container 的运行状态；另一方面，它接收并处理来自 AM 的 Container 启动/停止等各种请求。</p>
+<h3 id="1-5-3-ApplicationMaster（AM）"><a href="#1-5-3-ApplicationMaster（AM）" class="headerlink" title="1.5.3 ApplicationMaster（AM）"></a>1.5.3 ApplicationMaster（AM）</h3><p>提交的每个作业都会包含一个 AM，主要功能包括：</p>
 <ul>
 <li><p>与 RM 协商以获取资源（用 container 表示）；</p>
 </li>
@@ -671,9 +838,9 @@
 </li>
 </ul>
 <p>MapReduce 就是原生支持 ON YARN 的一种框架，可以在 YARN 上运行 MapReduce 作业。有很多分布式应用都开发了对应的应用程序框架，用于在 YARN 上运行任务，例如 Spark，Storm、Flink 等。</p>
-<h4 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h4><p>Container 是 YARN 中的资源抽象，它封装了某个节点上的多维度资源，如内存、CPU、磁盘、网络等，当 AM 向 RM 申请资源时，RM 为 AM 返回的资源便是用 Container 表示的。 YARN 会为每个任务分配一个 Container 且该任务只能使用该 Container 中描述的资源。</p>
-<h3 id="MapReduce过程？"><a href="#MapReduce过程？" class="headerlink" title="MapReduce过程？"></a>MapReduce过程？</h3><p>MapReduce分为两个阶段: <strong>Map</strong> 和  <strong>Ruduce</strong>.</p>
-<h4 id="Map阶段"><a href="#Map阶段" class="headerlink" title="Map阶段:"></a><strong>Map阶段:</strong></h4><ul>
+<h3 id="1-5-4-Container"><a href="#1-5-4-Container" class="headerlink" title="1.5.4 Container"></a>1.5.4 Container</h3><p>Container 是 YARN 中的资源抽象，它封装了某个节点上的多维度资源，如内存、CPU、磁盘、网络等，当 AM 向 RM 申请资源时，RM 为 AM 返回的资源便是用 Container 表示的。 YARN 会为每个任务分配一个 Container 且该任务只能使用该 Container 中描述的资源。</p>
+<h2 id="1-6-MapReduce过程？"><a href="#1-6-MapReduce过程？" class="headerlink" title="1.6 MapReduce过程？"></a>1.6 MapReduce过程？</h2><p>MapReduce分为两个阶段: <strong>Map</strong> 和  <strong>Ruduce</strong>.</p>
+<h3 id="1-6-1-Map阶段"><a href="#1-6-1-Map阶段" class="headerlink" title="1.6.1 Map阶段:"></a><strong>1.6.1 Map阶段:</strong></h3><ul>
 <li><p><strong>input</strong>.</p>
 <p>在进行map计算之前，mapreduce会根据输入文件计算输入分片（input split），每个输入分片（input split）针对一个map任务</p>
 </li>
@@ -701,7 +868,7 @@
 <li><strong>merge</strong> </li>
 </ul>
 <p>spill结果会有很多个文件,但最终输出只有一个,故有一个merge操作会合并所有的本地文件,并且该文件会有一个对应的索引文件.</p>
-<h4 id="Reduce阶段"><a href="#Reduce阶段" class="headerlink" title="Reduce阶段:"></a><strong>Reduce阶段:</strong></h4><ul>
+<h3 id="1-6-2-Reduce阶段"><a href="#1-6-2-Reduce阶段" class="headerlink" title="1.6.2  Reduce阶段:"></a><strong>1.6.2  Reduce阶段:</strong></h3><ul>
 <li><strong>copy</strong>.</li>
 </ul>
 <p>拉取数据,reduce启动数据copy线程(默认5个),通过Http请求对应节点的map task输出文件,copy的数据也会先放到内部缓冲区.之后再溢写,类似map端操作.</p>
@@ -717,7 +884,7 @@
 <li><strong>reduce</strong></li>
 </ul>
 <p>开始执行reduce任务,最后结果保留在hdfs上.</p>
-<h4 id="案例-4"><a href="#案例-4" class="headerlink" title="案例[4]"></a>案例<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm">[4]</span></a></sup></h4><p><strong>1.下表是一个不同年份的用电量，找出平均用电量最大的年份</strong></p>
+<h3 id="1-6-3-案例-4"><a href="#1-6-3-案例-4" class="headerlink" title="1.6.3 案例[4]"></a>1.6.3 案例<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm">[4]</span></a></sup></h3><p><strong>1.下表是一个不同年份的用电量，找出平均用电量最大的年份</strong></p>
 <div class="table-container">
 <table>
 <thead>
@@ -830,9 +997,9 @@
 <p><strong>4.多表查询</strong></p>
 <p><strong>5.倒排索引</strong></p>
 <p>(ps:spark经典案例<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[http://www.damaoguo.site/2019/03/30/spark%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/](http://www.damaoguo.site/2019/03/30/spark经典案例/)">[8]</span></a></sup>)</p>
-<h3 id="Yarn-调度MapReduce？"><a href="#Yarn-调度MapReduce？" class="headerlink" title="Yarn 调度MapReduce？"></a>Yarn 调度MapReduce？</h3><p>Yarn采用的双层调度框架，RM将资源分配给AM,AM再将资源进一步分配给Task,资源不够时会为TASK预留，直到资源充足。</p>
+<h2 id="1-7-Yarn-调度MapReduce？"><a href="#1-7-Yarn-调度MapReduce？" class="headerlink" title="1.7 Yarn 调度MapReduce？"></a>1.7 Yarn 调度MapReduce？</h2><p>Yarn采用的双层调度框架，RM将资源分配给AM,AM再将资源进一步分配给Task,资源不够时会为TASK预留，直到资源充足。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.hadoop<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hadoop-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.hadoop<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hadoop-common<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="hdfs写流程？"><a href="#hdfs写流程？" class="headerlink" title="hdfs写流程？"></a>hdfs写流程？</h3><p><img src="/2019/11/24/大数据相关/hdfs写流程.png"></p>
+<h2 id="1-8-hdfs写流程？"><a href="#1-8-hdfs写流程？" class="headerlink" title="1.8 hdfs写流程？"></a>1.8 hdfs写流程？</h2><p><img src="/2019/11/24/大数据相关/hdfs写流程.png"></p>
 <ol>
 <li>Client 调用 DistributedFileSystem 对象的 <code>create</code> 方法，创建一个文件输出流（FSDataOutputStream）对象；</li>
 <li>通过 DistributedFileSystem 对象与集群的 NameNode 进行一次 RPC 远程调用，在 HDFS 的 Namespace 中创建一个文件条目（Entry），此时该条目没有任何的 Block，NameNode 会返回该数据每个块需要拷贝的 DataNode 地址信息；</li>
@@ -842,7 +1009,7 @@
 <li>完成向文件写入数据，Client 在文件输出流（FSDataOutputStream）对象上调用 <code>close</code> 方法，完成文件写入；</li>
 <li>调用 DistributedFileSystem 对象的 complete 方法，通知 NameNode 文件写入成功，NameNode 会将相关结果记录到 editlog 中。</li>
 </ol>
-<h3 id="hdfs读流程？"><a href="#hdfs读流程？" class="headerlink" title="hdfs读流程？"></a>hdfs读流程？</h3><p><img src="/2019/11/24/大数据相关/hdfs读流程.png" alt=""></p>
+<h2 id="1-8-hdfs读流程？"><a href="#1-8-hdfs读流程？" class="headerlink" title="1.8 hdfs读流程？"></a>1.8 hdfs读流程？</h2><p><img src="/2019/11/24/大数据相关/hdfs读流程.png" alt=""></p>
 <ol>
 <li>Client 通过 DistributedFileSystem 对象与集群的 NameNode 进行一次 RPC 远程调用，获取文件 block 位置信息；</li>
 <li>NameNode 返回存储的每个块的 DataNode 列表；</li>
@@ -850,7 +1017,7 @@
 <li>Client 开始从 DataNode 并行读取数据；</li>
 <li>一旦 Client 获得了所有必须的 block，它就会将这些 block 组合起来形成一个文件。</li>
 </ol>
-<h3 id="hdfs创建一个文件的流程？-类的调用过程"><a href="#hdfs创建一个文件的流程？-类的调用过程" class="headerlink" title="hdfs创建一个文件的流程？(类的调用过程)"></a>hdfs创建一个文件的流程？(类的调用过程)</h3><ul>
+<h2 id="1-9-hdfs创建一个文件的流程？-类的调用过程"><a href="#1-9-hdfs创建一个文件的流程？-类的调用过程" class="headerlink" title="1.9 hdfs创建一个文件的流程？(类的调用过程)"></a>1.9 hdfs创建一个文件的流程？(类的调用过程)</h2><ul>
 <li>Apache Hadoop HDFS 2.9.1 API<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="http://hadoop.apache.org/docs/r2.9.1/hadoop-project-dist/hadoop-hdfs/api/overview-summary.html 
 ">[5]</span></a></sup></li>
 </ul>
@@ -860,7 +1027,7 @@
 <li>进一步的，FSDirectory封装了各种目录树操作的实现细节，FSNamesystem调用FSDirectory中的相关方法在目录树中创建目标文件，并通过日志系统备份文件系统的修改。</li>
 <li>最后，RpcServer将RPC响应返回给客户端。</li>
 </ol>
-<h3 id="hadoop1-x-和hadoop-2-x-的区别？"><a href="#hadoop1-x-和hadoop-2-x-的区别？" class="headerlink" title="hadoop1.x 和hadoop 2.x 的区别？"></a>hadoop1.x 和hadoop 2.x 的区别？</h3><ul>
+<h2 id="1-10-hadoop1-x-和hadoop-2-x-的区别？"><a href="#1-10-hadoop1-x-和hadoop-2-x-的区别？" class="headerlink" title="1.10 hadoop1.x 和hadoop 2.x 的区别？"></a>1.10 hadoop1.x 和hadoop 2.x 的区别？</h2><ul>
 <li><strong>资源调度方式的改变</strong></li>
 </ul>
 <p>在1.x, 使用Jobtracker负责任务调度和资源管理,单点负担过重,在2.x中,新增了yarn作为集群的调度工具.在yarn中,使用ResourceManager进行 资源管理, 单独开启一个Container作为ApplicationMaster来进行任务管理.</p>
@@ -872,9 +1039,9 @@
 <li><strong>HDFS Federation</strong></li>
 </ul>
 <p>Hadoop 2.0中对HDFS进行了改进，使NameNode可以横向扩展成多个，每个NameNode分管一部分目录，进而产生了HDFS Federation，该机制的引入不仅增强了HDFS的扩展性，也使HDFS具备了隔离性</p>
-<h4 id="hadoop1-x："><a href="#hadoop1-x：" class="headerlink" title="hadoop1.x："></a>hadoop1.x：</h4><p><img src="/2019/11/24/大数据相关/hadoop1.jpg" alt=""></p>
-<h4 id="hadoop2-x："><a href="#hadoop2-x：" class="headerlink" title="hadoop2.x："></a>hadoop2.x：</h4><p><img src="/2019/11/24/大数据相关/hadoop2.jpg" alt=""></p>
-<h3 id="hadoop-HA介绍？"><a href="#hadoop-HA介绍？" class="headerlink" title="hadoop HA介绍？"></a>hadoop HA介绍？</h3><ul>
+<h3 id="1-10-1-hadoop1-x："><a href="#1-10-1-hadoop1-x：" class="headerlink" title="1.10.1 hadoop1.x："></a>1.10.1 hadoop1.x：</h3><p><img src="/2019/11/24/大数据相关/hadoop1.jpg" alt=""></p>
+<h3 id="1-10-2-hadoop2-x："><a href="#1-10-2-hadoop2-x：" class="headerlink" title="1.10.2 hadoop2.x："></a>1.10.2 hadoop2.x：</h3><p><img src="/2019/11/24/大数据相关/hadoop2.jpg" alt=""></p>
+<h2 id="1-11-hadoop-HA介绍？"><a href="#1-11-hadoop-HA介绍？" class="headerlink" title="1.11 hadoop HA介绍？"></a>1.11 hadoop HA介绍？</h2><ul>
 <li><strong><font color="red">HDFS High Availability</font></strong><sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithNFS.html
 ">[6]</span></a></sup></li>
 </ul>
@@ -885,7 +1052,7 @@
 <li><strong>共享存储系统</strong>：共享存储系统是实现 NameNode 的高可用最为关键的部分，共享存储系统保存了 NameNode 在运行过程中所产生的 HDFS 的元数据。主 NameNode 和备 NameNode 通过共享存储系统实现元数据同步。在进行主备切换的时候，新的主 NameNode 在<strong>确认元数据完全同步之后才能继续对外提供服务</strong>。</li>
 <li><strong>DataNode 节点</strong>：因为主 NameNode 和备 NameNode 需要共享 HDFS 的数据块和 DataNode 之间的映射关系，为了使故障切换能够快速进行，DataNode 会同时向主 NameNode 和备 NameNode 上报数据块的位置信息。</li>
 </ol>
-<h3 id="hadoop的常用配置文件？"><a href="#hadoop的常用配置文件？" class="headerlink" title="hadoop的常用配置文件？"></a>hadoop的常用配置文件？</h3><p><strong>在TPC-H的测评实验中，使用配置文件见github.com/maomao1994/TPC-H<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/maomao1994/TPC-H/
+<h2 id="1-12-hadoop的常用配置文件？"><a href="#1-12-hadoop的常用配置文件？" class="headerlink" title="1.12 hadoop的常用配置文件？"></a>1.12 hadoop的常用配置文件？</h2><p><strong>在TPC-H的测评实验中，使用配置文件见github.com/maomao1994/TPC-H<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/maomao1994/TPC-H/
 ">[7]</span></a></sup></strong></p>
 <ol>
 <li><strong><font color="red">hadoop-env.sh</font></strong>: 用于定义hadoop运行环境相关的配置信息，比如配置JAVA_HOME环境变量、为hadoop的JVM指定特定的选项、指定日志文件所在的目录路径以及master和slave文件的位置等；</li>
@@ -895,10 +1062,10 @@
 <li><strong><font color="red">yarn-site.xml</font></strong></li>
 <li><strong><font color="red">~/hadoop/etc/hadoop/slaves</font></strong></li>
 </ol>
-<h3 id="小文件过多会有什么危害-如何避免？"><a href="#小文件过多会有什么危害-如何避免？" class="headerlink" title="小文件过多会有什么危害,如何避免？"></a>小文件过多会有什么危害,如何避免？</h3><p>Hadoop上大量HDFS元数据信息存储在NameNode内存中,因此过多的小文件必定会压垮NameNode的内存.</p>
+<h2 id="1-13-小文件过多会有什么危害-如何避免？"><a href="#1-13-小文件过多会有什么危害-如何避免？" class="headerlink" title="1.13 小文件过多会有什么危害,如何避免？"></a>1.13 小文件过多会有什么危害,如何避免？</h2><p>Hadoop上大量HDFS元数据信息存储在NameNode内存中,因此过多的小文件必定会压垮NameNode的内存.</p>
 <p>每个元数据对象约占150byte，所以如果有1千万个小文件，每个文件占用一个block，则NameNode大约需要2G空间。如果存储1亿个文件，则NameNode需要20G空间.</p>
 <p>显而易见的解决这个问题的方法就是合并小文件,可以选择在客户端上传时执行一定的策略先合并,或者是使用Hadoop的CombineFileInputFormat<k,v>实现小文件的合并</k,v></p>
-<h3 id="启动hadoop集群会分别启动哪些进程-各自的作用？"><a href="#启动hadoop集群会分别启动哪些进程-各自的作用？" class="headerlink" title="启动hadoop集群会分别启动哪些进程,各自的作用？"></a>启动hadoop集群会分别启动哪些进程,各自的作用？</h3><ol>
+<h2 id="1-14-启动hadoop集群会分别启动哪些进程-各自的作用？"><a href="#1-14-启动hadoop集群会分别启动哪些进程-各自的作用？" class="headerlink" title="1.14 启动hadoop集群会分别启动哪些进程,各自的作用？"></a>1.14 启动hadoop集群会分别启动哪些进程,各自的作用？</h2><ol>
 <li><p><strong><font color="red">NameNode：</font></strong></p>
 <ul>
 <li>维护文件系统树及整棵树内所有的文件和目录。这些信息永久保存在本地磁盘的两个文件中：命名空间镜像文件、编辑日志文件</li>
@@ -932,8 +1099,8 @@
 </ul>
 </li>
 </ol>
-<h2 id="HIVE"><a href="#HIVE" class="headerlink" title="HIVE"></a>HIVE</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>The Apache Hive ™ data warehouse software facilitates<font color="red"> reading, writing, and managing large datasets residing in distributed storage using SQL.</font> Structure can be projected onto data already in storage. A command line tool and JDBC driver are provided to connect users to Hive.</p>
-<h3 id="HIVE架构"><a href="#HIVE架构" class="headerlink" title="HIVE架构"></a>HIVE架构</h3><p><strong><font color="red">下面是hive的架构图</font><sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
+<h1 id="2-HIVE"><a href="#2-HIVE" class="headerlink" title="2. HIVE"></a>2. HIVE</h1><h2 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1 介绍"></a>2.1 介绍</h2><p>The Apache Hive ™ data warehouse software facilitates<font color="red"> reading, writing, and managing large datasets residing in distributed storage using SQL.</font> Structure can be projected onto data already in storage. A command line tool and JDBC driver are provided to connect users to Hive.</p>
+<h2 id="2-2-HIVE架构"><a href="#2-2-HIVE架构" class="headerlink" title="2.2 HIVE架构"></a>2.2 HIVE架构</h2><p><strong><font color="red">下面是hive的架构图</font><sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
 ">[9]</span></a></sup></strong></p>
 <p><img src="/2019/11/24/大数据相关/hive_architecture.jpg" alt=""></p>
 <div class="table-container">
@@ -1028,7 +1195,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="hive的数据类型"><a href="#hive的数据类型" class="headerlink" title="hive的数据类型"></a>hive的数据类型</h3><font color="red">**All the data types in Hive are classified into four types, given as follows:<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
+<h2 id="2-3-hive的数据类型"><a href="#2-3-hive的数据类型" class="headerlink" title="2.3 hive的数据类型"></a>2.3 hive的数据类型</h2><font color="red">**All the data types in Hive are classified into four types, given as follows:<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
 ">[9]</span></a></sup>**</font>
 
 <ol>
@@ -1111,16 +1278,16 @@
 </tbody>
 </table>
 </div>
-<h3 id="SQL和JDBC"><a href="#SQL和JDBC" class="headerlink" title="SQL和JDBC"></a>SQL和JDBC</h3><font color="red">**请参考教程<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
+<h2 id="2-4-SQL和JDBC"><a href="#2-4-SQL和JDBC" class="headerlink" title="2.4 SQL和JDBC"></a>2.4 SQL和JDBC</h2><font color="red">**请参考教程<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://www.tutorialspoint.com/hive/hive_introduction.htm
 ">[9]</span></a></sup>**</font>
 
-<h3 id="hive-内部表和外部表的区别？"><a href="#hive-内部表和外部表的区别？" class="headerlink" title="hive 内部表和外部表的区别？"></a>hive 内部表和外部表的区别？</h3><ul>
+<h2 id="2-5-hive-内部表和外部表的区别？"><a href="#2-5-hive-内部表和外部表的区别？" class="headerlink" title="2.5 hive 内部表和外部表的区别？"></a>2.5 hive 内部表和外部表的区别？</h2><ul>
 <li>建表时带有external关键字为外部表，否则为内部表</li>
 <li>内部表和外部表建表时都可以自己指定location</li>
 <li>删除表时，外部表不会删除对应的数据，只会删除元数据信息，内部表则会删除</li>
 <li>其他用法是一样的</li>
 </ul>
-<h3 id="Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？"><a href="#Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？" class="headerlink" title="Hive中 sort by / order by / cluster by / distribute by 的区别？"></a>Hive中 <font color="red">sort by / order by / cluster by / distribute by </font>的区别？</h3><ul>
+<h2 id="2-6-Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？"><a href="#2-6-Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？" class="headerlink" title="2.6 Hive中 sort by / order by / cluster by / distribute by 的区别？"></a>2.6 Hive中 <font color="red">sort by / order by / cluster by / distribute by </font>的区别？</h2><ul>
 <li><p><strong>order by</strong> </p>
 <pre><code>order by 是要对输出的结果进行全局排序，这就意味着**只有一个reducer**才能实现（多个reducer无法保证全局有序）但是当数据量过大的时候，效率就很低。如果在严格模式下（hive.mapred.mode=strict）,则必须配合limit使用
 </code></pre></li>
@@ -1134,7 +1301,7 @@
 <p>cluster by 可以看做是一个特殊的distribute by+sort by，它具备二者的功能，但是只能实现倒序排序的方式,不能指定排序规则为asc 或者desc</p>
 </li>
 </ul>
-<h3 id="hive的metastore的三种模式？"><a href="#hive的metastore的三种模式？" class="headerlink" title="hive的metastore的三种模式？"></a>hive的metastore的三种模式？</h3><ul>
+<h2 id="2-7-hive的metastore的三种模式？"><a href="#2-7-hive的metastore的三种模式？" class="headerlink" title="2.7 hive的metastore的三种模式？"></a>2.7 hive的metastore的三种模式？</h2><ul>
 <li><p><strong><font color="red">内嵌Derby方式</font></strong></p>
 <p>这个是Hive默认的启动模式，一般用于单元测试，这种存储方式有一个缺点：在同一时间只能有一个进程连接使用数据库。</p>
 </li>
@@ -1145,7 +1312,7 @@
 <p>远程MySQL,一般常用此种方式</p>
 </li>
 </ul>
-<h3 id="hive-中-join都有哪些？"><a href="#hive-中-join都有哪些？" class="headerlink" title="hive 中 join都有哪些？"></a>hive 中 join都有哪些？</h3><p>Hive中除了支持和传统数据库中一样的<font color="red">内关联（JOIN）、左关联（LEFT JOIN）、右关联（RIGHT JOIN）、全关联（FULL JOIN），还支持左半关联（LEFT SEMI JOIN）</font></p>
+<h2 id="2-8-hive-中-join都有哪些？"><a href="#2-8-hive-中-join都有哪些？" class="headerlink" title="2.8 hive 中 join都有哪些？"></a>2.8 hive 中 join都有哪些？</h2><p>Hive中除了支持和传统数据库中一样的<font color="red">内关联（JOIN）、左关联（LEFT JOIN）、右关联（RIGHT JOIN）、全关联（FULL JOIN），还支持左半关联（LEFT SEMI JOIN）</font></p>
 <ul>
 <li><p><strong>内关联（JOIN）</strong></p>
 <p>只返回能关联上的结果。</p>
@@ -1166,7 +1333,7 @@
 <p>返回两个表的笛卡尔积结果，不需要指定关联键。</p>
 </li>
 </ul>
-<h3 id="Impala-和-hive-的查询有哪些区别？"><a href="#Impala-和-hive-的查询有哪些区别？" class="headerlink" title="Impala 和 hive 的查询有哪些区别？"></a>Impala 和 hive 的查询有哪些区别？</h3><p><strong>Impala是基于Hive的大数据实时分析查询引擎</strong>，直接使用Hive的元数据库Metadata,意味着impala元数据都存储在Hive的metastore中。并且impala兼容Hive的sql解析，实现了Hive的SQL语义的子集，功能还在不断的完善中。</p>
+<h2 id="2-9-Impala-和-hive-的查询有哪些区别？"><a href="#2-9-Impala-和-hive-的查询有哪些区别？" class="headerlink" title="2.9 Impala 和 hive 的查询有哪些区别？"></a>2.9 Impala 和 hive 的查询有哪些区别？</h2><p><strong>Impala是基于Hive的大数据实时分析查询引擎</strong>，直接使用Hive的元数据库Metadata,意味着impala元数据都存储在Hive的metastore中。并且impala兼容Hive的sql解析，实现了Hive的SQL语义的子集，功能还在不断的完善中。</p>
 <p><strong><font color="red">Impala相对于Hive所使用的优化技术</font></strong></p>
 <ul>
 <li>1、没有使用 MapReduce进行并行计算，虽然MapReduce是非常好的并行计算框架，但它更多的面向批处理模式，而不是面向交互式的SQL执行。与 MapReduce相比：Impala把整个查询分成一执行计划树，而不是一连串的MapReduce任务，在分发执行计划后，Impala使用拉式获取 数据的方式获取结果，把结果数据组成按执行树流式传递汇集，减少的了把中间结果写入磁盘的步骤，再从磁盘读取数据的开销。Impala使用服务的方式避免 每次执行查询都需要启动的开销，即相比Hive没了MapReduce启动时间。</li>
@@ -1176,9 +1343,9 @@
 <li>5、通过选择合适的数据存储格式可以得到最好的性能（Impala支持多种存储格式）。</li>
 <li>6、最大使用内存，中间结果不写磁盘，及时通过网络以stream的方式传递。</li>
 </ul>
-<h3 id="Hive中大表join小表的优化方法？"><a href="#Hive中大表join小表的优化方法？" class="headerlink" title="Hive中大表join小表的优化方法？"></a>Hive中大表join小表的优化方法？</h3><font color="red">在小表和大表进行join时，将**小表放在前边**，效率会高，hive会将小表进行缓存</font>
+<h2 id="2-10-Hive中大表join小表的优化方法？"><a href="#2-10-Hive中大表join小表的优化方法？" class="headerlink" title="2.10 Hive中大表join小表的优化方法？"></a>2.10 Hive中大表join小表的优化方法？</h2><font color="red">在小表和大表进行join时，将**小表放在前边**，效率会高，hive会将小表进行缓存</font>
 
-<h3 id="Hive-Sql-是怎样解析成MR-job的"><a href="#Hive-Sql-是怎样解析成MR-job的" class="headerlink" title="Hive Sql 是怎样解析成MR job的?"></a>Hive Sql 是怎样解析成MR job的?</h3><p><strong>主要分为6个阶段:</strong></p>
+<h2 id="2-11-Hive-Sql-是怎样解析成MR-job的"><a href="#2-11-Hive-Sql-是怎样解析成MR-job的" class="headerlink" title="2.11 Hive Sql 是怎样解析成MR job的?"></a>2.11 Hive Sql 是怎样解析成MR job的?</h2><p><strong>主要分为6个阶段:</strong></p>
 <ol>
 <li><strong><font color="red">Hive使用Antlr实现语法解析</font></strong>.根据Antlr制定的SQL语法解析规则,完成SQL语句的词法/语法解析,<font color="red">将SQL转为抽象语法树AST.</font></li>
 <li><strong><font color="red">遍历AST,生成基本查询单元QueryBlock</font></strong>.QueryBlock是一条SQL最基本的组成单元，包括三个部分：输入源，计算过程，输出.</li>
@@ -1195,27 +1362,27 @@
 </li>
 <li><strong><font color="red">优化任务.</font></strong> 使用物理优化器对MR任务进行优化,生成最终执行任务</li>
 </ol>
-<h3 id="Hive-UDF简单介绍？"><a href="#Hive-UDF简单介绍？" class="headerlink" title="Hive UDF简单介绍？"></a>Hive UDF简单介绍？</h3><p>在Hive中，用户可以自定义一些函数，用于扩展HiveQL的功能，而这类函数叫做UDF（用户自定义函数）。UDF分为两大类：UDAF（用户自定义聚合函数）和UDTF（用户自定义表生成函数）。</p>
+<h2 id="2-12-Hive-UDF简单介绍？"><a href="#2-12-Hive-UDF简单介绍？" class="headerlink" title="2.12 Hive UDF简单介绍？"></a>2.12 Hive UDF简单介绍？</h2><p>在Hive中，用户可以自定义一些函数，用于扩展HiveQL的功能，而这类函数叫做UDF（用户自定义函数）。UDF分为两大类：UDAF（用户自定义聚合函数）和UDTF（用户自定义表生成函数）。</p>
 <p><strong><font color="red">Hive有两个不同的接口编写UDF程序。一个是基础的UDF接口，一个是复杂的GenericUDF接口。</font></strong></p>
 <ol>
 <li><strong>org.apache.hadoop.hive.ql. exec.UDF</strong> 基础UDF的函数读取和返回基本类型，即Hadoop和Hive的基本类型。如，Text、IntWritable、LongWritable、DoubleWritable等。</li>
 <li><strong>org.apache.hadoop.hive.ql.udf.generic.GenericUDF</strong> 复杂的GenericUDF可以处理Map、List、Set类型。</li>
 </ol>
-<h3 id="SQL题-按照学生科目分组-取每个科目的TopN？"><a href="#SQL题-按照学生科目分组-取每个科目的TopN？" class="headerlink" title="SQL题: 按照学生科目分组, 取每个科目的TopN？"></a>SQL题: 按照学生科目分组, 取每个科目的TopN？</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">id,name,subject,score</span><br><span class="line">1,小明,语文,87</span><br><span class="line">2,张三,语文,27</span><br><span class="line">3,王五,语文,69</span><br><span class="line">4,李四,语文,99</span><br><span class="line">5,小明,数学,86</span><br><span class="line">6,马六,数学,33</span><br><span class="line">7,李四,数学,44</span><br><span class="line">8,小红,数学,50</span><br></pre></td></tr></table></figure>
+<h2 id="2-13-SQL题-按照学生科目分组-取每个科目的TopN？"><a href="#2-13-SQL题-按照学生科目分组-取每个科目的TopN？" class="headerlink" title="2.13 SQL题: 按照学生科目分组, 取每个科目的TopN？"></a>2.13 SQL题: 按照学生科目分组, 取每个科目的TopN？</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">id,name,subject,score</span><br><span class="line">1,小明,语文,87</span><br><span class="line">2,张三,语文,27</span><br><span class="line">3,王五,语文,69</span><br><span class="line">4,李四,语文,99</span><br><span class="line">5,小明,数学,86</span><br><span class="line">6,马六,数学,33</span><br><span class="line">7,李四,数学,44</span><br><span class="line">8,小红,数学,50</span><br></pre></td></tr></table></figure>
 <p><strong>按照各个科目的成绩排名 取 Top3</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select a.* from</span><br><span class="line">(select id,name,subject,score,row_number() over(partition by subject order by score desc) rank from student) a</span><br><span class="line">where a.rank &lt;= 3</span><br></pre></td></tr></table></figure>
-<h3 id="SQL题-获取每个用户的前1-4次的数据？"><a href="#SQL题-获取每个用户的前1-4次的数据？" class="headerlink" title="SQL题: 获取每个用户的前1/4次的数据？"></a>SQL题: 获取每个用户的前1/4次的数据？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cookieId  createTime    pv</span><br><span class="line">--------------------------</span><br><span class="line">cookie1 2015-04-10      1</span><br><span class="line">cookie1 2015-04-11      5</span><br><span class="line">cookie1 2015-04-12      7</span><br><span class="line">cookie1 2015-04-13      3</span><br><span class="line">cookie1 2015-04-14      2</span><br><span class="line">cookie1 2015-04-15      4</span><br><span class="line">cookie1 2015-04-16      4</span><br><span class="line">cookie2 2015-04-10      2</span><br><span class="line">cookie2 2015-04-11      3</span><br><span class="line">cookie2 2015-04-12      5</span><br><span class="line">cookie2 2015-04-13      6</span><br><span class="line">cookie2 2015-04-14      3</span><br><span class="line">cookie2 2015-04-15      9</span><br><span class="line">cookie2 2015-04-16      7</span><br></pre></td></tr></table></figure>
+<h2 id="2-14-SQL题-获取每个用户的前1-4次的数据？"><a href="#2-14-SQL题-获取每个用户的前1-4次的数据？" class="headerlink" title="2.14 SQL题: 获取每个用户的前1/4次的数据？"></a>2.14 SQL题: 获取每个用户的前1/4次的数据？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cookieId  createTime    pv</span><br><span class="line">--------------------------</span><br><span class="line">cookie1 2015-04-10      1</span><br><span class="line">cookie1 2015-04-11      5</span><br><span class="line">cookie1 2015-04-12      7</span><br><span class="line">cookie1 2015-04-13      3</span><br><span class="line">cookie1 2015-04-14      2</span><br><span class="line">cookie1 2015-04-15      4</span><br><span class="line">cookie1 2015-04-16      4</span><br><span class="line">cookie2 2015-04-10      2</span><br><span class="line">cookie2 2015-04-11      3</span><br><span class="line">cookie2 2015-04-12      5</span><br><span class="line">cookie2 2015-04-13      6</span><br><span class="line">cookie2 2015-04-14      3</span><br><span class="line">cookie2 2015-04-15      9</span><br><span class="line">cookie2 2015-04-16      7</span><br></pre></td></tr></table></figure>
 <p>获取每个用户前1/4次的访问记录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT a.* from </span><br><span class="line">(SELECT cookieid,createtime,pv,NTILE(4)</span><br><span class="line">OVER(PARTITION BY cookieId ORDER BY createtime) AS rn</span><br><span class="line">from table ) a</span><br><span class="line">WHERE a.rn = 1</span><br></pre></td></tr></table></figure>
 <p><font color="red">NTILE(n)</font>，用于将分组数据按照顺序切分成n片，返回当前切片值</p>
-<h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><h3 id="spark-的运行架构？"><a href="#spark-的运行架构？" class="headerlink" title="spark 的运行架构？"></a>spark 的运行架构？</h3><p><img src="/2019/11/24/大数据相关/spark架构图.jpg" alt=""></p>
+<h1 id="3-Spark"><a href="#3-Spark" class="headerlink" title="3. Spark"></a>3. Spark</h1><h2 id="3-1-spark-的运行架构？"><a href="#3-1-spark-的运行架构？" class="headerlink" title="3.1 spark 的运行架构？"></a>3.1 spark 的运行架构？</h2><p><img src="/2019/11/24/大数据相关/spark架构图.jpg" alt=""></p>
 <ul>
 <li><strong><font color="red">Cluster Manager(Master)</font></strong>：在standalone模式中即为Master主节点，控制整个集群，监控worker。在YARN模式中为资源管理器</li>
 <li><strong><font color="red">Worker节点</font></strong>：从节点，负责控制计算节点，启动Executor或者Driver。</li>
 <li><strong><font color="red">Driver</font></strong>： 运行Application 的main()函数</li>
 <li><strong><font color="red">Executor</font></strong>：执行器，是为某个Application运行在worker node上的一个进程</li>
 </ul>
-<h3 id="一个spark程序的执行流程？"><a href="#一个spark程序的执行流程？" class="headerlink" title="一个spark程序的执行流程？"></a>一个spark程序的执行流程？</h3><p><img src="/2019/11/24/大数据相关/spark程序执行流程.jpg" alt=""></p>
+<h2 id="3-2-一个spark程序的执行流程？"><a href="#3-2-一个spark程序的执行流程？" class="headerlink" title="3.2 一个spark程序的执行流程？"></a>3.2 一个spark程序的执行流程？</h2><p><img src="/2019/11/24/大数据相关/spark程序执行流程.jpg" alt=""></p>
 <ul>
 <li><strong>A -&gt;</strong> 当 Driver 进程被启动之后,首先它将发送请求到Master节点上,进行Spark应用程序的注册</li>
 <li><strong>B -&gt;</strong> Master在接受到Spark应用程序的注册申请之后,会发送给Worker,让其进行资源的调度和分配.</li>
@@ -1226,7 +1393,7 @@
 <li><strong>G -&gt;</strong> task就会去调用对应的任务数据来计算,并task会对调用过来的RDD的partition数据执行指定的算子操作,形成新的RDD的partition,这时一个大的循环就结束了</li>
 <li>后续的RDD的partition数据又通过Driver形成新的一批task提交给Executor执行,循环这个操作,直到所有的算子结束</li>
 </ul>
-<h3 id="spark的shuffle介绍？"><a href="#spark的shuffle介绍？" class="headerlink" title="spark的shuffle介绍？"></a>spark的shuffle介绍？</h3><p><strong>spark中的shuffle主要有3种:</strong></p>
+<h2 id="3-3-spark的shuffle介绍？"><a href="#3-3-spark的shuffle介绍？" class="headerlink" title="3.3 spark的shuffle介绍？"></a>3.3 spark的shuffle介绍？</h2><p><strong>spark中的shuffle主要有3种:</strong></p>
 <ul>
 <li><p><strong>Hash Shuffle</strong> 2.0以后移除</p>
 <p><img src="/2019/11/24/大数据相关/spark-shuffle-v1.png" alt=""></p>
@@ -1249,7 +1416,7 @@
 <p>UnsafeShuffleWriter需要Serializer支持relocation，Serializer支持relocation：原始数据首先被序列化处理，并且再也不需要反序列，在其对应的元数据被排序后，需要Serializer支持relocation，在指定位置读取对应数据</p>
 <p><a href="http://sharkdtu.com/posts/spark-shuffle.html" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="http://spark.coolplayer.net/?p=576" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="Spark的-partitioner-都有哪些"><a href="#Spark的-partitioner-都有哪些" class="headerlink" title="Spark的 partitioner 都有哪些?"></a>Spark的 partitioner 都有哪些?</h3><p><strong>Partitioner主要有两个实现类：HashPartitioner和RangePartitioner,HashPartitioner是大部分transformation的默认实现，sortBy、sortByKey使用RangePartitioner实现，也可以自定义Partitioner.</strong></p>
+<h2 id="3-4-Spark的-partitioner-都有哪些"><a href="#3-4-Spark的-partitioner-都有哪些" class="headerlink" title="3.4 Spark的 partitioner 都有哪些?"></a>3.4 Spark的 partitioner 都有哪些?</h2><p><strong>Partitioner主要有两个实现类：HashPartitioner和RangePartitioner,HashPartitioner是大部分transformation的默认实现，sortBy、sortByKey使用RangePartitioner实现，也可以自定义Partitioner.</strong></p>
 <ul>
 <li><p><strong>HashPartitioner</strong></p>
 <p>numPartitions方法返回传入的分区数，getPartition方法使用key的hashCode值对分区数取模得到PartitionId，写入到对应的bucket中。</p>
@@ -1265,7 +1432,7 @@
 </li>
 </ul>
 <p><a href="https://blog.csdn.net/qq_34842671/article/details/83685179" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="spark-有哪几种join？"><a href="#spark-有哪几种join？" class="headerlink" title="spark 有哪几种join？"></a>spark 有哪几种join？</h3><p><strong>Spark 中和 join 相关的算子有这几个</strong>：<code>join</code>、<code>fullOuterJoin</code>、<code>leftOuterJoin</code>、<code>rightOuterJoin</code></p>
+<h2 id="3-5-spark-有哪几种join？"><a href="#3-5-spark-有哪几种join？" class="headerlink" title="3.5 spark 有哪几种join？"></a>3.5 spark 有哪几种join？</h2><p><strong>Spark 中和 join 相关的算子有这几个</strong>：<code>join</code>、<code>fullOuterJoin</code>、<code>leftOuterJoin</code>、<code>rightOuterJoin</code></p>
 <ul>
 <li><p><strong>join</strong></p>
 <p>join函数会输出两个RDD中key相同的所有项，并将它们的value联结起来，它联结的key要求在两个表中都存在，类似于SQL中的INNER JOIN。但它不满足交换律，a.join(b)与b.join(a)的结果不完全相同，值插入的顺序与调用关系有关。</p>
@@ -1281,7 +1448,7 @@
 </li>
 </ul>
 <p><a href="http://www.neilron.xyz/join-in-spark/" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="RDD有哪些特点？"><a href="#RDD有哪些特点？" class="headerlink" title="RDD有哪些特点？"></a>RDD有哪些特点？</h3><ol>
+<h2 id="3-6-RDD有哪些特点？"><a href="#3-6-RDD有哪些特点？" class="headerlink" title="3.6 RDD有哪些特点？"></a>3.6 RDD有哪些特点？</h2><ol>
 <li><p><strong>A list of partitions</strong><br>RDD是一个由多个partition（某个节点里的某一片连续的数据）组成的的list；将数据加载为RDD时，一般会遵循数据的本地性（一般一个hdfs里的block会加载为一个partition）。</p>
 </li>
 <li><p><strong>A function for computing each split</strong><br>RDD的每个partition上面都会有function，也就是函数应用，其作用是实现RDD之间partition的转换。</p>
@@ -1294,9 +1461,9 @@
 <p>最优的位置去计算，也就是数据的本地性。</p>
 </li>
 </ol>
-<h3 id="讲一下宽依赖和窄依赖？"><a href="#讲一下宽依赖和窄依赖？" class="headerlink" title="讲一下宽依赖和窄依赖？"></a>讲一下宽依赖和窄依赖？</h3><p>区别宽窄依赖的核心点是 <strong>子RDD的partition与父RDD的partition是否是1对多的关系</strong>,如果是这样的关系的话,</p>
+<h2 id="3-7-讲一下宽依赖和窄依赖？"><a href="#3-7-讲一下宽依赖和窄依赖？" class="headerlink" title="3.7 讲一下宽依赖和窄依赖？"></a>3.7 讲一下宽依赖和窄依赖？</h2><p>区别宽窄依赖的核心点是 <strong>子RDD的partition与父RDD的partition是否是1对多的关系</strong>,如果是这样的关系的话,</p>
 <p>说明多个父rdd的partition需要经过shuffle过程汇总到一个子rdd的partition,这样就是一次宽依赖,在DAGScheduler中会产生stage的切分.</p>
-<h3 id="Spark中的算子都有哪些？"><a href="#Spark中的算子都有哪些？" class="headerlink" title="Spark中的算子都有哪些？"></a>Spark中的算子都有哪些？</h3><p>总的来说,spark分为两大类算子:</p>
+<h2 id="3-8-Spark中的算子都有哪些？"><a href="#3-8-Spark中的算子都有哪些？" class="headerlink" title="3.8 Spark中的算子都有哪些？"></a>3.8 Spark中的算子都有哪些？</h2><p>总的来说,spark分为两大类算子:</p>
 <ul>
 <li><p><strong>Transformation 变换/转换算子：这种变换并不触发提交作业，完成作业中间过程处理</strong></p>
 <p>Transformation 操作是延迟计算的，也就是说从一个RDD 转换生成另一个 RDD 的转换操作不是马上执行，需要等到有 Action 操作的时候才会真正触发运算</p>
@@ -1381,9 +1548,9 @@
 </li>
 </ul>
 <p><a href="https://www.cnblogs.com/kpsmile/p/10434390.html" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="RDD的缓存级别都有哪些？"><a href="#RDD的缓存级别都有哪些？" class="headerlink" title="RDD的缓存级别都有哪些？"></a>RDD的缓存级别都有哪些？</h3><p>NONE :什么类型都不是<br>DISK_ONLY：磁盘<br>DISK_ONLY_2：磁盘；双副本<br>MEMORY_ONLY： 内存；反序列化；把RDD作为反序列化的方式存储，假如RDD的内容存不下，剩余的分区在以后需要时会重新计算，不会刷到磁盘上。<br>MEMORY_ONLY_2：内存；反序列化；双副本<br>MEMORY_ONLY_SER：内存；序列化；这种序列化方式，每一个partition以字节数据存储，好处是能带来更好的空间存储，但CPU耗费高<br>MEMORY_ONLY_SER_2 : 内存；序列化；双副本<br>MEMORY_AND_DISK：内存 + 磁盘；反序列化；双副本；RDD以反序列化的方式存内存，假如RDD的内容存不下，剩余的会存到磁盘<br>MEMORY_AND_DISK_2 : 内存 + 磁盘；反序列化；双副本<br>MEMORY_AND_DISK_SER：内存 + 磁盘；序列化<br>MEMORY_AND_DISK_SER_2：内存 + 磁盘；序列化；双副本</p>
-<h3 id="RDD-懒加载？"><a href="#RDD-懒加载？" class="headerlink" title="RDD 懒加载？"></a>RDD 懒加载？</h3><p>Transformation 操作是延迟计算的，也就是说从一个RDD 转换生成另一个 RDD 的转换操作不是马上执行，需要等到有 Acion 操作的时候才会真正触发运算,这也就是懒加载.</p>
-<h3 id="spark的几种部署方式？"><a href="#spark的几种部署方式？" class="headerlink" title="spark的几种部署方式？"></a>spark的几种部署方式？</h3><p><strong>目前,除了local模式为本地调试模式以为, Spark支持三种分布式部署方式，分别是standalone、spark on mesos和 spark on YARN</strong></p>
+<h2 id="3-9-RDD的缓存级别都有哪些？"><a href="#3-9-RDD的缓存级别都有哪些？" class="headerlink" title="3.9 RDD的缓存级别都有哪些？"></a>3.9 RDD的缓存级别都有哪些？</h2><p>NONE :什么类型都不是<br>DISK_ONLY：磁盘<br>DISK_ONLY_2：磁盘；双副本<br>MEMORY_ONLY： 内存；反序列化；把RDD作为反序列化的方式存储，假如RDD的内容存不下，剩余的分区在以后需要时会重新计算，不会刷到磁盘上。<br>MEMORY_ONLY_2：内存；反序列化；双副本<br>MEMORY_ONLY_SER：内存；序列化；这种序列化方式，每一个partition以字节数据存储，好处是能带来更好的空间存储，但CPU耗费高<br>MEMORY_ONLY_SER_2 : 内存；序列化；双副本<br>MEMORY_AND_DISK：内存 + 磁盘；反序列化；双副本；RDD以反序列化的方式存内存，假如RDD的内容存不下，剩余的会存到磁盘<br>MEMORY_AND_DISK_2 : 内存 + 磁盘；反序列化；双副本<br>MEMORY_AND_DISK_SER：内存 + 磁盘；序列化<br>MEMORY_AND_DISK_SER_2：内存 + 磁盘；序列化；双副本</p>
+<h2 id="3-10-RDD-懒加载？"><a href="#3-10-RDD-懒加载？" class="headerlink" title="3.10 RDD 懒加载？"></a>3.10 RDD 懒加载？</h2><p>Transformation 操作是延迟计算的，也就是说从一个RDD 转换生成另一个 RDD 的转换操作不是马上执行，需要等到有 Acion 操作的时候才会真正触发运算,这也就是懒加载.</p>
+<h2 id="3-11-spark的几种部署方式？"><a href="#3-11-spark的几种部署方式？" class="headerlink" title="3.11 spark的几种部署方式？"></a>3.11 spark的几种部署方式？</h2><p><strong>目前,除了local模式为本地调试模式以为, Spark支持三种分布式部署方式，分别是standalone、spark on mesos和 spark on YARN</strong></p>
 <ul>
 <li><p><strong>Standalone模式</strong></p>
 <p>即独立模式，自带完整的服务，可单独部署到一个集群中，无需依赖任何其他资源管理系统。从一定程度上说，该模式是其他两种的基础。目前Spark在standalone模式下是没有任何单点故障问题的，这是借助zookeeper实现的，思想类似于Hbase master单点故障解决方案。将Spark standalone与MapReduce比较，会发现它们两个在架构上是完全一致的： </p>
@@ -1408,11 +1575,11 @@
 </ul>
 </li>
 </ul>
-<h3 id="spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？"><a href="#spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？" class="headerlink" title="spark on yarn 模式下的 cluster模式和 client模式有什么区别？"></a>spark on yarn 模式下的 cluster模式和 client模式有什么区别？</h3><ol>
+<h2 id="3-12-spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？"><a href="#3-12-spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？" class="headerlink" title="3.12 spark on yarn 模式下的 cluster模式和 client模式有什么区别？"></a>3.12 spark on yarn 模式下的 cluster模式和 client模式有什么区别？</h2><ol>
 <li>yarn-cluster 适用于生产环境。而 yarn-client 适用于交互和调试，也就是希望快速地看到 application 的输出.</li>
 <li>yarn-cluster 和 yarn-client 模式的区别其实就是 <strong>Application Master 进程</strong>的区别，yarn-cluster 模式下，driver 运行在 AM(Application Master)中，它负责向 YARN 申请资源，并监督作业的运行状况。当用户提交了作业之后，就可以关掉 Client，作业会继续在 YARN 上运行。然而 yarn-cluster 模式不适合运行交互类型的作业。而 yarn-client 模式下，Application Master 仅仅向 YARN 请求 executor，Client 会和请求的container 通信来调度他们工作，也就是说 Client 不能离开。</li>
 </ol>
-<h3 id="spark运行原理-从提交一个jar到最后返回结果-整个过程？"><a href="#spark运行原理-从提交一个jar到最后返回结果-整个过程？" class="headerlink" title="spark运行原理,从提交一个jar到最后返回结果,整个过程？"></a>spark运行原理,从提交一个jar到最后返回结果,整个过程？</h3><ol>
+<h2 id="3-13-spark运行原理-从提交一个jar到最后返回结果-整个过程？"><a href="#3-13-spark运行原理-从提交一个jar到最后返回结果-整个过程？" class="headerlink" title="3.13 spark运行原理,从提交一个jar到最后返回结果,整个过程？"></a>3.13 spark运行原理,从提交一个jar到最后返回结果,整个过程？</h2><ol>
 <li><code>spark-submit</code> 提交代码，执行 <code>new SparkContext()</code>，在 SparkContext 里构造 <code>DAGScheduler</code> 和 <code>TaskScheduler</code>。</li>
 <li>TaskScheduler 会通过后台的一个进程，连接 Master，向 Master 注册 Application。</li>
 <li>Master 接收到 Application 请求后，会使用相应的资源调度算法，在 Worker 上为这个 Application 启动多个 Executer。</li>
@@ -1422,15 +1589,15 @@
 <li>TaskScheduler 会把每一个 TaskSet 里的 Task，提交到 Executor 上执行。</li>
 <li>Executor 上有线程池，每接收到一个 Task，就用 TaskRunner 封装，然后从线程池里取出一个线程执行这个 task。(TaskRunner 将我们编写的代码，拷贝，反序列化，执行 Task，每个 Task 执行 RDD 里的一个 partition)</li>
 </ol>
-<h3 id="spark的stage是如何划分的？"><a href="#spark的stage是如何划分的？" class="headerlink" title="spark的stage是如何划分的？"></a>spark的stage是如何划分的？</h3><p><strong>stage的划分依据就是看是否产生了shuflle(即宽依赖),遇到一个shuffle操作就划分为前后两个stage.</strong></p>
+<h2 id="3-14-spark的stage是如何划分的？"><a href="#3-14-spark的stage是如何划分的？" class="headerlink" title="3.14 spark的stage是如何划分的？"></a>3.14 spark的stage是如何划分的？</h2><p><strong>stage的划分依据就是看是否产生了shuflle(即宽依赖),遇到一个shuffle操作就划分为前后两个stage.</strong></p>
 <p><img src="/2019/11/24/大数据相关/stageDivide.jpg" alt=""></p>
-<h3 id="spark的rpc-spark2-0为什么放弃了akka-而用netty？"><a href="#spark的rpc-spark2-0为什么放弃了akka-而用netty？" class="headerlink" title="spark的rpc: spark2.0为什么放弃了akka 而用netty？"></a>spark的rpc: spark2.0为什么放弃了akka 而用netty？</h3><ol>
+<h2 id="3-15-spark的rpc-spark2-0为什么放弃了akka-而用netty？"><a href="#3-15-spark的rpc-spark2-0为什么放弃了akka-而用netty？" class="headerlink" title="3.15 spark的rpc: spark2.0为什么放弃了akka 而用netty？"></a>3.15 spark的rpc: spark2.0为什么放弃了akka 而用netty？</h2><ol>
 <li>很多Spark用户也使用Akka，但是由于Akka不同版本之间无法互相通信，这就要求用户必须使用跟Spark完全一样的Akka版本，导致用户无法升级Akka。</li>
 <li>Spark的Akka配置是针对Spark自身来调优的，可能跟用户自己代码中的Akka配置冲突。</li>
 <li>Spark用的Akka特性很少，这部分特性很容易自己实现。同时，这部分代码量相比Akka来说少很多，debug比较容易。如果遇到什么bug，也可以自己马上fix，不需要等Akka上游发布新版本。而且，Spark升级Akka本身又因为第一点会强制要求用户升级他们使用的Akka，对于某些用户来说是不现实的。</li>
 </ol>
 <p><a href="https://www.zhihu.com/question/61638635" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="spark的各种HA"><a href="#spark的各种HA" class="headerlink" title="spark的各种HA?"></a>spark的各种HA?</h3><p>master/worker/executor/driver/task的ha</p>
+<h2 id="3-16-spark的各种HA"><a href="#3-16-spark的各种HA" class="headerlink" title="3.16 spark的各种HA?"></a>3.16 spark的各种HA?</h2><p>master/worker/executor/driver/task的ha</p>
 <ul>
 <li><h4 id="Master异常"><a href="#Master异常" class="headerlink" title="Master异常"></a>Master异常</h4><p>spark可以在集群运行时启动一个或多个standby Master,当 Master 出现异常时,会根据规则启动某个standby master接管,在standlone模式下有如下几种配置</p>
 <ul>
@@ -1461,7 +1628,7 @@
 </ol>
 </li>
 </ul>
-<h3 id="spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？"><a href="#spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？" class="headerlink" title="spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？"></a>spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？</h3><p><strong>spark的内存结构分为3大块:storage/execution/系统自留</strong></p>
+<h2 id="3-17-spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？"><a href="#3-17-spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？" class="headerlink" title="3.17 spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？"></a>3.17 spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？</h2><p><strong>spark的内存结构分为3大块:storage/execution/系统自留</strong></p>
 <ul>
 <li><p><strong>storage 内存</strong>：用于缓存 RDD、展开 partition、存放 Direct Task Result、存放广播变量。在 Spark Streaming receiver 模式中，也用来存放每个 batch 的 blocks</p>
 </li>
@@ -1475,25 +1642,25 @@
 </li>
 </ul>
 <hr>
-<h4 id="1-6版本以前的问题"><a href="#1-6版本以前的问题" class="headerlink" title="1.6版本以前的问题"></a>1.6版本以前的问题</h4><ul>
+<h3 id="3-17-1-1-6版本以前的问题"><a href="#3-17-1-1-6版本以前的问题" class="headerlink" title="3.17.1 1.6版本以前的问题"></a>3.17.1 1.6版本以前的问题</h3><ul>
 <li>旧方案最大的问题是 storage 和 execution 的内存大小都是固定的，不可改变，即使 execution 有大量的空闲内存且 storage 内存不足，storage 也无法使用 execution 的内存，只能进行 spill，反之亦然。所以，在很多情况下存在资源浪费</li>
 <li>旧方案中，只有 execution 内存支持 off heap，storage 内存不支持 off heap</li>
 </ul>
-<h4 id="新方案的改进"><a href="#新方案的改进" class="headerlink" title="新方案的改进"></a>新方案的改进</h4><ul>
+<h3 id="3-17-2-新方案的改进"><a href="#3-17-2-新方案的改进" class="headerlink" title="3.17.2 新方案的改进"></a>3.17.2 新方案的改进</h3><ul>
 <li>新方案 storage 和 execution 内存可以互相借用，当一方内存不足可以向另一方借用内存，提高了整体的资源利用率</li>
 <li>新方案中 execution 内存和 storage 内存均支持 off heap</li>
 </ul>
-<h3 id="spark-中的广播变量？"><a href="#spark-中的广播变量？" class="headerlink" title="spark 中的广播变量？"></a>spark 中的广播变量？</h3><p><a href="https://www.jianshu.com/p/6ef7f0a44fbf" target="_blank" rel="noopener">图片来源</a> /<a href="https://github.com/JerryLead/SparkInternals/blob/master/markdown/7-Broadcast.md" target="_blank" rel="noopener">文字来源</a></p>
+<h2 id="3-18-spark-中的广播变量？"><a href="#3-18-spark-中的广播变量？" class="headerlink" title="3.18 spark 中的广播变量？"></a>3.18 spark 中的广播变量？</h2><p><a href="https://www.jianshu.com/p/6ef7f0a44fbf" target="_blank" rel="noopener">图片来源</a> /<a href="https://github.com/JerryLead/SparkInternals/blob/master/markdown/7-Broadcast.md" target="_blank" rel="noopener">文字来源</a></p>
 <p><img src="/2019/11/24/大数据相关/spark中的广播变量.png" alt=""></p>
 <p><strong>顾名思义，broadcast 就是将数据从一个节点发送到其他各个节点上去。这样的场景很多，比如 driver 上有一张表，其他节点上运行的 task 需要 lookup 这张表，那么 driver 可以先把这张表 copy 到这些节点，这样 task 就可以在本地查表了。如何实现一个可靠高效的 broadcast 机制是一个有挑战性的问题。先看看 Spark 官网上的一段话：</strong></p>
 <p>Broadcast variables allow the programmer to keep a <strong>read-only</strong> variable cached on each <strong>machine</strong> rather than shipping a copy of it with <strong>tasks</strong>. They can be used, for example, to give every node a copy of a <strong>large input dataset</strong> in an efficient manner. Spark also attempts to distribute broadcast variables using <strong>efficient</strong> broadcast algorithms to reduce communication cost.</p>
-<h4 id="问题：为什么只能-broadcast-只读的变量？"><a href="#问题：为什么只能-broadcast-只读的变量？" class="headerlink" title="问题：为什么只能 broadcast 只读的变量？"></a>问题：为什么只能 broadcast 只读的变量？</h4><p>这就涉及一致性的问题，如果变量可以被更新，那么一旦变量被某个节点更新，其他节点要不要一块更新？如果多个节点同时在更新，更新顺序是什么？怎么做同步？还会涉及 fault-tolerance 的问题。为了避免维护数据一致性问题，Spark 目前只支持 broadcast 只读变量。</p>
-<h4 id="问题：broadcast-到节点而不是-broadcast-到每个-task？"><a href="#问题：broadcast-到节点而不是-broadcast-到每个-task？" class="headerlink" title="问题：broadcast 到节点而不是 broadcast 到每个 task？"></a>问题：broadcast 到节点而不是 broadcast 到每个 task？</h4><p>因为每个 task 是一个线程，而且同在一个进程运行 tasks 都属于同一个 application。因此每个节点（executor）上放一份就可以被所有 task 共享。</p>
-<h4 id="问题：-具体怎么用-broadcast？"><a href="#问题：-具体怎么用-broadcast？" class="headerlink" title="问题： 具体怎么用 broadcast？"></a>问题： 具体怎么用 broadcast？</h4><p>driver program 例子：</p>
+<h3 id="问题：为什么只能-broadcast-只读的变量？"><a href="#问题：为什么只能-broadcast-只读的变量？" class="headerlink" title="问题：为什么只能 broadcast 只读的变量？"></a>问题：为什么只能 broadcast 只读的变量？</h3><p>这就涉及一致性的问题，如果变量可以被更新，那么一旦变量被某个节点更新，其他节点要不要一块更新？如果多个节点同时在更新，更新顺序是什么？怎么做同步？还会涉及 fault-tolerance 的问题。为了避免维护数据一致性问题，Spark 目前只支持 broadcast 只读变量。</p>
+<h3 id="问题：broadcast-到节点而不是-broadcast-到每个-task？"><a href="#问题：broadcast-到节点而不是-broadcast-到每个-task？" class="headerlink" title="问题：broadcast 到节点而不是 broadcast 到每个 task？"></a>问题：broadcast 到节点而不是 broadcast 到每个 task？</h3><p>因为每个 task 是一个线程，而且同在一个进程运行 tasks 都属于同一个 application。因此每个节点（executor）上放一份就可以被所有 task 共享。</p>
+<h3 id="问题：-具体怎么用-broadcast？"><a href="#问题：-具体怎么用-broadcast？" class="headerlink" title="问题： 具体怎么用 broadcast？"></a>问题： 具体怎么用 broadcast？</h3><p>driver program 例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val data = List(1, 2, 3, 4, 5, 6)</span><br><span class="line">val bdata = sc.broadcast(data)</span><br><span class="line"></span><br><span class="line">val rdd = sc.parallelize(1 to 6, 2)</span><br><span class="line">val observedSizes = rdd.map(_ =&gt; bdata.value.size)</span><br></pre></td></tr></table></figure>
 <p>driver 使用 <code>sc.broadcast()</code> 声明要 broadcast 的 data，bdata 的类型是 Broadcast。</p>
 <p>当 <code>rdd.transformation(func)</code> 需要用 bdata 时，直接在 func 中调用，比如上面的例子中的 map() 就使用了 bdata.value.size。</p>
-<h4 id="问题：怎么实现-broadcast？"><a href="#问题：怎么实现-broadcast？" class="headerlink" title="问题：怎么实现 broadcast？"></a>问题：怎么实现 broadcast？</h4><p>broadcast 的实现机制很有意思：</p>
+<h3 id="问题：怎么实现-broadcast？"><a href="#问题：怎么实现-broadcast？" class="headerlink" title="问题：怎么实现 broadcast？"></a>问题：怎么实现 broadcast？</h3><p>broadcast 的实现机制很有意思：</p>
 <ol>
 <li>分发 task 的时候先分发 bdata 的元信息</li>
 </ol>
@@ -1530,19 +1697,19 @@
 <p><strong>BT 过程：</strong>task 先在本地开一个数组用于存放将要 fetch 过来的 data blocks <code>arrayOfBlocks = new Array[TorrentBlock](totalBlocks)</code>，TorrentBlock 是对 data block 的包装。然后打乱要 fetch 的 data blocks 的顺序，比如如果 data block 共有 5 个，那么打乱后的 fetch 顺序可能是 3-1-2-4-5。然后按照打乱后的顺序去 fetch 一个个 data block。fetch 的过程就是通过 “本地 blockManager －本地 connectionManager－driver/executor 的 connectionManager－driver/executor 的 blockManager－data” 得到 data，这个过程与 fetch cached rdd 类似。<strong>每 fetch 到一个 block 就将其存放到 executor 的 blockManager 里面，同时通知 driver 上的 blockManagerMaster 说该 data block 多了一个存储地址。</strong>这一步通知非常重要，意味着 blockManagerMaster 知道 data block 现在在 cluster 中有多份，下一个不同节点上的 task 再去 fetch 这个 data block 的时候，可以有两个选择了，而且会随机选择一个去 fetch。这个过程持续下去就是 BT 协议，随着下载的客户端越来越多，data block 服务器也越来越多，就变成 p2p下载了。关于 BT 协议，Wikipedia 上有一个<a href="http://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">动画</a>)。</p>
 <p>整个 fetch 过程结束后，task 会开一个大 Array[Byte]，大小为 data 的总大小，然后将 data block 都 copy 到这个 Array，然后对 Array 中 bytes 进行反序列化得到原始的 data，这个过程就是 driver 序列化 data 的反过程。</p>
 <p>最后将 data 存放到 task 所在 executor 的 blockManager 里面，StorageLevel 为内存＋磁盘。显然，这时候 data 在 blockManager 里存了两份，不过等全部 executor 都 fetch 结束，存储 data blocks 那份可以删掉了。</p>
-<h4 id="问题：broadcast-RDD-会怎样"><a href="#问题：broadcast-RDD-会怎样" class="headerlink" title="问题：broadcast RDD 会怎样?"></a>问题：broadcast RDD 会怎样?</h4><p><a href="http://weibo.com/u/1410938285" target="_blank" rel="noopener">@Andrew-Xia</a> 回答道：不会怎样，就是这个rdd在每个executor中实例化一份。</p>
+<h3 id="问题：broadcast-RDD-会怎样"><a href="#问题：broadcast-RDD-会怎样" class="headerlink" title="问题：broadcast RDD 会怎样?"></a>问题：broadcast RDD 会怎样?</h3><p><a href="http://weibo.com/u/1410938285" target="_blank" rel="noopener">@Andrew-Xia</a> 回答道：不会怎样，就是这个rdd在每个executor中实例化一份。</p>
 <h4 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h4><p>公共数据的 broadcast 是很实用的功能，在 Hadoop 中使用 DistributedCache，比如常用的<code>-libjars</code>就是使用 DistributedCache 来将 task 依赖的 jars 分发到每个 task 的工作目录。不过分发前 DistributedCache 要先将文件上传到 HDFS。这种方式的主要问题是<strong>资源浪费</strong>，如果某个节点上要运行来自同一 job 的 4 个 mapper，那么公共数据会在该节点上存在 4 份（每个 task 的工作目录会有一份）。但是通过 HDFS 进行 broadcast 的好处在于<strong>单点瓶颈不明显</strong>，因为公共 data 首先被分成多个 block，然后不同的 block 存放在不同的节点。这样，只要所有的 task 不是同时去同一个节点 fetch 同一个 block，网络拥塞不会很严重。</p>
 <p>对于 Spark 来讲，broadcast 时考虑的不仅是如何将公共 data 分发下去的问题，还要考虑如何让同一节点上的 task 共享 data。</p>
 <p>对于第一个问题，Spark 设计了两种 broadcast 的方式，传统存在单点瓶颈问题的 HttpBroadcast，和类似 BT 方式的 TorrentBroadcast。HttpBroadcast 使用传统的 client-server 形式的 HttpServer 来传递真正的 data，而 TorrentBroadcast 使用 blockManager 自带的 NIO 通信方式来传递 data。TorrentBroadcast 存在的问题是<strong>慢启动</strong>和<strong>占内存</strong>，慢启动指的是刚开始 data 只在 driver 上有，要等 executors fetch 很多轮 data block 后，data server 才会变得可观，后面的 fetch 速度才会变快。executor 所占内存的在 fetch 完 data blocks 后进行反序列化时需要将近两倍 data size 的内存消耗。不管哪一种方式，driver 在分块时会有两倍 data size 的内存消耗。</p>
 <p>对于第二个问题，每个 executor 都包含一个 blockManager 用来管理存放在 executor 里的数据，将公共数据存放在 blockManager 中（StorageLevel 为内存＋磁盘），可以保证在 executor 执行的 tasks 能够共享 data。</p>
 <p>其实 Spark 之前还尝试了一种称为 TreeBroadcast 的机制，详情可以见技术报告 <a href="http://www.cs.berkeley.edu/~agearh/cs267.sp10/files/mosharaf-spark-bc-report-spring10.pdf" target="_blank" rel="noopener">Performance and Scalability of Broadcast in Spark</a>。</p>
 <p>更深入点，broadcast 可以用多播协议来做，不过多播使用 UDP，不是可靠的，仍然需要应用层的设计一些可靠性保障机制。</p>
-<h3 id="数据倾斜-怎样去处理数据倾斜？"><a href="#数据倾斜-怎样去处理数据倾斜？" class="headerlink" title="数据倾斜,怎样去处理数据倾斜？"></a>数据倾斜,怎样去处理数据倾斜？</h3><p>数据倾斜是一种很常见的问题（依据二八定律），简单来说，比方WordCount中某个Key对应的数据量非常大的话，就会产生数据倾斜，导致两个后果：</p>
+<h2 id="3-19-数据倾斜-怎样去处理数据倾斜？"><a href="#3-19-数据倾斜-怎样去处理数据倾斜？" class="headerlink" title="3.19 数据倾斜,怎样去处理数据倾斜？"></a>3.19 数据倾斜,怎样去处理数据倾斜？</h2><p>数据倾斜是一种很常见的问题（依据二八定律），简单来说，比方WordCount中某个Key对应的数据量非常大的话，就会产生数据倾斜，导致两个后果：</p>
 <ul>
 <li>OOM（单或少数的节点）；</li>
 <li>拖慢整个Job执行时间（其他已经完成的节点都在等这个还在做的节点）</li>
 </ul>
-<h4 id="数据倾斜主要分为两类-聚合倾斜-和-join倾斜"><a href="#数据倾斜主要分为两类-聚合倾斜-和-join倾斜" class="headerlink" title="数据倾斜主要分为两类: 聚合倾斜 和 join倾斜"></a>数据倾斜主要分为两类: 聚合倾斜 和 join倾斜</h4><ul>
+<h3 id="数据倾斜主要分为两类-聚合倾斜-和-join倾斜"><a href="#数据倾斜主要分为两类-聚合倾斜-和-join倾斜" class="headerlink" title="数据倾斜主要分为两类: 聚合倾斜 和 join倾斜"></a>数据倾斜主要分为两类: 聚合倾斜 和 join倾斜</h3><ul>
 <li><p><strong>聚合倾斜</strong></p>
 <ul>
 <li><p><strong>双重聚合（局部聚合+全局聚合）</strong></p>
@@ -1584,15 +1751,9 @@
 </ul>
 <p><a href="https://juejin.im/post/5ccd5cc7f265da03474e1249#heading-9" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://blog.csdn.net/qq_35394891/article/details/82260907" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="分析一下一段spark代码中哪些部分在Driver端执行-哪些部分在Worker端执行？"><a href="#分析一下一段spark代码中哪些部分在Driver端执行-哪些部分在Worker端执行？" class="headerlink" title="分析一下一段spark代码中哪些部分在Driver端执行,哪些部分在Worker端执行？"></a>分析一下一段spark代码中哪些部分在Driver端执行,哪些部分在Worker端执行？</h3><p>Driver Program是用户编写的提交给Spark集群执行的application，它包含两部分</p>
-<ul>
-<li><strong>作为驱动</strong>： Driver与Master、Worker协作完成application进程的启动、DAG划分、计算任务封装、计算任务分发到各个计算节点(Worker)、计算资源的分配等。</li>
-<li><strong>计算逻辑本身</strong>，当计算任务在Worker执行时，执行计算逻辑完成application的计算任务</li>
-</ul>
-<p>一般来说transformation算子均是在worker上执行的,其他类型的代码在driver端执行</p>
-<h3 id="Spark经典程序"><a href="#Spark经典程序" class="headerlink" title="Spark经典程序"></a>Spark经典程序</h3><h4 id="wordcount"><a href="#wordcount" class="headerlink" title="wordcount"></a>wordcount</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package yun.mao</span><br><span class="line"></span><br><span class="line">import org.apache.spark._</span><br><span class="line">import org.apache.spark.SparkContext._</span><br><span class="line"></span><br><span class="line">object WordCount &#123;</span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val inputFile = args(0)</span><br><span class="line">    val outputFile = args(1)</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;wordCount&quot;)</span><br><span class="line">    // Create a Scala Spark Context.</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line">    // Load our input data.</span><br><span class="line">    val input =  sc.textFile(inputFile)</span><br><span class="line">    // Split up into words.</span><br><span class="line">    val words = input.flatMap(_.split(&quot; &quot;))</span><br><span class="line">    // Transform into word and count.</span><br><span class="line">    val counts = words.map((_, 1)).reduceByKey(_+_)</span><br><span class="line">    // Save the word count back out to a text file, causing evaluation.</span><br><span class="line">    counts.saveAsTextFile(outputFile)</span><br><span class="line">    sc.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="pagerank"><a href="#pagerank" class="headerlink" title="pagerank"></a>pagerank</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">package yun.mao</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @Classname PageRank</span><br><span class="line">  * @Description TODO</span><br><span class="line">  * @Date 19-3-30 下午12:41</span><br><span class="line">  * @Created by mao&lt;tianmao818@qq.com&gt;</span><br><span class="line">  */</span><br><span class="line">import org.apache.spark.&#123;HashPartitioner, SparkConf, SparkContext&#125;</span><br><span class="line">object PageRank &#123;</span><br><span class="line">  def main(args: Array[String]): Unit = &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;page rank&quot;)</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line"></span><br><span class="line">    val iters=10</span><br><span class="line">    val lines=sc.textFile(args(0))</span><br><span class="line">    val links =lines.map&#123;s=&gt;</span><br><span class="line">      val parts=s.split(&quot;\\s+&quot;)</span><br><span class="line">      (parts(0),parts(1))</span><br><span class="line">    &#125;.distinct().groupByKey().cache()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    var ranks=links.mapValues(v=&gt;1.0)</span><br><span class="line">    /*</span><br><span class="line">    * 地址1---&gt;地址2   (指向链接2的越多,链接2 rank越高)</span><br><span class="line">    * (4,1.0)</span><br><span class="line">    * (2,1.0)</span><br><span class="line">    * (3,1.0)</span><br><span class="line">    * (1,1.0)</span><br><span class="line">    * */</span><br><span class="line"></span><br><span class="line">    ranks.foreach(println)</span><br><span class="line"></span><br><span class="line">    val tmp=links.join(ranks)</span><br><span class="line"></span><br><span class="line">    tmp.foreach(println)</span><br><span class="line">    /*</span><br><span class="line">    * (3,(CompactBuffer(1),1.0))</span><br><span class="line">    * (1,(CompactBuffer(3, 2, 4),1.0))</span><br><span class="line">    * (4,(CompactBuffer(1),1.0))</span><br><span class="line">    * (2,(CompactBuffer(1),1.0))</span><br><span class="line">    * */</span><br><span class="line">    println(&quot;----------------values-------------&quot;)</span><br><span class="line">    tmp.values.foreach(println)</span><br><span class="line">    /*</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * (CompactBuffer(3, 2, 4),1.0)</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * */</span><br><span class="line"></span><br><span class="line">    for(i &lt;-1 to iters)&#123;</span><br><span class="line">      //对urls中的url分别计算从当前的节点获取了多少权重</span><br><span class="line">      val contribs=links.join(ranks).values.flatMap&#123;case(urls,rank)=&gt;</span><br><span class="line">        val size=urls.size</span><br><span class="line">        urls.map(url=&gt;(url,rank/size))</span><br><span class="line">      &#125;</span><br><span class="line">      println(s&quot;--------$&#123;i&#125;-----------&quot;)</span><br><span class="line">      contribs.foreach(println)</span><br><span class="line">      ranks=contribs.reduceByKey(_+_).mapValues(0.15+0.85*_)</span><br><span class="line">    &#125;</span><br><span class="line">    val output=ranks.collect()</span><br><span class="line">    output.foreach(tup=&gt;println(s&quot;$&#123;tup._1&#125; has rank: $&#123;tup._2&#125;&quot;))</span><br><span class="line">    sc.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h4><ul>
+<h2 id="3-20-Spark经典程序"><a href="#3-20-Spark经典程序" class="headerlink" title="3.20 Spark经典程序"></a>3.20 Spark经典程序</h2><h3 id="3-20-1-wordcount"><a href="#3-20-1-wordcount" class="headerlink" title="3.20.1 wordcount"></a>3.20.1 wordcount</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package yun.mao</span><br><span class="line"></span><br><span class="line">import org.apache.spark._</span><br><span class="line">import org.apache.spark.SparkContext._</span><br><span class="line"></span><br><span class="line">object WordCount &#123;</span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val inputFile = args(0)</span><br><span class="line">    val outputFile = args(1)</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;wordCount&quot;)</span><br><span class="line">    // Create a Scala Spark Context.</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line">    // Load our input data.</span><br><span class="line">    val input =  sc.textFile(inputFile)</span><br><span class="line">    // Split up into words.</span><br><span class="line">    val words = input.flatMap(_.split(&quot; &quot;))</span><br><span class="line">    // Transform into word and count.</span><br><span class="line">    val counts = words.map((_, 1)).reduceByKey(_+_)</span><br><span class="line">    // Save the word count back out to a text file, causing evaluation.</span><br><span class="line">    counts.saveAsTextFile(outputFile)</span><br><span class="line">    sc.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-20-2-pagerank"><a href="#3-20-2-pagerank" class="headerlink" title="3.20.2 pagerank"></a>3.20.2 pagerank</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">package yun.mao</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @Classname PageRank</span><br><span class="line">  * @Description TODO</span><br><span class="line">  * @Date 19-3-30 下午12:41</span><br><span class="line">  * @Created by mao&lt;tianmao818@qq.com&gt;</span><br><span class="line">  */</span><br><span class="line">import org.apache.spark.&#123;HashPartitioner, SparkConf, SparkContext&#125;</span><br><span class="line">object PageRank &#123;</span><br><span class="line">  def main(args: Array[String]): Unit = &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;page rank&quot;)</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line"></span><br><span class="line">    val iters=10</span><br><span class="line">    val lines=sc.textFile(args(0))</span><br><span class="line">    val links =lines.map&#123;s=&gt;</span><br><span class="line">      val parts=s.split(&quot;\\s+&quot;)</span><br><span class="line">      (parts(0),parts(1))</span><br><span class="line">    &#125;.distinct().groupByKey().cache()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    var ranks=links.mapValues(v=&gt;1.0)</span><br><span class="line">    /*</span><br><span class="line">    * 地址1---&gt;地址2   (指向链接2的越多,链接2 rank越高)</span><br><span class="line">    * (4,1.0)</span><br><span class="line">    * (2,1.0)</span><br><span class="line">    * (3,1.0)</span><br><span class="line">    * (1,1.0)</span><br><span class="line">    * */</span><br><span class="line"></span><br><span class="line">    ranks.foreach(println)</span><br><span class="line"></span><br><span class="line">    val tmp=links.join(ranks)</span><br><span class="line"></span><br><span class="line">    tmp.foreach(println)</span><br><span class="line">    /*</span><br><span class="line">    * (3,(CompactBuffer(1),1.0))</span><br><span class="line">    * (1,(CompactBuffer(3, 2, 4),1.0))</span><br><span class="line">    * (4,(CompactBuffer(1),1.0))</span><br><span class="line">    * (2,(CompactBuffer(1),1.0))</span><br><span class="line">    * */</span><br><span class="line">    println(&quot;----------------values-------------&quot;)</span><br><span class="line">    tmp.values.foreach(println)</span><br><span class="line">    /*</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * (CompactBuffer(3, 2, 4),1.0)</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * (CompactBuffer(1),1.0)</span><br><span class="line">    * */</span><br><span class="line"></span><br><span class="line">    for(i &lt;-1 to iters)&#123;</span><br><span class="line">      //对urls中的url分别计算从当前的节点获取了多少权重</span><br><span class="line">      val contribs=links.join(ranks).values.flatMap&#123;case(urls,rank)=&gt;</span><br><span class="line">        val size=urls.size</span><br><span class="line">        urls.map(url=&gt;(url,rank/size))</span><br><span class="line">      &#125;</span><br><span class="line">      println(s&quot;--------$&#123;i&#125;-----------&quot;)</span><br><span class="line">      contribs.foreach(println)</span><br><span class="line">      ranks=contribs.reduceByKey(_+_).mapValues(0.15+0.85*_)</span><br><span class="line">    &#125;</span><br><span class="line">    val output=ranks.collect()</span><br><span class="line">    output.foreach(tup=&gt;println(s&quot;$&#123;tup._1&#125; has rank: $&#123;tup._2&#125;&quot;))</span><br><span class="line">    sc.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-20-3-TF-IDF"><a href="#3-20-3-TF-IDF" class="headerlink" title="3.20.3 TF-IDF"></a>3.20.3 TF-IDF</h3><ul>
 <li>TF-IDF介绍:</li>
 </ul>
 <p>实质在于统计词汇在当前文档中的频率和在所有文档中的频率,在当前的文档中出现的频率越高重要性越高,在所有的文档中出现的频率越高重要性越低.它可以体现一个文档中词语在语料库中的重要程度。</p>
@@ -1601,7 +1762,7 @@
 </ul>
 <p>(<a href="http://qwone.com/~jason/20Newsgroups/" target="_blank" rel="noopener">http://qwone.com/~jason/20Newsgroups/</a>)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line">package yun.mao</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @Classname DocumentClassification</span><br><span class="line">  * @Description TODO</span><br><span class="line">  * @Date 19-3-30 下午5:19</span><br><span class="line">  * @Created by mao&lt;tianmao818@qq.com&gt;</span><br><span class="line">  */</span><br><span class="line">import org.apache.spark.&#123;SparkConf, SparkContext&#125;</span><br><span class="line">import org.apache.spark.mllib.classification.NaiveBayes</span><br><span class="line">import org.apache.spark.mllib.evaluation.MulticlassMetrics</span><br><span class="line">import org.apache.spark.mllib.feature.&#123;HashingTF, IDF&#125;</span><br><span class="line">import org.apache.spark.mllib.linalg.SparseVector</span><br><span class="line">import org.apache.spark.mllib.regression.LabeledPoint</span><br><span class="line">import org.apache.spark.mllib.linalg.&#123;SparseVector =&gt; SV&#125;</span><br><span class="line">import org.apache.spark.mllib.util.MLUtils</span><br><span class="line">//import org.apache.spark.ml.feature.HashingTF</span><br><span class="line">//import org.apache.spark.ml.feature.IDF</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * A simple Spark app in Scala</span><br><span class="line">  */</span><br><span class="line">object DocumentClassification &#123;</span><br><span class="line"></span><br><span class="line">  def main(args: Array[String]) &#123;</span><br><span class="line">    val conf = new SparkConf().setAppName(&quot;TF-IDF Document classification&quot;)</span><br><span class="line">    val sc = new SparkContext(conf)</span><br><span class="line"></span><br><span class="line">    val path = args(0)</span><br><span class="line">    //训练数据</span><br><span class="line">    val rdd = sc.wholeTextFiles(path)</span><br><span class="line">    val text = rdd.map &#123; case (file, text) =&gt; text &#125;</span><br><span class="line">    val newsgroups = rdd.map &#123; case (file, text) =&gt; file.split(&quot;/&quot;).takeRight(2).head &#125;</span><br><span class="line">    val newsgroupsMap = newsgroups.distinct.collect().zipWithIndex.toMap</span><br><span class="line">    val dim = math.pow(2, 18).toInt</span><br><span class="line"></span><br><span class="line">    val hashingTF = new HashingTF(dim)</span><br><span class="line"></span><br><span class="line">    var tokens = text.map(doc =&gt; TFIDFExtraction.tokenize(doc))</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    * HashingTF.transform()的输入/输出?</span><br><span class="line">    * 输入:</span><br><span class="line">    * 输出:多个[65,618,852,992,1194],[1.0,1.0,1.0,1.0,1.0])],前半部分是单词的hash值,后半部分是对应的频率</span><br><span class="line">    * 每一个文档对应这这样的一个记录</span><br><span class="line">    * */</span><br><span class="line">    val tf = hashingTF.transform(tokens)</span><br><span class="line">    tf.cache</span><br><span class="line">    val v = tf.first.asInstanceOf[SV]</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    * IDF().fit()的输入/输出?</span><br><span class="line">    * 输入:</span><br><span class="line">    * 输出:</span><br><span class="line">    * */</span><br><span class="line">    val idf = new IDF().fit(tf)</span><br><span class="line">    /*</span><br><span class="line">    * IDF().fit(tf).transform(tf)的输入输出?</span><br><span class="line">    * 输入:</span><br><span class="line">    * 输出:每一项计算的值[65,618,852,992,1194],[0.6931471805599453,0.6931471805599453,0.6931471805599453,0.6931471805599453,0.6931471805599453]</span><br><span class="line">    * 输出前半部分是单词的hash值,后半部分是对应的tfidf数值,输出是所有的文档集合,一个文档有一个这样的记录</span><br><span class="line">    * */</span><br><span class="line">    val tfidf = idf.transform(tf)</span><br><span class="line"></span><br><span class="line">    //zip()将两个序列组织成为字典的形式!</span><br><span class="line">    val zipped = newsgroups.zip(tfidf)</span><br><span class="line">    println(zipped.first())</span><br><span class="line">    val train = zipped.map &#123; case (topic, vector) =&gt; &#123;</span><br><span class="line">      LabeledPoint(newsgroupsMap(topic), vector)</span><br><span class="line">    &#125; &#125;</span><br><span class="line"></span><br><span class="line">    //TODO uncomment to generate libsvm format</span><br><span class="line">    MLUtils.saveAsLibSVMFile(train,&quot;./output/20news-by-date-train-libsvm&quot;)</span><br><span class="line"></span><br><span class="line">    train.cache</span><br><span class="line">    val model = NaiveBayes.train(train, lambda = 0.1)</span><br><span class="line"></span><br><span class="line">    //测试数据</span><br><span class="line">    val testPath = args(1)</span><br><span class="line">    val testRDD = sc.wholeTextFiles(testPath)</span><br><span class="line">    val testLabels = testRDD.map &#123; case (file, text) =&gt;</span><br><span class="line">      val topic = file.split(&quot;/&quot;).takeRight(2).head</span><br><span class="line">      newsgroupsMap(topic)</span><br><span class="line">    &#125;</span><br><span class="line">    val testTf = testRDD.map &#123; case (file, text) =&gt; hashingTF.transform(TFIDFExtraction.tokenize(text)) &#125;</span><br><span class="line">    //idf利用的是已经训练好的</span><br><span class="line">    val testTfIdf = idf.transform(testTf)</span><br><span class="line">    val zippedTest = testLabels.zip(testTfIdf)</span><br><span class="line">    val test = zippedTest.map &#123; case (topic, vector) =&gt; &#123;</span><br><span class="line">      println(topic)</span><br><span class="line">      println(vector)</span><br><span class="line">      LabeledPoint(topic, vector)</span><br><span class="line">    &#125; &#125;</span><br><span class="line"></span><br><span class="line">    //支持向量机</span><br><span class="line">    MLUtils.saveAsLibSVMFile(test,&quot;./output/20news-by-date-test-libsvm&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    val predictionAndLabel = test.map(p =&gt; (model.predict(p.features), p.label))</span><br><span class="line">    val accuracy = 1.0 * predictionAndLabel.filter(x =&gt; x._1 == x._2).count() / test.count()</span><br><span class="line">    println(accuracy)</span><br><span class="line">    // Updated Dec 2016 by Rajdeep</span><br><span class="line">    //0.7928836962294211</span><br><span class="line">    val metrics = new MulticlassMetrics(predictionAndLabel)</span><br><span class="line">    println(metrics.accuracy)</span><br><span class="line">    println(metrics.weightedFalsePositiveRate)</span><br><span class="line">    println(metrics.weightedPrecision)</span><br><span class="line">    println(metrics.weightedFMeasure)</span><br><span class="line">    println(metrics.weightedRecall)</span><br><span class="line">    //0.7822644376431702</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    //朴素贝叶斯</span><br><span class="line">    val rawTokens = rdd.map &#123; case (file, text) =&gt; text.split(&quot; &quot;) &#125;</span><br><span class="line">    val rawTF = rawTokens.map(doc =&gt; hashingTF.transform(doc))</span><br><span class="line">    val rawTrain = newsgroups.zip(rawTF).map &#123; case (topic, vector) =&gt; LabeledPoint(newsgroupsMap(topic), vector) &#125;</span><br><span class="line">    val rawModel = NaiveBayes.train(rawTrain, lambda = 0.1)</span><br><span class="line">    val rawTestTF = testRDD.map &#123; case (file, text) =&gt; hashingTF.transform(text.split(&quot; &quot;)) &#125;</span><br><span class="line">    val rawZippedTest = testLabels.zip(rawTestTF)</span><br><span class="line">    val rawTest = rawZippedTest.map &#123; case (topic, vector) =&gt; LabeledPoint(topic, vector) &#125;</span><br><span class="line">    val rawPredictionAndLabel = rawTest.map(p =&gt; (rawModel.predict(p.features), p.label))</span><br><span class="line">    val rawAccuracy = 1.0 * rawPredictionAndLabel.filter(x =&gt; x._1 == x._2).count() / rawTest.count()</span><br><span class="line">    println(rawAccuracy)</span><br><span class="line">    // 0.7661975570897503</span><br><span class="line">    val rawMetrics = new MulticlassMetrics(rawPredictionAndLabel)</span><br><span class="line">    println(rawMetrics.weightedFMeasure)</span><br><span class="line">    // older value 0.7628947184990661</span><br><span class="line">    // dec 2016 : 0.7653320418573546</span><br><span class="line"></span><br><span class="line">    sc.stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">object TFIDFExtraction &#123;</span><br><span class="line">  def tokenize(line: String): Seq[String] = &#123;</span><br><span class="line">    line.split(&quot;&quot;&quot;\W+&quot;&quot;&quot;)</span><br><span class="line">      .map(_.toLowerCase)</span><br><span class="line">      .filter(token =&gt; regex.pattern.matcher(token).matches)</span><br><span class="line">      .filterNot(token =&gt; stopwords.contains(token))</span><br><span class="line">      .filterNot(token =&gt; rareTokens.contains(token))</span><br><span class="line">      .filter(token =&gt; token.size &gt;= 2)</span><br><span class="line">      .toSeq</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h2><h3 id="讲一下flink的运行架构？"><a href="#讲一下flink的运行架构？" class="headerlink" title="讲一下flink的运行架构？"></a>讲一下flink的运行架构？</h3><p><img src="/2019/11/24/大数据相关/flink架构图.png" alt=""></p>
+<h1 id="4-Flink"><a href="#4-Flink" class="headerlink" title="4. Flink"></a>4. Flink</h1><h2 id="4-1-讲一下flink的运行架构？"><a href="#4-1-讲一下flink的运行架构？" class="headerlink" title="4.1 讲一下flink的运行架构？"></a>4.1 讲一下flink的运行架构？</h2><p><img src="/2019/11/24/大数据相关/flink架构图.png" alt=""></p>
 <p>当 Flink 集群启动后，首先会启动一个 JobManger 和一个或多个的 TaskManager。由 Client 提交任务给 JobManager，JobManager 再调度任务到各个 TaskManager 去执行，然后 TaskManager 将心跳和统计信息汇报给 JobManager。TaskManager 之间以流的形式进行数据的传输。上述三者均为独立的 JVM 进程。</p>
 <ul>
 <li><strong>Client</strong> 为提交 Job 的客户端，可以是运行在任何机器上（与 JobManager 环境连通即可）。提交 Job 后，Client 可以结束进程（Streaming的任务），也可以不结束并等待结果返回。</li>
@@ -1610,7 +1771,7 @@
 </ul>
 <p><a href="http://wuchong.me/blog/2016/05/03/flink-internals-overview/" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="http://shiyanjun.cn/archives/1508.html" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="讲一下flink的作业执行流程？"><a href="#讲一下flink的作业执行流程？" class="headerlink" title="讲一下flink的作业执行流程？"></a>讲一下flink的作业执行流程？</h3><p> <img src="/2019/11/24/大数据相关/flinkRuntime.png" alt=""></p>
+<h2 id="4-2-讲一下flink的作业执行流程？"><a href="#4-2-讲一下flink的作业执行流程？" class="headerlink" title="4.2 讲一下flink的作业执行流程？"></a>4.2 讲一下flink的作业执行流程？</h2><p> <img src="/2019/11/24/大数据相关/flinkRuntime.png" alt=""></p>
 <p><strong>以yarn模式Per-job方式为例概述作业提交执行流程</strong></p>
 <ol>
 <li><p>当执行executor() 之后,会首先在本地client 中将代码转化为可以提交的 JobGraph</p>
@@ -1636,7 +1797,7 @@
 </li>
 </ol>
 <p><a href="https://www.bilibili.com/video/av52394455?t=343" target="_blank" rel="noopener">参考视频</a></p>
-<h3 id="flink具体是如何实现exactly-once-语义？"><a href="#flink具体是如何实现exactly-once-语义？" class="headerlink" title="flink具体是如何实现exactly once 语义？"></a>flink具体是如何实现exactly once 语义？</h3><p>在谈到 flink 所实现的 exactly-once语义时,主要是2个层面上的,首先 flink在0.9版本以后已经实现了基于state的内部一致性语义, 在1.4版本以后也可以实现端到端 Exactly-Once语义</p>
+<h2 id="4-3-flink具体是如何实现exactly-once-语义？"><a href="#4-3-flink具体是如何实现exactly-once-语义？" class="headerlink" title="4.3 flink具体是如何实现exactly once 语义？"></a>4.3 flink具体是如何实现exactly once 语义？</h2><p>在谈到 flink 所实现的 exactly-once语义时,主要是2个层面上的,首先 flink在0.9版本以后已经实现了基于state的内部一致性语义, 在1.4版本以后也可以实现端到端 Exactly-Once语义</p>
 <ul>
 <li><h4 id="状态-Exactly-Once"><a href="#状态-Exactly-Once" class="headerlink" title="状态 Exactly-Once"></a>状态 Exactly-Once</h4><p>Flink 提供 exactly-once 的状态（state）投递语义，这为有状态的（stateful）计算提供了准确性保证。也就是状态是不会重复使用的,有且仅有一次消费</p>
 </li>
@@ -1651,13 +1812,13 @@
 <p>为了提供端到端Exactly-Once语义，除了Flink应用程序本身的状态，Flink写入的外部存储也需要满足这个语义。也就是说，这些外部系统必须提供提交或者回滚的方法，然后通过Flink的checkpoint来协调</p>
 <p><a href="https://www.whitewood.me/2018/10/16/Flink-Exactly-Once-%E6%8A%95%E9%80%92%E5%AE%9E%E7%8E%B0%E6%B5%85%E6%9E%90/" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://my.oschina.net/u/992559/blog/1819948" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="flink-的-window-实现机制？"><a href="#flink-的-window-实现机制？" class="headerlink" title="flink 的 window 实现机制？"></a>flink 的 window 实现机制？</h3><p>Flink 中定义一个窗口主要需要以下三个组件。</p>
+<h2 id="4-4-flink-的-window-实现机制？"><a href="#4-4-flink-的-window-实现机制？" class="headerlink" title="4.4 flink 的 window 实现机制？"></a>4.4 flink 的 window 实现机制？</h2><p>Flink 中定义一个窗口主要需要以下三个组件。</p>
 <ul>
 <li><strong>Window Assigner：</strong>用来决定某个元素被分配到哪个/哪些窗口中去。</li>
 <li><strong>Trigger：</strong>触发器。决定了一个窗口何时能够被计算或清除，每个窗口都会拥有一个自己的Trigger。</li>
 <li><strong>Evictor：</strong>可以译为“驱逐者”。在Trigger触发之后，在窗口被处理之前，Evictor（如果有Evictor的话）会用来剔除窗口中不需要的元素，相当于一个filter。</li>
 </ul>
-<h4 id="Window-的实现"><a href="#Window-的实现" class="headerlink" title="Window 的实现"></a>Window 的实现</h4><p><img src="/2019/11/24/大数据相关/flink中window的实现.png" alt=""></p>
+<h3 id="Window-的实现"><a href="#Window-的实现" class="headerlink" title="Window 的实现"></a>Window 的实现</h3><p><img src="/2019/11/24/大数据相关/flink中window的实现.png" alt=""></p>
 <p>首先上图中的组件都位于一个算子（window operator）中，数据流源源不断地进入算子，每一个到达的元素都会被交给 WindowAssigner。WindowAssigner 会决定元素被放到哪个或哪些窗口（window），可能会创建新窗口。因为一个元素可以被放入多个窗口中，所以同时存在多个窗口是可能的。注意，<code>Window</code>本身只是一个ID标识符，其内部可能存储了一些元数据，如<code>TimeWindow</code>中有开始和结束时间，但是并不会存储窗口中的元素。窗口中的元素实际存储在 Key/Value State 中，key为<code>Window</code>，value为元素集合（或聚合值）。为了保证窗口的容错性，该实现依赖了 Flink 的 State 机制（参见 <a href="https://ci.apache.org/projects/flink/flink-docs-master/apis/streaming/state.html" target="_blank" rel="noopener">state 文档</a>）。</p>
 <p>每一个窗口都拥有一个属于自己的 Trigger，Trigger上会有定时器，用来决定一个窗口何时能够被计算或清除。每当有元素加入到该窗口，或者之前注册的定时器超时了，那么Trigger都会被调用。Trigger的返回结果可以是 continue（不做任何操作），fire（处理窗口数据），purge（移除窗口和窗口中的数据），或者 fire + purge。一个Trigger的调用结果只是fire的话，那么会计算窗口并保留窗口原样，也就是说窗口中的数据仍然保留不变，等待下次Trigger fire的时候再次执行计算。一个窗口可以被重复计算多次知道它被 purge 了。在purge之前，窗口会一直占用着内存。</p>
 <p>当Trigger fire了，窗口中的元素集合就会交给<code>Evictor</code>（如果指定了的话）。Evictor 主要用来遍历窗口中的元素列表，并决定最先进入窗口的多少个元素需要被移除。剩余的元素会交给用户指定的函数进行窗口的计算。如果没有 Evictor 的话，窗口中的所有元素会一起交给函数进行计算。</p>
@@ -1691,7 +1852,7 @@
 <p>在这种用户交互事件流中，我们首先想到的是将事件聚合到会话窗口中（一段用户持续活跃的周期），由非活跃的间隙分隔开。如上图所示，就是需要计算每个用户在活跃期间总共购买的商品数量，如果用户30秒没有活动则视为会话断开（假设raw data stream是单个用户的购买行为流）</p>
 </li>
 </ul>
-<h3 id="flink-的-state-存储？"><a href="#flink-的-state-存储？" class="headerlink" title="flink 的 state 存储？"></a>flink 的 state 存储？</h3><p>Apache Flink内部有四种state的存储实现，具体如下：</p>
+<h2 id="4-5-flink-的-state-存储？"><a href="#4-5-flink-的-state-存储？" class="headerlink" title="4.5 flink 的 state 存储？"></a>4.5 flink 的 state 存储？</h2><p>Apache Flink内部有四种state的存储实现，具体如下：</p>
 <ul>
 <li><strong>基于内存的HeapStateBackend</strong> - 在debug模式使用，不 建议在生产模式下应用；</li>
 <li><strong>基于HDFS的FsStateBackend</strong> - 分布式文件持久化，每次读写都产生网络IO，整体性能不佳；</li>
@@ -1699,7 +1860,7 @@
 <li><strong>基于Niagara(Alibaba内部实现)NiagaraStateBackend</strong> - 分布式持久化- 在Alibaba生产环境应用；</li>
 </ul>
 <p><a href="https://juejin.im/post/5c87dbdbe51d45494c77d607" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="flink是如何实现反压的？"><a href="#flink是如何实现反压的？" class="headerlink" title="flink是如何实现反压的？"></a>flink是如何实现反压的？</h3><p>flink的反压经历了两个发展阶段,分别是基于TCP的反压(<1.5)和基于credit的反压(>1.5)</1.5)和基于credit的反压(></p>
+<h2 id="4-6-flink是如何实现反压的？"><a href="#4-6-flink是如何实现反压的？" class="headerlink" title="4.6 flink是如何实现反压的？"></a>4.6 flink是如何实现反压的？</h2><p>flink的反压经历了两个发展阶段,分别是基于TCP的反压(<1.5)和基于credit的反压(>1.5)</1.5)和基于credit的反压(></p>
 <ul>
 <li><h4 id="基于-TCP-的反压"><a href="#基于-TCP-的反压" class="headerlink" title="基于 TCP 的反压"></a>基于 TCP 的反压</h4><p>flink中的消息发送通过RS(ResultPartition),消息接收通过IC(InputGate),两者的数据都是以 LocalBufferPool的形式来存储和提取,进一步的依托于Netty的NetworkBufferPool,之后更底层的便是依托于TCP的滑动窗口机制,当IC端的buffer池满了之后,两个task之间的滑动窗口大小便为0,此时RS端便无法再发送数据</p>
 <p>基于TCP的反压最大的问题是会造成整个TaskManager端的反压,所有的task都会受到影响</p>
@@ -1711,9 +1872,9 @@
 <p><a href="https://www.bilibili.com/video/av55487329" target="_blank" rel="noopener">参考视频</a></p>
 <p><a href="https://blog.csdn.net/u010376788/article/details/92086752" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://blog.csdn.net/u010376788/article/details/95047250" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="flink的部署模式都有哪些？"><a href="#flink的部署模式都有哪些？" class="headerlink" title="flink的部署模式都有哪些？"></a>flink的部署模式都有哪些？</h3><p><strong>flink可以以多种方式部署,包括standlone模式/yarn/Mesos/Kubernetes/Docker/AWS/Google Compute Engine/MAPR等</strong></p>
+<h2 id="4-7-flink的部署模式都有哪些？"><a href="#4-7-flink的部署模式都有哪些？" class="headerlink" title="4.7 flink的部署模式都有哪些？"></a>4.7 flink的部署模式都有哪些？</h2><p><strong>flink可以以多种方式部署,包括standlone模式/yarn/Mesos/Kubernetes/Docker/AWS/Google Compute Engine/MAPR等</strong></p>
 <p>一般公司中主要采用 on yarn模式</p>
-<h3 id="讲一下flink-on-yarn的部署？"><a href="#讲一下flink-on-yarn的部署？" class="headerlink" title="讲一下flink on yarn的部署？"></a>讲一下flink on yarn的部署？</h3><p>Flink作业提交有两种类型:</p>
+<h3 id="4-7-1-讲一下flink-on-yarn的部署？"><a href="#4-7-1-讲一下flink-on-yarn的部署？" class="headerlink" title="4.7.1 讲一下flink on yarn的部署？"></a>4.7.1 讲一下flink on yarn的部署？</h3><p>Flink作业提交有两种类型:</p>
 <ul>
 <li><h4 id="yarn-session"><a href="#yarn-session" class="headerlink" title="yarn session"></a>yarn session</h4><p>需要先启动集群，然后在提交作业，接着会向yarn申请一块空间后，资源永远保持不变。如果资源满了，下一个作业就无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，那下一个作业才会正常提交.</p>
 <ul>
@@ -1752,7 +1913,7 @@
 </table>
 </div>
 <p><img src="/2019/11/24/大数据相关/flinkOnYarn.png" alt=""></p>
-<h3 id="flink中的时间概念-eventTime-和-processTime的区别？"><a href="#flink中的时间概念-eventTime-和-processTime的区别？" class="headerlink" title="flink中的时间概念 , eventTime 和 processTime的区别？"></a>flink中的时间概念 , eventTime 和 processTime的区别？</h3><p>Flink中有三种时间概念,分别是 Processing Time、Event Time 和 Ingestion Time</p>
+<h2 id="4-8-flink中的时间概念-eventTime-和-processTime的区别？"><a href="#4-8-flink中的时间概念-eventTime-和-processTime的区别？" class="headerlink" title="4.8 flink中的时间概念 , eventTime 和 processTime的区别？"></a>4.8 flink中的时间概念 , eventTime 和 processTime的区别？</h2><p>Flink中有三种时间概念,分别是 Processing Time、Event Time 和 Ingestion Time</p>
 <ul>
 <li><h4 id="Processing-Time"><a href="#Processing-Time" class="headerlink" title="Processing Time"></a>Processing Time</h4><p>Processing Time 是指事件被处理时机器的系统时间。</p>
 <p>当流程序在 Processing Time 上运行时，所有基于时间的操作(如时间窗口)将使用当时机器的系统时间。每小时 Processing Time 窗口将包括在系统时钟指示整个小时之间到达特定操作的所有事件</p>
@@ -1765,17 +1926,17 @@
 </li>
 </ul>
 <p><a href="https://zhuanlan.zhihu.com/p/55322400" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="flink中的session-Window怎样使用？"><a href="#flink中的session-Window怎样使用？" class="headerlink" title="flink中的session Window怎样使用？"></a>flink中的session Window怎样使用？</h3><p>会话窗口主要是将某段时间内活跃度较高的数据聚合成一个窗口进行计算,窗口的触发条件是 Session Gap, 是指在规定的时间内如果没有数据活跃接入,则认为窗口结束,然后触发窗口结果</p>
+<h2 id="4-9-flink中的session-Window怎样使用？"><a href="#4-9-flink中的session-Window怎样使用？" class="headerlink" title="4.9 flink中的session Window怎样使用？"></a>4.9 flink中的session Window怎样使用？</h2><p>会话窗口主要是将某段时间内活跃度较高的数据聚合成一个窗口进行计算,窗口的触发条件是 Session Gap, 是指在规定的时间内如果没有数据活跃接入,则认为窗口结束,然后触发窗口结果</p>
 <p>Session Windows窗口类型比较适合非连续性数据处理或周期性产生数据的场景,根据用户在线上某段时间内的活跃度对用户行为进行数据统计</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val sessionWindowStream = inputStream</span><br><span class="line">.keyBy(_.id)</span><br><span class="line">//使用EventTimeSessionWindow 定义 Event Time 滚动窗口</span><br><span class="line">.window(EventTimeSessionWindow.withGap(Time.milliseconds(10)))</span><br><span class="line">.process(......)</span><br></pre></td></tr></table></figure>
 <p>Session Window 本质上没有固定的起止时间点,因此底层计算逻辑和Tumbling窗口及Sliding 窗口有一定的区别,</p>
 <p>Session Window 为每个进入的数据都创建了一个窗口,最后再将距离窗口Session Gap 最近的窗口进行合并,然后计算窗口结果</p>
-<h3 id="flink中的session-Window怎样使用"><a href="#flink中的session-Window怎样使用" class="headerlink" title="flink中的session Window怎样使用"></a>flink中的session Window怎样使用</h3><p>会话窗口主要是将某段时间内活跃度较高的数据聚合成一个窗口进行计算,窗口的触发条件是 Session Gap, 是指在规定的时间内如果没有数据活跃接入,则认为窗口结束,然后触发窗口结果</p>
+<h2 id="4-10-flink中的session-Window怎样使用"><a href="#4-10-flink中的session-Window怎样使用" class="headerlink" title="4.10 flink中的session Window怎样使用"></a>4.10 flink中的session Window怎样使用</h2><p>会话窗口主要是将某段时间内活跃度较高的数据聚合成一个窗口进行计算,窗口的触发条件是 Session Gap, 是指在规定的时间内如果没有数据活跃接入,则认为窗口结束,然后触发窗口结果</p>
 <p>Session Windows窗口类型比较适合非连续性数据处理或周期性产生数据的场景,根据用户在线上某段时间内的活跃度对用户行为进行数据统计</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val sessionWindowStream = inputStream</span><br><span class="line">.keyBy(_.id)</span><br><span class="line">//使用EventTimeSessionWindow 定义 Event Time 滚动窗口</span><br><span class="line">.window(EventTimeSessionWindow.withGap(Time.milliseconds(10)))</span><br><span class="line">.process(......)</span><br></pre></td></tr></table></figure>
 <p>Session Window 本质上没有固定的起止时间点,因此底层计算逻辑和Tumbling窗口及Sliding 窗口有一定的区别,</p>
 <p>Session Window 为每个进入的数据都创建了一个窗口,最后再将距离窗口Session Gap 最近的窗口进行合并,然后计算窗口结果</p>
-<h2 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h2><h3 id="Hbase-架构"><a href="#Hbase-架构" class="headerlink" title="Hbase 架构"></a>Hbase 架构</h3><p><img src="/2019/11/24/大数据相关/hbase架构图.png" alt=""></p>
+<h1 id="5-HBase"><a href="#5-HBase" class="headerlink" title="5. HBase"></a>5. HBase</h1><h2 id="5-1-Hbase-架构"><a href="#5-1-Hbase-架构" class="headerlink" title="5.1 Hbase 架构"></a>5.1 Hbase 架构</h2><p><img src="/2019/11/24/大数据相关/hbase架构图.png" alt=""></p>
 <p><strong>Hbase主要包含HMaster/HRegionServer/Zookeeper</strong></p>
 <ul>
 <li><p><strong>HRegionServer 负责实际数据的读写. 当访问数据时, 客户端直接与RegionServer通信.</strong></p>
@@ -1793,7 +1954,7 @@
 <p>zookeeper探测和记录Hbase集群中服务器的状态信息.如果zookeeper发现服务器宕机,它会通知Hbase的master节点.</p>
 </li>
 </ul>
-<h3 id="hbase-如何设计-rowkey？"><a href="#hbase-如何设计-rowkey？" class="headerlink" title="hbase 如何设计 rowkey？"></a>hbase 如何设计 rowkey？</h3><ul>
+<h2 id="5-2-hbase-如何设计-rowkey？"><a href="#5-2-hbase-如何设计-rowkey？" class="headerlink" title="5.2 hbase 如何设计 rowkey？"></a>5.2 hbase 如何设计 rowkey？</h2><ul>
 <li><p><strong>RowKey长度原则</strong></p>
 <p>Rowkey是一个二进制码流，Rowkey的长度被很多开发者建议说设计在10~100个字节，不过建议是越短越好，不要超过16个字节。</p>
 <p>原因如下：</p>
@@ -1812,7 +1973,7 @@
 </ul>
 <p><a href="https://zhuanlan.zhihu.com/p/30074408" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="http://www.nosqlnotes.com/technotes/hbase/hbase-rowkey-design/" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="hbase的存储结构"><a href="#hbase的存储结构" class="headerlink" title="hbase的存储结构"></a>hbase的存储结构</h3><p><img src="/2019/11/24/大数据相关/hbase逻辑结构.png" alt=""></p>
+<h2 id="5-3-hbase的存储结构"><a href="#5-3-hbase的存储结构" class="headerlink" title="5.3 hbase的存储结构"></a>5.3 hbase的存储结构</h2><p><img src="/2019/11/24/大数据相关/hbase逻辑结构.png" alt=""></p>
 <p><strong>Hbase的优点及应用场景</strong>:</p>
 <ol>
 <li>半结构化或非结构化数据:<br>对于数据结构字段不够确定或杂乱无章非常难按一个概念去进行抽取的数据适合用HBase，因为HBase支持动态添加列。</li>
@@ -1831,10 +1992,10 @@
 <p><a href="https://www.iteye.com/blog/forlan-2364661" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://blog.csdn.net/liaynling/article/details/81199238" target="_blank" rel="noopener">参考文章2</a></p>
 <p><a href="https://juejin.im/post/5c31cf486fb9a04a102f6f89#heading-2" target="_blank" rel="noopener">参考文章3</a></p>
-<h3 id="hbase的HA实现-zookeeper在其中的作用？"><a href="#hbase的HA实现-zookeeper在其中的作用？" class="headerlink" title="hbase的HA实现,zookeeper在其中的作用？"></a>hbase的HA实现,zookeeper在其中的作用？</h3><p> HBase中可以启动多个HMaster，通过Zookeeper的Master Election机制保证总有一个Master运行。<br>配置HBase高可用，只需要启动两个HMaster，让Zookeeper自己去选择一个Master Acitve即可</p>
+<h2 id="5-4-hbase的HA实现-zookeeper在其中的作用？"><a href="#5-4-hbase的HA实现-zookeeper在其中的作用？" class="headerlink" title="5.4 hbase的HA实现,zookeeper在其中的作用？"></a>5.4 hbase的HA实现,zookeeper在其中的作用？</h2><p> HBase中可以启动多个HMaster，通过Zookeeper的Master Election机制保证总有一个Master运行。<br>配置HBase高可用，只需要启动两个HMaster，让Zookeeper自己去选择一个Master Acitve即可</p>
 <p>zk的在这里起到的作用就是用来管理master节点,以及帮助hbase做master选举</p>
-<h3 id="HMaster宕机的时候-哪些操作还能正常工作？"><a href="#HMaster宕机的时候-哪些操作还能正常工作？" class="headerlink" title="HMaster宕机的时候,哪些操作还能正常工作？"></a>HMaster宕机的时候,哪些操作还能正常工作？</h3><p>对表内数据的增删查改是可以正常进行的,因为hbase client 访问数据只需要通过 zookeeper 来找到 rowkey 的具体 region 位置即可. 但是对于创建表/删除表等的操作就无法进行了,因为这时候是需要HMaster介入, 并且region的拆分,合并,迁移等操作也都无法进行了</p>
-<h3 id="hbase的写数据的流程？"><a href="#hbase的写数据的流程？" class="headerlink" title="hbase的写数据的流程？"></a>hbase的写数据的流程？</h3><ol>
+<h2 id="5-5-HMaster宕机的时候-哪些操作还能正常工作？"><a href="#5-5-HMaster宕机的时候-哪些操作还能正常工作？" class="headerlink" title="5.5 HMaster宕机的时候,哪些操作还能正常工作？"></a>5.5 HMaster宕机的时候,哪些操作还能正常工作？</h2><p>对表内数据的增删查改是可以正常进行的,因为hbase client 访问数据只需要通过 zookeeper 来找到 rowkey 的具体 region 位置即可. 但是对于创建表/删除表等的操作就无法进行了,因为这时候是需要HMaster介入, 并且region的拆分,合并,迁移等操作也都无法进行了</p>
+<h2 id="5-6-hbase的写数据的流程？"><a href="#5-6-hbase的写数据的流程？" class="headerlink" title="5.6 hbase的写数据的流程？"></a>5.6 hbase的写数据的流程？</h2><ol>
 <li>Client先访问zookeeper，从.META.表获取相应region信息，然后从meta表获取相应region信息 </li>
 <li>根据namespace、表名和rowkey根据meta表的数据找到写入数据对应的region信息 </li>
 <li>找到对应的regionserver 把数据先写到WAL中，即HLog，然后写到MemStore上 </li>
@@ -1842,7 +2003,7 @@
 <li>当多个StoreFile文件达到一定的大小后(这个可以称之为小合并，合并数据可以进行设置，必须大于等于2，小于10——hbase.hstore.compaction.max和hbase.hstore.compactionThreshold，默认为10和3)，会触发Compact合并操作，合并为一个StoreFile，（这里同时进行版本的合并和数据删除。） </li>
 <li>当Storefile大小超过一定阈值后，会把当前的Region分割为两个（Split）【可称之为大合并，该阈值通过hbase.hregion.max.filesize设置，默认为10G】，并由Hmaster分配到相应的HRegionServer，实现负载均衡</li>
 </ol>
-<h3 id="hbase读数据的流程？"><a href="#hbase读数据的流程？" class="headerlink" title="hbase读数据的流程？"></a>hbase读数据的流程？</h3><ol>
+<h2 id="5-7-hbase读数据的流程？"><a href="#5-7-hbase读数据的流程？" class="headerlink" title="5.7 hbase读数据的流程？"></a>5.7 hbase读数据的流程？</h2><ol>
 <li>首先，客户端需要获知其想要读取的信息的Region的位置，这个时候，Client访问hbase上数据时并不需要Hmaster参与（HMaster仅仅维护着table和Region的元数据信息，负载很低），只需要访问zookeeper，从meta表获取相应region信息(地址和端口等)。【Client请求ZK获取.META.所在的RegionServer的地址。】</li>
 <li>客户端会将该保存着RegionServer的位置信息的元数据表.META.进行缓存。然后在表中确定待检索rowkey所在的RegionServer信息（得到持有对应行键的.META表的服务器名）。【获取访问数据所在的RegionServer地址】</li>
 <li>根据数据所在RegionServer的访问信息，客户端会向该RegionServer发送真正的数据读取请求。服务器端接收到该请求之后需要进行复杂的处理。</li>
@@ -1850,7 +2011,7 @@
 </ol>
 <p><a href="https://blog.csdn.net/HaixWang/article/details/79520141#%E8%AF%BB%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="http://hbasefly.com/2016/12/21/hbase-getorscan/?rkfcfo=fy6gy1" target="_blank" rel="noopener">参考文章2</a></p>
-<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><h3 id="kafka-的架构？"><a href="#kafka-的架构？" class="headerlink" title="kafka 的架构？"></a>kafka 的架构？</h3><h3 id="kafka-与其他消息组件对比？"><a href="#kafka-与其他消息组件对比？" class="headerlink" title="kafka 与其他消息组件对比？"></a>kafka 与其他消息组件对比？</h3><p><a href="https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/why-mq.md" target="_blank" rel="noopener">推荐阅读文章</a></p>
+<h1 id="6-Kafka"><a href="#6-Kafka" class="headerlink" title="6. Kafka"></a>6. Kafka</h1><h2 id="6-1-kafka-的架构？"><a href="#6-1-kafka-的架构？" class="headerlink" title="6.1 kafka 的架构？"></a>6.1 kafka 的架构？</h2><h2 id="6-2-kafka-与其他消息组件对比？"><a href="#6-2-kafka-与其他消息组件对比？" class="headerlink" title="6.2 kafka 与其他消息组件对比？"></a>6.2 kafka 与其他消息组件对比？</h2><p><a href="https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/why-mq.md" target="_blank" rel="noopener">推荐阅读文章</a></p>
 <div class="table-container">
 <table>
 <thead>
@@ -1908,7 +2069,7 @@
 </tbody>
 </table>
 </div>
-<h3 id="kafka-实现高吞吐的原理？"><a href="#kafka-实现高吞吐的原理？" class="headerlink" title="kafka 实现高吞吐的原理？"></a>kafka 实现高吞吐的原理？</h3><ul>
+<h2 id="6-3-kafka-实现高吞吐的原理？"><a href="#6-3-kafka-实现高吞吐的原理？" class="headerlink" title="6.3 kafka 实现高吞吐的原理？"></a>6.3 kafka 实现高吞吐的原理？</h2><ul>
 <li>读写文件依赖OS文件系统的页缓存，而不是在JVM内部缓存数据，利用OS来缓存，内存利用率高</li>
 <li>sendfile技术（零拷贝），避免了传统网络IO四步流程</li>
 <li>支持End-to-End的压缩</li>
@@ -1917,7 +2078,7 @@
 </ul>
 <p><a href="https://www.jianshu.com/p/d6a73be9d803" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://blog.csdn.net/stark_summer/article/details/50144591" target="_blank" rel="noopener">参考文章2</a></p>
-<h3 id="kafka怎样保证不重复消费？"><a href="#kafka怎样保证不重复消费？" class="headerlink" title="kafka怎样保证不重复消费？"></a>kafka怎样保证不重复消费？</h3><p>此问题其实等价于保证消息队列消费的幂等性</p>
+<h2 id="6-4-kafka怎样保证不重复消费？"><a href="#6-4-kafka怎样保证不重复消费？" class="headerlink" title="6.4 kafka怎样保证不重复消费？"></a>6.4 kafka怎样保证不重复消费？</h2><p>此问题其实等价于保证消息队列消费的幂等性</p>
 <p>主要需要结合实际业务来操作:</p>
 <ul>
 <li>比如你拿个数据要写库，你先根据主键查一下，如果这数据都有了，你就别插入了，update 一下好吧。</li>
@@ -1926,10 +2087,10 @@
 <li>比如基于数据库的唯一键来保证重复数据不会重复插入多条。因为有唯一键约束了，重复数据插入只会报错，不会导致数据库中出现脏数据。</li>
 </ul>
 <p><a href="https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/how-to-ensure-that-messages-are-not-repeatedly-consumed.md" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="kafka怎样保证不丢失消息？"><a href="#kafka怎样保证不丢失消息？" class="headerlink" title="kafka怎样保证不丢失消息？"></a>kafka怎样保证不丢失消息？</h3><h4 id="消费端弄丢了数据"><a href="#消费端弄丢了数据" class="headerlink" title="消费端弄丢了数据"></a>消费端弄丢了数据</h4><p>唯一可能导致消费者弄丢数据的情况，就是说，你消费到了这个消息，然后消费者那边<strong>自动提交了 offset</strong>，让 Kafka 以为你已经消费好了这个消息，但其实你才刚准备处理这个消息，你还没处理，你自己就挂了，此时这条消息就丢咯。</p>
+<h2 id="6-5-kafka怎样保证不丢失消息？"><a href="#6-5-kafka怎样保证不丢失消息？" class="headerlink" title="6.5 kafka怎样保证不丢失消息？"></a>6.5 kafka怎样保证不丢失消息？</h2><h3 id="消费端弄丢了数据"><a href="#消费端弄丢了数据" class="headerlink" title="消费端弄丢了数据"></a>消费端弄丢了数据</h3><p>唯一可能导致消费者弄丢数据的情况，就是说，你消费到了这个消息，然后消费者那边<strong>自动提交了 offset</strong>，让 Kafka 以为你已经消费好了这个消息，但其实你才刚准备处理这个消息，你还没处理，你自己就挂了，此时这条消息就丢咯。</p>
 <p>这不是跟 RabbitMQ 差不多吗，大家都知道 Kafka 会自动提交 offset，那么只要<strong>关闭自动提交</strong> offset，在处理完之后自己手动提交 offset，就可以保证数据不会丢。但是此时确实还是<strong>可能会有重复消费</strong>，比如你刚处理完，还没提交 offset，结果自己挂了，此时肯定会重复消费一次，自己保证幂等性就好了。</p>
 <p>生产环境碰到的一个问题，就是说我们的 Kafka 消费者消费到了数据之后是写到一个内存的 queue 里先缓冲一下，结果有的时候，你刚把消息写入内存 queue，然后消费者会自动提交 offset。然后此时我们重启了系统，就会导致内存 queue 里还没来得及处理的数据就丢失了。</p>
-<h4 id="Kafka-弄丢了数据"><a href="#Kafka-弄丢了数据" class="headerlink" title="Kafka 弄丢了数据"></a>Kafka 弄丢了数据</h4><p>这块比较常见的一个场景，就是 Kafka 某个 broker 宕机，然后重新选举 partition 的 leader。大家想想，要是此时其他的 follower 刚好还有些数据没有同步，结果此时 leader 挂了，然后选举某个 follower 成 leader 之后，不就少了一些数据？这就丢了一些数据啊。</p>
+<h3 id="Kafka-弄丢了数据"><a href="#Kafka-弄丢了数据" class="headerlink" title="Kafka 弄丢了数据"></a>Kafka 弄丢了数据</h3><p>这块比较常见的一个场景，就是 Kafka 某个 broker 宕机，然后重新选举 partition 的 leader。大家想想，要是此时其他的 follower 刚好还有些数据没有同步，结果此时 leader 挂了，然后选举某个 follower 成 leader 之后，不就少了一些数据？这就丢了一些数据啊。</p>
 <p>生产环境也遇到过，我们也是，之前 Kafka 的 leader 机器宕机了，将 follower 切换为 leader 之后，就会发现说这个数据就丢了。</p>
 <p>所以此时一般是要求起码设置如下 4 个参数：</p>
 <ul>
@@ -1939,9 +2100,9 @@
 <li>在 producer 端设置 <code>retries=MAX</code>（很大很大很大的一个值，无限次重试的意思）：这个是<strong>要求一旦写入失败，就无限重试</strong>，卡在这里了。</li>
 </ul>
 <p>我们生产环境就是按照上述要求配置的，这样配置之后，至少在 Kafka broker 端就可以保证在 leader 所在 broker 发生故障，进行 leader 切换时，数据不会丢失。</p>
-<h4 id="生产者会不会弄丢数据？"><a href="#生产者会不会弄丢数据？" class="headerlink" title="生产者会不会弄丢数据？"></a>生产者会不会弄丢数据？</h4><p>如果按照上述的思路设置了 <code>acks=all</code>，一定不会丢，要求是，你的 leader 接收到消息，所有的 follower 都同步到了消息之后，才认为本次写成功了。如果没满足这个条件，生产者会自动不断的重试，重试无限次。</p>
+<h3 id="生产者会不会弄丢数据？"><a href="#生产者会不会弄丢数据？" class="headerlink" title="生产者会不会弄丢数据？"></a>生产者会不会弄丢数据？</h3><p>如果按照上述的思路设置了 <code>acks=all</code>，一定不会丢，要求是，你的 leader 接收到消息，所有的 follower 都同步到了消息之后，才认为本次写成功了。如果没满足这个条件，生产者会自动不断的重试，重试无限次。</p>
 <p><a href="https://github.com/doocs/advanced-java/blob/master/docs/high-concurrency/how-to-ensure-the-reliable-transmission-of-messages.md" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？"><a href="#kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？" class="headerlink" title="kafka 与 spark streaming 集成,如何保证 exactly once 语义？"></a>kafka 与 spark streaming 集成,如何保证 exactly once 语义？</h3><ul>
+<h2 id="6-6-kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？"><a href="#6-6-kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？" class="headerlink" title="6.6 kafka 与 spark streaming 集成,如何保证 exactly once 语义？"></a>6.6 kafka 与 spark streaming 集成,如何保证 exactly once 语义？</h2><ul>
 <li><h3 id="Spark-Streaming上游对接kafka时保证Exactly-Once"><a href="#Spark-Streaming上游对接kafka时保证Exactly-Once" class="headerlink" title="Spark Streaming上游对接kafka时保证Exactly Once"></a>Spark Streaming上游对接kafka时保证Exactly Once</h3><p>Spark Streaming使用Direct模式对接上游kafka。无论kafka有多少个partition， 使用Direct模式总能保证SS中有相同数量的partition与之相对， 也就是说SS中的KafkaRDD的并发数量在Direct模式下是由上游kafka决定的。 在这个模式下，kafka的offset是作为KafkaRDD的一部分存在，会存储在checkpoints中， 由于checkpoints只存储offset内容，而不存储数据，这就使得checkpoints是相对轻的操作。 这就使得SS在遇到故障时，可以从checkpoint中恢复上游kafka的offset，从而保证exactly once</p>
 </li>
 <li><h3 id="Spark-Streaming输出下游保证Exactly-once"><a href="#Spark-Streaming输出下游保证Exactly-once" class="headerlink" title="Spark Streaming输出下游保证Exactly once"></a>Spark Streaming输出下游保证Exactly once</h3><ul>
@@ -1960,7 +2121,7 @@
 <p><a href="http://www.aihacks.life/post/spark-streaming%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81exactly-once%E8%AF%AD%E4%B9%89/" target="_blank" rel="noopener">参考文章1</a></p>
 <p><a href="https://www.jianshu.com/p/10de8f3b1be8" target="_blank" rel="noopener">参考文章2</a></p>
 <p><a href="https://blog.csdn.net/cymvp/article/details/52605987" target="_blank" rel="noopener">参考文章3</a></p>
-<h3 id="ack-有哪几种-生产中怎样选择？"><a href="#ack-有哪几种-生产中怎样选择？" class="headerlink" title="ack 有哪几种, 生产中怎样选择？"></a>ack 有哪几种, 生产中怎样选择？</h3><p>ack=0/1/-1的不同情况：</p>
+<h2 id="6-7-ack-有哪几种-生产中怎样选择？"><a href="#6-7-ack-有哪几种-生产中怎样选择？" class="headerlink" title="6.7 ack 有哪几种, 生产中怎样选择？"></a>6.7 ack 有哪几种, 生产中怎样选择？</h2><p>ack=0/1/-1的不同情况：</p>
 <ul>
 <li><p>Ack = 0</p>
 <p>producer不等待broker的ack，broker一接收到还没有写入磁盘就已经返回，当broker故障时有可能丢失数据；</p>
@@ -1973,13 +2134,13 @@
 </li>
 </ul>
 <p><strong>生产中主要以 Ack=-1为主,如果压力过大,可切换为Ack=1. Ack=0的情况只能在测试中使用.</strong></p>
-<h3 id="如何通过-offset-寻找数据？"><a href="#如何通过-offset-寻找数据？" class="headerlink" title="如何通过 offset 寻找数据？"></a>如何通过 offset 寻找数据？</h3><p>如果consumer要找offset是1008的消息，那么，</p>
+<h2 id="6-8-如何通过-offset-寻找数据？"><a href="#6-8-如何通过-offset-寻找数据？" class="headerlink" title="6.8 如何通过 offset 寻找数据？"></a>6.8 如何通过 offset 寻找数据？</h2><p>如果consumer要找offset是1008的消息，那么，</p>
 <p>1，按照二分法找到小于1008的segment，也就是00000000000000001000.log和00000000000000001000.index</p>
 <p>2，用目标offset减去文件名中的offset得到消息在这个segment中的偏移量。也就是1008-1000=8，偏移量是8。</p>
 <p>3，再次用二分法在index文件中找到对应的索引，也就是第三行6,45。</p>
 <p>4，到log文件中，从偏移量45的位置开始（实际上这里的消息offset是1006），顺序查找，直到找到offset为1008的消息。查找期间kafka是按照log的存储格式来判断一条消息是否结束的。</p>
 <p><a href="https://blog.csdn.net/lkforce/article/details/77854813" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="如何清理过期数据？（删除-amp-压缩）"><a href="#如何清理过期数据？（删除-amp-压缩）" class="headerlink" title="如何清理过期数据？（删除&amp;压缩）"></a>如何清理过期数据？（删除&amp;压缩）</h3><ul>
+<h2 id="6-9-如何清理过期数据？（删除-amp-压缩）"><a href="#6-9-如何清理过期数据？（删除-amp-压缩）" class="headerlink" title="6.9 如何清理过期数据？（删除&amp;压缩）"></a>6.9 如何清理过期数据？（删除&amp;压缩）</h2><ul>
 <li><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>log.cleanup.policy=delete启用删除策略</p>
 <ul>
 <li>直接删除，删除后的消息不可恢复。可配置以下两个策略：<br>清理超过指定时间清理：<br>log.retention.hours=16</li>
@@ -1992,7 +2153,7 @@
 </li>
 </ul>
 <p><a href="https://blog.csdn.net/honglei915/article/details/49683065" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="1条message中包含哪些信息？"><a href="#1条message中包含哪些信息？" class="headerlink" title="1条message中包含哪些信息？"></a>1条message中包含哪些信息？</h3><div class="table-container">
+<h2 id="6-10-1条message中包含哪些信息？"><a href="#6-10-1条message中包含哪些信息？" class="headerlink" title="6.10 1条message中包含哪些信息？"></a>6.10 1条message中包含哪些信息？</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -2028,19 +2189,18 @@
 </tbody>
 </table>
 </div>
-<h3 id="讲一下zookeeper在kafka中的作用？"><a href="#讲一下zookeeper在kafka中的作用？" class="headerlink" title="讲一下zookeeper在kafka中的作用？"></a>讲一下zookeeper在kafka中的作用？</h3><p><img src="/2019/11/24/大数据相关/kafka在zk中的存储结构.png" alt=""></p>
-<h4 id="zk的作用主要有如下几点"><a href="#zk的作用主要有如下几点" class="headerlink" title="zk的作用主要有如下几点:"></a>zk的作用主要有如下几点:</h4><ol>
+<h2 id="6-11-讲一下zookeeper在kafka中的作用？"><a href="#6-11-讲一下zookeeper在kafka中的作用？" class="headerlink" title="6.11 讲一下zookeeper在kafka中的作用？"></a>6.11 讲一下zookeeper在kafka中的作用？</h2><p><img src="/2019/11/24/大数据相关/kafka在zk中的存储结构.png" alt=""></p>
+<p>zk的作用主要有如下几点:</p>
+<ol>
 <li>kafka的元数据都存放在zk上面,由zk来管理</li>
 <li>0.8之前版本的kafka, consumer的消费状态，group的管理以及 offset的值都是由zk管理的,现在offset会保存在本地topic文件里</li>
 <li>负责borker的lead选举和管理</li>
 </ol>
 <h3 id="kafka-可以脱离-zookeeper-单独使用吗？"><a href="#kafka-可以脱离-zookeeper-单独使用吗？" class="headerlink" title="kafka 可以脱离 zookeeper 单独使用吗？"></a>kafka 可以脱离 zookeeper 单独使用吗？</h3><p>kafka 不能脱离 zookeeper 单独使用，因为 kafka 使用 zookeeper 管理和协调 kafka 的节点服务器。</p>
-<h3 id="kafka有几种数据保留策略？"><a href="#kafka有几种数据保留策略？" class="headerlink" title="kafka有几种数据保留策略？"></a>kafka有几种数据保留策略？</h3><p>kafka 有两种数据保存策略：按照过期时间保留和按照存储的消息大小保留。</p>
-<h3 id="kafka同时设置了7天和10G清除数据-到第5天的时候消息到达了10G-这个时候kafka如何处理？"><a href="#kafka同时设置了7天和10G清除数据-到第5天的时候消息到达了10G-这个时候kafka如何处理？" class="headerlink" title="kafka同时设置了7天和10G清除数据,到第5天的时候消息到达了10G,这个时候kafka如何处理？"></a>kafka同时设置了7天和10G清除数据,到第5天的时候消息到达了10G,这个时候kafka如何处理？</h3><p>这个时候 kafka 会执行数据清除工作，时间和大小不论那个满足条件，都会清空数据。</p>
-<h2 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h2><h3 id="zookeeper是什么-都有哪些功能？"><a href="#zookeeper是什么-都有哪些功能？" class="headerlink" title="zookeeper是什么,都有哪些功能？"></a>zookeeper是什么,都有哪些功能？</h3><h3 id="zk-有几种部署模式？"><a href="#zk-有几种部署模式？" class="headerlink" title="zk 有几种部署模式？"></a>zk 有几种部署模式？</h3><p>zookeeper有两种运行模式: 集群模式和单机模式,还有一种伪集群模式,在单机模式下模拟集群的zookeeper服务</p>
-<h3 id="zk-是怎样保证主从节点的状态同步？"><a href="#zk-是怎样保证主从节点的状态同步？" class="headerlink" title="zk 是怎样保证主从节点的状态同步？"></a>zk 是怎样保证主从节点的状态同步？</h3><p>zookeeper 的核心是原子广播，这个机制保证了各个 server 之间的同步。实现这个机制的协议叫做 zab 协议。 zab 协议有两种模式，分别是恢复模式（选主）和广播模式（同步）。当服务启动或者在领导者崩溃后，zab 就进入了恢复模式，当领导者被选举出来，且大多数 server 完成了和 leader 的状态同步以后，恢复模式就结束了。状态同步保证了 leader 和 server 具有相同的系统状态。</p>
-<h3 id="说一下-zk-的通知机制？"><a href="#说一下-zk-的通知机制？" class="headerlink" title="说一下 zk 的通知机制？"></a>说一下 zk 的通知机制？</h3><p>客户端端会对某个 znode 建立一个 watcher 事件，当该 znode 发生变化时，这些客户端会收到 zookeeper 的通知，然后客户端可以根据 znode 变化来做出业务上的改变</p>
-<h3 id="zk-的分布式锁实现方式？"><a href="#zk-的分布式锁实现方式？" class="headerlink" title="zk 的分布式锁实现方式？"></a>zk 的分布式锁实现方式？</h3><p>使用zookeeper实现分布式锁的算法流程，假设锁空间的根节点为/lock：</p>
+<h1 id="7-Zookeeper"><a href="#7-Zookeeper" class="headerlink" title="7. Zookeeper"></a>7. Zookeeper</h1><h2 id="7-1-zookeeper是什么-都有哪些功能？"><a href="#7-1-zookeeper是什么-都有哪些功能？" class="headerlink" title="7.1 zookeeper是什么,都有哪些功能？"></a>7.1 zookeeper是什么,都有哪些功能？</h2><h2 id="7-2-zk-有几种部署模式？"><a href="#7-2-zk-有几种部署模式？" class="headerlink" title="7.2 zk 有几种部署模式？"></a>7.2 zk 有几种部署模式？</h2><p>zookeeper有两种运行模式: 集群模式和单机模式,还有一种伪集群模式,在单机模式下模拟集群的zookeeper服务</p>
+<h2 id="7-3-zk-是怎样保证主从节点的状态同步？"><a href="#7-3-zk-是怎样保证主从节点的状态同步？" class="headerlink" title="7.3 zk 是怎样保证主从节点的状态同步？"></a>7.3 zk 是怎样保证主从节点的状态同步？</h2><p>zookeeper 的核心是原子广播，这个机制保证了各个 server 之间的同步。实现这个机制的协议叫做 zab 协议。 zab 协议有两种模式，分别是恢复模式（选主）和广播模式（同步）。当服务启动或者在领导者崩溃后，zab 就进入了恢复模式，当领导者被选举出来，且大多数 server 完成了和 leader 的状态同步以后，恢复模式就结束了。状态同步保证了 leader 和 server 具有相同的系统状态。</p>
+<h2 id="7-4-说一下-zk-的通知机制？"><a href="#7-4-说一下-zk-的通知机制？" class="headerlink" title="7.4 说一下 zk 的通知机制？"></a>7.4 说一下 zk 的通知机制？</h2><p>客户端端会对某个 znode 建立一个 watcher 事件，当该 znode 发生变化时，这些客户端会收到 zookeeper 的通知，然后客户端可以根据 znode 变化来做出业务上的改变</p>
+<h2 id="7-5-zk-的分布式锁实现方式？"><a href="#7-5-zk-的分布式锁实现方式？" class="headerlink" title="7.5 zk 的分布式锁实现方式？"></a>7.5 zk 的分布式锁实现方式？</h2><p>使用zookeeper实现分布式锁的算法流程，假设锁空间的根节点为/lock：</p>
 <ol>
 <li>客户端连接zookeeper，并在/lock下创建<strong>临时的</strong>且<strong>有序的</strong>子节点，第一个客户端对应的子节点为/lock/lock-0000000000，第二个为/lock/lock-0000000001，以此类推。</li>
 <li>客户端获取/lock下的子节点列表，判断自己创建的子节点是否为当前子节点列表中<strong>序号最小</strong>的子节点，如果是则认为获得锁，否则<strong>监听刚好在自己之前一位的子节点删除消息</strong>，获得子节点变更通知后重复此步骤直至获得锁；</li>
@@ -2048,50 +2208,7 @@
 <li>完成业务流程后，删除对应的子节点释放锁。</li>
 </ol>
 <p><a href="http://www.dengshenyu.com/java/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/2017/10/23/zookeeper-distributed-lock.html" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="分布式一致性协议"><a href="#分布式一致性协议" class="headerlink" title="分布式一致性协议"></a>分布式一致性协议</h3><p>常见的分布式一致性协议有: 两阶段提交协议，三阶段提交协议，向量时钟，RWN协议，paxos协议，Raft协议. zk采用的是paxos协议.</p>
-<h4 id="两阶段提交协议-2PC"><a href="#两阶段提交协议-2PC" class="headerlink" title="两阶段提交协议(2PC)"></a>两阶段提交协议(2PC)</h4><p>两阶段提交协议，简称2PC，是比较常用的解决分布式事务问题的方式，要么所有参与进程都提交事务，要么都取消事务，即实现ACID中的原子性(A)的常用手段。</p>
-<h4 id="三阶段提交协议-3PC"><a href="#三阶段提交协议-3PC" class="headerlink" title="三阶段提交协议(3PC)"></a>三阶段提交协议(3PC)</h4><p>3PC就是在2PC基础上将2PC的提交阶段细分位两个阶段：预提交阶段和提交阶段</p>
-<h4 id="向量时钟"><a href="#向量时钟" class="headerlink" title="向量时钟"></a>向量时钟</h4><p>通过向量空间祖先继承的关系比较, 使数据保持最终一致性,这就是向量时钟的基本定义。</p>
-<h4 id="NWR协议"><a href="#NWR协议" class="headerlink" title="NWR协议"></a>NWR协议</h4><p>NWR是一种在分布式存储系统中用于控制一致性级别的一种策略。在Amazon的Dynamo云存储系统中，就应用NWR来控制一致性。<br>让我们先来看看这三个字母的含义：<br>N：在分布式存储系统中，有多少份备份数据<br>W：代表一次成功的更新操作要求至少有w份数据写入成功<br>R： 代表一次成功的读数据操作要求至少有R份数据成功读取<br>NWR值的不同组合会产生不同的一致性效果，当W+R&gt;N的时候，整个系统对于客户端来讲能保证强一致性。当W+R 以常见的N=3、W=2、R=2为例：<br>N=3，表示，任何一个对象都必须有三个副本（Replica），W=2表示，对数据的修改操作（Write）只需要在3个Replica中的2个上面完成就返回，R=2表示，从三个对象中要读取到2个数据对象，才能返回。<br>在分布式系统中，数据的单点是不允许存在的。即线上正常存在的Replica数量是1的情况是非常危险的，因为一旦这个Replica再次错误，就 可能发生数据的永久性错误。假如我们把N设置成为2，那么，只要有一个存储节点发生损坏，就会有单点的存在。所以N必须大于2。N约高，系统的维护和整体 成本就越高。工业界通常把N设置为3。<br>当W是2、R是2的时候，W+R&gt;N，这种情况对于客户端就是强一致性的。</p>
-<h4 id="paxos协议"><a href="#paxos协议" class="headerlink" title="paxos协议"></a>paxos协议</h4><p>Paxos算法是<strong>Lamport</strong>于1990年提出的一种基于<strong>消息传递的一致性算法</strong>，</p>
-<ul>
-<li>数据库高可用性难题<ul>
-<li>痛点：如何处理主备库之间的数据同步。</li>
-<li>如何选择主节点</li>
-</ul>
-</li>
-<li>基本需求：<ul>
-<li>数据不丢失</li>
-<li>服务持续可用</li>
-<li>自动的主备切换</li>
-</ul>
-</li>
-<li>目标：<strong>谋求尽早形成多数派</strong></li>
-</ul>
-<p><a href="https://zh.wikipedia.org/wiki/Paxos算法" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Paxos%E7%AE%97%E6%B3%95</a></p>
-<p><a href="https://www.zhihu.com/question/19787937/answer/107750652" target="_blank" rel="noopener">https://www.zhihu.com/question/19787937/answer/107750652</a></p>
-<p><a href="http://chuansong.me/n/2189245" target="_blank" rel="noopener">架构师需要了解的Paxos原理，历程及实践</a></p>
-<h4 id="Raft协议"><a href="#Raft协议" class="headerlink" title="Raft协议"></a>Raft协议</h4><p>Raft是一个通过管理一个副本日志的一致性算法。它提供了跟(multi-)Paxos一样有效的功能，但是它的架构和Paxos不一样；它比Paxos更加容易理解，并且能用于生产环境中。为了加强理解，raft把一致性的问题分成了三个子问题，例如<strong>leader election, log replication, and safety</strong>,在Raft集群中，<strong>有且仅有一个Leader</strong>，在Leader运行正常的情况下，一个节点服务器要么就是Leader，要么就是Follower。Follower直到Leader故障了，才有可能变成candidate。</p>
-<p><strong>角色：</strong></p>
-<ul>
-<li><strong>follower</strong></li>
-<li><strong>leader</strong></li>
-<li><strong>candidate：</strong>If followers don’t hear from a leader then they can become a candidate.</li>
-</ul>
-<p>子问题：</p>
-<ul>
-<li>Leader Election.</li>
-<li>Log Replication</li>
-<li></li>
-</ul>
-<p><em>In Search of an Understandable Consensus Algorithm</em><sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Ongaro, D., & Ousterhout, J. (2014). In search of an understandable consensus algorithm. In *2014 {USENIX} Annual Technical Conference ({USENIX}{ATC} 14)* (pp. 305-319).">[10]</span></a></sup></p>
-<p><a href="https://raft.github.io/" target="_blank" rel="noopener">https://raft.github.io/</a></p>
-<p><a href="http://thesecretlivesofdata.com/raft/" target="_blank" rel="noopener">Raft协议的动画</a></p>
-<p><strong>视频教程</strong></p>
-<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=28fc6d071129b2cdc993b22ed4895cf2&tvId=43770694409&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="480" height="350"></iframe>
-
-<p><a href="https://blog.csdn.net/chdhust/article/details/52651741" target="_blank" rel="noopener">参考文章</a></p>
-<h3 id="讲一下leader-选举过程？"><a href="#讲一下leader-选举过程？" class="headerlink" title="讲一下leader 选举过程？"></a>讲一下leader 选举过程？</h3><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Vinod  Kumar Vavilapalli, Arun C. Murthy, Chris Douglas, Sharad Agarwal, &amp;  Eric Baldeschwieler. (2013). Apache Hadoop YARN: yet another resource  negotiator. <em>Proceedings of the 4th annual Symposium on Cloud Computing</em>. ACM.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://hadoop.apache.org/docs/<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Vavilapalli, V. K., Murthy, A. C., Douglas, C., Agarwal, S., Konar, M., Evans, R., ... &amp; Saha, B. (2013, October). Apache hadoop yarn: Yet another resource negotiator. In <em>Proceedings of the 4th annual Symposium on Cloud Computing</em> (p. 5). ACM.<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">http://hadoop.apache.org/docs/r2.9.1/hadoop-project-dist/hadoop-hdfs/api/overview-summary.html<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithNFS.html<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://github.com/maomao1994/TPC-H/<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.damaoguo.site/2019/03/30/spark%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/" target="_blank" rel="noopener">http://www.damaoguo.site/2019/03/30/spark%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/</a><a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.tutorialspoint.com/hive/hive_introduction.htm<a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Ongaro, D., &amp; Ousterhout, J. (2014). In search of an understandable consensus algorithm. In <em>2014 {USENIX} Annual Technical Conference ({USENIX}{ATC} 14)</em> (pp. 305-319).<a href="#fnref:10" rev="footnote"> ↩</a></span></li></ol></div></div>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Vinod  Kumar Vavilapalli, Arun C. Murthy, Chris Douglas, Sharad Agarwal, &amp;  Eric Baldeschwieler. (2013). Apache Hadoop YARN: yet another resource  negotiator. <em>Proceedings of the 4th annual Symposium on Cloud Computing</em>. ACM.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://hadoop.apache.org/docs/<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Vavilapalli, V. K., Murthy, A. C., Douglas, C., Agarwal, S., Konar, M., Evans, R., ... &amp; Saha, B. (2013, October). Apache hadoop yarn: Yet another resource negotiator. In <em>Proceedings of the 4th annual Symposium on Cloud Computing</em> (p. 5). ACM.<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">http://hadoop.apache.org/docs/r2.9.1/hadoop-project-dist/hadoop-hdfs/api/overview-summary.html<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithNFS.html<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://github.com/maomao1994/TPC-H/<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://www.damaoguo.site/2019/03/30/spark%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/" target="_blank" rel="noopener">http://www.damaoguo.site/2019/03/30/spark%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/</a><a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.tutorialspoint.com/hive/hive_introduction.htm<a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Ongaro, D., &amp; Ousterhout, J. (2014). In search of an understandable consensus algorithm. In <em>2014 {USENIX} Annual Technical Conference ({USENIX}{ATC} 14)</em> (pp. 305-319).<a href="#fnref:10" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
 
@@ -2734,7 +2851,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadoop"><span class="nav-number">1.</span> <span class="nav-text">Hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS架构？-2"><span class="nav-number">1.1.</span> <span class="nav-text">HDFS架构？[2]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HDFS-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">HDFS-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDFS-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">HDFS-2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS比较（主要体现在jdk版本，HA等）"><span class="nav-number">1.2.</span> <span class="nav-text">HDFS比较（主要体现在jdk版本，HA等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS相关的例子？"><span class="nav-number">1.3.</span> <span class="nav-text">HDFS相关的例子？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Yarn架构？（资源管理）"><span class="nav-number">1.4.</span> <span class="nav-text">Yarn架构？（资源管理）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ResourceManager（RM）"><span class="nav-number">1.4.1.</span> <span class="nav-text">ResourceManager（RM）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NodeManager（NM）"><span class="nav-number">1.4.2.</span> <span class="nav-text">NodeManager（NM）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ApplicationMaster（AM）"><span class="nav-number">1.4.3.</span> <span class="nav-text">ApplicationMaster（AM）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Container"><span class="nav-number">1.4.4.</span> <span class="nav-text">Container</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce过程？"><span class="nav-number">1.5.</span> <span class="nav-text">MapReduce过程？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map阶段"><span class="nav-number">1.5.1.</span> <span class="nav-text">Map阶段:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reduce阶段"><span class="nav-number">1.5.2.</span> <span class="nav-text">Reduce阶段:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#案例-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">案例[4]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Yarn-调度MapReduce？"><span class="nav-number">1.6.</span> <span class="nav-text">Yarn 调度MapReduce？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdfs写流程？"><span class="nav-number">1.7.</span> <span class="nav-text">hdfs写流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdfs读流程？"><span class="nav-number">1.8.</span> <span class="nav-text">hdfs读流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdfs创建一个文件的流程？-类的调用过程"><span class="nav-number">1.9.</span> <span class="nav-text">hdfs创建一个文件的流程？(类的调用过程)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop1-x-和hadoop-2-x-的区别？"><span class="nav-number">1.10.</span> <span class="nav-text">hadoop1.x 和hadoop 2.x 的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hadoop1-x："><span class="nav-number">1.10.1.</span> <span class="nav-text">hadoop1.x：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hadoop2-x："><span class="nav-number">1.10.2.</span> <span class="nav-text">hadoop2.x：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop-HA介绍？"><span class="nav-number">1.11.</span> <span class="nav-text">hadoop HA介绍？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hadoop的常用配置文件？"><span class="nav-number">1.12.</span> <span class="nav-text">hadoop的常用配置文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小文件过多会有什么危害-如何避免？"><span class="nav-number">1.13.</span> <span class="nav-text">小文件过多会有什么危害,如何避免？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动hadoop集群会分别启动哪些进程-各自的作用？"><span class="nav-number">1.14.</span> <span class="nav-text">启动hadoop集群会分别启动哪些进程,各自的作用？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HIVE"><span class="nav-number">2.</span> <span class="nav-text">HIVE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">2.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HIVE架构"><span class="nav-number">2.2.</span> <span class="nav-text">HIVE架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hive的数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">hive的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL和JDBC"><span class="nav-number">2.4.</span> <span class="nav-text">SQL和JDBC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hive-内部表和外部表的区别？"><span class="nav-number">2.5.</span> <span class="nav-text">hive 内部表和外部表的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？"><span class="nav-number">2.6.</span> <span class="nav-text">Hive中 sort by / order by / cluster by / distribute by 的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hive的metastore的三种模式？"><span class="nav-number">2.7.</span> <span class="nav-text">hive的metastore的三种模式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hive-中-join都有哪些？"><span class="nav-number">2.8.</span> <span class="nav-text">hive 中 join都有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impala-和-hive-的查询有哪些区别？"><span class="nav-number">2.9.</span> <span class="nav-text">Impala 和 hive 的查询有哪些区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive中大表join小表的优化方法？"><span class="nav-number">2.10.</span> <span class="nav-text">Hive中大表join小表的优化方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive-Sql-是怎样解析成MR-job的"><span class="nav-number">2.11.</span> <span class="nav-text">Hive Sql 是怎样解析成MR job的?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive-UDF简单介绍？"><span class="nav-number">2.12.</span> <span class="nav-text">Hive UDF简单介绍？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL题-按照学生科目分组-取每个科目的TopN？"><span class="nav-number">2.13.</span> <span class="nav-text">SQL题: 按照学生科目分组, 取每个科目的TopN？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL题-获取每个用户的前1-4次的数据？"><span class="nav-number">2.14.</span> <span class="nav-text">SQL题: 获取每个用户的前1/4次的数据？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spark"><span class="nav-number">3.</span> <span class="nav-text">Spark</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spark-的运行架构？"><span class="nav-number">3.1.</span> <span class="nav-text">spark 的运行架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个spark程序的执行流程？"><span class="nav-number">3.2.</span> <span class="nav-text">一个spark程序的执行流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的shuffle介绍？"><span class="nav-number">3.3.</span> <span class="nav-text">spark的shuffle介绍？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三种Writer的分类"><span class="nav-number">3.3.1.</span> <span class="nav-text">三种Writer的分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark的-partitioner-都有哪些"><span class="nav-number">3.4.</span> <span class="nav-text">Spark的 partitioner 都有哪些?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark-有哪几种join？"><span class="nav-number">3.5.</span> <span class="nav-text">spark 有哪几种join？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RDD有哪些特点？"><span class="nav-number">3.6.</span> <span class="nav-text">RDD有哪些特点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下宽依赖和窄依赖？"><span class="nav-number">3.7.</span> <span class="nav-text">讲一下宽依赖和窄依赖？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark中的算子都有哪些？"><span class="nav-number">3.8.</span> <span class="nav-text">Spark中的算子都有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Value数据类型的Transformation算子"><span class="nav-number">3.8.1.</span> <span class="nav-text">1. Value数据类型的Transformation算子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Key-Value数据类型的Transfromation算子"><span class="nav-number">3.8.2.</span> <span class="nav-text">2. Key-Value数据类型的Transfromation算子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Action算子"><span class="nav-number">3.8.3.</span> <span class="nav-text">3. Action算子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RDD的缓存级别都有哪些？"><span class="nav-number">3.9.</span> <span class="nav-text">RDD的缓存级别都有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RDD-懒加载？"><span class="nav-number">3.10.</span> <span class="nav-text">RDD 懒加载？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的几种部署方式？"><span class="nav-number">3.11.</span> <span class="nav-text">spark的几种部署方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？"><span class="nav-number">3.12.</span> <span class="nav-text">spark on yarn 模式下的 cluster模式和 client模式有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark运行原理-从提交一个jar到最后返回结果-整个过程？"><span class="nav-number">3.13.</span> <span class="nav-text">spark运行原理,从提交一个jar到最后返回结果,整个过程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的stage是如何划分的？"><span class="nav-number">3.14.</span> <span class="nav-text">spark的stage是如何划分的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的rpc-spark2-0为什么放弃了akka-而用netty？"><span class="nav-number">3.15.</span> <span class="nav-text">spark的rpc: spark2.0为什么放弃了akka 而用netty？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的各种HA"><span class="nav-number">3.16.</span> <span class="nav-text">spark的各种HA?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Master异常"><span class="nav-number">3.16.1.</span> <span class="nav-text">Master异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Worker异常"><span class="nav-number">3.16.2.</span> <span class="nav-text">Worker异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor异常"><span class="nav-number">3.16.3.</span> <span class="nav-text">Executor异常</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？"><span class="nav-number">3.17.</span> <span class="nav-text">spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6版本以前的问题"><span class="nav-number">3.17.1.</span> <span class="nav-text">1.6版本以前的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新方案的改进"><span class="nav-number">3.17.2.</span> <span class="nav-text">新方案的改进</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark-中的广播变量？"><span class="nav-number">3.18.</span> <span class="nav-text">spark 中的广播变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：为什么只能-broadcast-只读的变量？"><span class="nav-number">3.18.1.</span> <span class="nav-text">问题：为什么只能 broadcast 只读的变量？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：broadcast-到节点而不是-broadcast-到每个-task？"><span class="nav-number">3.18.2.</span> <span class="nav-text">问题：broadcast 到节点而不是 broadcast 到每个 task？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：-具体怎么用-broadcast？"><span class="nav-number">3.18.3.</span> <span class="nav-text">问题： 具体怎么用 broadcast？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：怎么实现-broadcast？"><span class="nav-number">3.18.4.</span> <span class="nav-text">问题：怎么实现 broadcast？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：broadcast-RDD-会怎样"><span class="nav-number">3.18.5.</span> <span class="nav-text">问题：broadcast RDD 会怎样?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Discussion"><span class="nav-number">3.18.6.</span> <span class="nav-text">Discussion</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据倾斜-怎样去处理数据倾斜？"><span class="nav-number">3.19.</span> <span class="nav-text">数据倾斜,怎样去处理数据倾斜？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据倾斜主要分为两类-聚合倾斜-和-join倾斜"><span class="nav-number">3.19.1.</span> <span class="nav-text">数据倾斜主要分为两类: 聚合倾斜 和 join倾斜</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析一下一段spark代码中哪些部分在Driver端执行-哪些部分在Worker端执行？"><span class="nav-number">3.20.</span> <span class="nav-text">分析一下一段spark代码中哪些部分在Driver端执行,哪些部分在Worker端执行？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark经典程序"><span class="nav-number">3.21.</span> <span class="nav-text">Spark经典程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#wordcount"><span class="nav-number">3.21.1.</span> <span class="nav-text">wordcount</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pagerank"><span class="nav-number">3.21.2.</span> <span class="nav-text">pagerank</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TF-IDF"><span class="nav-number">3.21.3.</span> <span class="nav-text">TF-IDF</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flink"><span class="nav-number">4.</span> <span class="nav-text">Flink</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下flink的运行架构？"><span class="nav-number">4.1.</span> <span class="nav-text">讲一下flink的运行架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下flink的作业执行流程？"><span class="nav-number">4.2.</span> <span class="nav-text">讲一下flink的作业执行流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink具体是如何实现exactly-once-语义？"><span class="nav-number">4.3.</span> <span class="nav-text">flink具体是如何实现exactly once 语义？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#状态-Exactly-Once"><span class="nav-number">4.3.1.</span> <span class="nav-text">状态 Exactly-Once</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#端到端（end-to-end）Exactly-Once"><span class="nav-number">4.3.2.</span> <span class="nav-text">端到端（end-to-end）Exactly-Once</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink-的-window-实现机制？"><span class="nav-number">4.4.</span> <span class="nav-text">flink 的 window 实现机制？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Window-的实现"><span class="nav-number">4.4.1.</span> <span class="nav-text">Window 的实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink的window分类？"><span class="nav-number">4.5.</span> <span class="nav-text">flink的window分类？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink-的-state-存储？"><span class="nav-number">4.6.</span> <span class="nav-text">flink 的 state 存储？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink是如何实现反压的？"><span class="nav-number">4.7.</span> <span class="nav-text">flink是如何实现反压的？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于-TCP-的反压"><span class="nav-number">4.7.1.</span> <span class="nav-text">基于 TCP 的反压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于-Credit-的反压"><span class="nav-number">4.7.2.</span> <span class="nav-text">基于 Credit 的反压</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink的部署模式都有哪些？"><span class="nav-number">4.8.</span> <span class="nav-text">flink的部署模式都有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下flink-on-yarn的部署？"><span class="nav-number">4.9.</span> <span class="nav-text">讲一下flink on yarn的部署？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#yarn-session"><span class="nav-number">4.9.1.</span> <span class="nav-text">yarn session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flink-run-Per-Job"><span class="nav-number">4.9.2.</span> <span class="nav-text">Flink run(Per-Job)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink中的时间概念-eventTime-和-processTime的区别？"><span class="nav-number">4.10.</span> <span class="nav-text">flink中的时间概念 , eventTime 和 processTime的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Processing-Time"><span class="nav-number">4.10.1.</span> <span class="nav-text">Processing Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Event-Time"><span class="nav-number">4.10.2.</span> <span class="nav-text">Event Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ingestion-Time"><span class="nav-number">4.10.3.</span> <span class="nav-text">Ingestion Time</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink中的session-Window怎样使用？"><span class="nav-number">4.11.</span> <span class="nav-text">flink中的session Window怎样使用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink中的session-Window怎样使用"><span class="nav-number">4.12.</span> <span class="nav-text">flink中的session Window怎样使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HBase"><span class="nav-number">5.</span> <span class="nav-text">HBase</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hbase-架构"><span class="nav-number">5.1.</span> <span class="nav-text">Hbase 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase-如何设计-rowkey？"><span class="nav-number">5.2.</span> <span class="nav-text">hbase 如何设计 rowkey？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的存储结构"><span class="nav-number">5.3.</span> <span class="nav-text">hbase的存储结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的HA实现-zookeeper在其中的作用？"><span class="nav-number">5.4.</span> <span class="nav-text">hbase的HA实现,zookeeper在其中的作用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HMaster宕机的时候-哪些操作还能正常工作？"><span class="nav-number">5.5.</span> <span class="nav-text">HMaster宕机的时候,哪些操作还能正常工作？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase的写数据的流程？"><span class="nav-number">5.6.</span> <span class="nav-text">hbase的写数据的流程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hbase读数据的流程？"><span class="nav-number">5.7.</span> <span class="nav-text">hbase读数据的流程？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka"><span class="nav-number">6.</span> <span class="nav-text">Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-的架构？"><span class="nav-number">6.1.</span> <span class="nav-text">kafka 的架构？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-与其他消息组件对比？"><span class="nav-number">6.2.</span> <span class="nav-text">kafka 与其他消息组件对比？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-实现高吞吐的原理？"><span class="nav-number">6.3.</span> <span class="nav-text">kafka 实现高吞吐的原理？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka怎样保证不重复消费？"><span class="nav-number">6.4.</span> <span class="nav-text">kafka怎样保证不重复消费？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka怎样保证不丢失消息？"><span class="nav-number">6.5.</span> <span class="nav-text">kafka怎样保证不丢失消息？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#消费端弄丢了数据"><span class="nav-number">6.5.1.</span> <span class="nav-text">消费端弄丢了数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kafka-弄丢了数据"><span class="nav-number">6.5.2.</span> <span class="nav-text">Kafka 弄丢了数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生产者会不会弄丢数据？"><span class="nav-number">6.5.3.</span> <span class="nav-text">生产者会不会弄丢数据？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？"><span class="nav-number">6.6.</span> <span class="nav-text">kafka 与 spark streaming 集成,如何保证 exactly once 语义？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-Streaming上游对接kafka时保证Exactly-Once"><span class="nav-number">6.7.</span> <span class="nav-text">Spark Streaming上游对接kafka时保证Exactly Once</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-Streaming输出下游保证Exactly-once"><span class="nav-number">6.8.</span> <span class="nav-text">Spark Streaming输出下游保证Exactly once</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ack-有哪几种-生产中怎样选择？"><span class="nav-number">6.9.</span> <span class="nav-text">ack 有哪几种, 生产中怎样选择？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何通过-offset-寻找数据？"><span class="nav-number">6.10.</span> <span class="nav-text">如何通过 offset 寻找数据？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何清理过期数据？（删除-amp-压缩）"><span class="nav-number">6.11.</span> <span class="nav-text">如何清理过期数据？（删除&amp;压缩）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#删除"><span class="nav-number">6.11.1.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩"><span class="nav-number">6.11.2.</span> <span class="nav-text">压缩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1条message中包含哪些信息？"><span class="nav-number">6.12.</span> <span class="nav-text">1条message中包含哪些信息？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下zookeeper在kafka中的作用？"><span class="nav-number">6.13.</span> <span class="nav-text">讲一下zookeeper在kafka中的作用？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#zk的作用主要有如下几点"><span class="nav-number">6.13.1.</span> <span class="nav-text">zk的作用主要有如下几点:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-可以脱离-zookeeper-单独使用吗？"><span class="nav-number">6.14.</span> <span class="nav-text">kafka 可以脱离 zookeeper 单独使用吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka有几种数据保留策略？"><span class="nav-number">6.15.</span> <span class="nav-text">kafka有几种数据保留策略？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka同时设置了7天和10G清除数据-到第5天的时候消息到达了10G-这个时候kafka如何处理？"><span class="nav-number">6.16.</span> <span class="nav-text">kafka同时设置了7天和10G清除数据,到第5天的时候消息到达了10G,这个时候kafka如何处理？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper"><span class="nav-number">7.</span> <span class="nav-text">Zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zookeeper是什么-都有哪些功能？"><span class="nav-number">7.1.</span> <span class="nav-text">zookeeper是什么,都有哪些功能？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zk-有几种部署模式？"><span class="nav-number">7.2.</span> <span class="nav-text">zk 有几种部署模式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zk-是怎样保证主从节点的状态同步？"><span class="nav-number">7.3.</span> <span class="nav-text">zk 是怎样保证主从节点的状态同步？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说一下-zk-的通知机制？"><span class="nav-number">7.4.</span> <span class="nav-text">说一下 zk 的通知机制？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zk-的分布式锁实现方式？"><span class="nav-number">7.5.</span> <span class="nav-text">zk 的分布式锁实现方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分布式一致性协议"><span class="nav-number">7.6.</span> <span class="nav-text">分布式一致性协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两阶段提交协议-2PC"><span class="nav-number">7.6.1.</span> <span class="nav-text">两阶段提交协议(2PC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三阶段提交协议-3PC"><span class="nav-number">7.6.2.</span> <span class="nav-text">三阶段提交协议(3PC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向量时钟"><span class="nav-number">7.6.3.</span> <span class="nav-text">向量时钟</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NWR协议"><span class="nav-number">7.6.4.</span> <span class="nav-text">NWR协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#paxos协议"><span class="nav-number">7.6.5.</span> <span class="nav-text">paxos协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Raft协议"><span class="nav-number">7.6.6.</span> <span class="nav-text">Raft协议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讲一下leader-选举过程？"><span class="nav-number">7.7.</span> <span class="nav-text">讲一下leader 选举过程？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">8.</span> <span class="nav-text">引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-理论基础"><span class="nav-number">1.</span> <span class="nav-text">0. 理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-1-经典论文阅读"><span class="nav-number">1.1.</span> <span class="nav-text">0.1 经典论文阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-2-分布式一致性协议"><span class="nav-number">1.2.</span> <span class="nav-text">0.2 分布式一致性协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-1-两阶段提交协议-2PC"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.2.1 两阶段提交协议(2PC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-2-三阶段提交协议-3PC"><span class="nav-number">1.2.2.</span> <span class="nav-text">0.2.2 三阶段提交协议(3PC)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-3-向量时钟"><span class="nav-number">1.2.3.</span> <span class="nav-text">0.2.3 向量时钟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-2-4-NWR协议"><span class="nav-number">1.2.4.</span> <span class="nav-text">0.2.4 NWR协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#paxos协议"><span class="nav-number">1.2.5.</span> <span class="nav-text">paxos协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Raft协议"><span class="nav-number">1.2.6.</span> <span class="nav-text">Raft协议</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Hadoop"><span class="nav-number">2.</span> <span class="nav-text">1. Hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-HDFS-1"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 HDFS-1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-HDFS-2"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 HDFS-2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-HDFS比较（主要体现在jdk版本，HA等）"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 HDFS比较（主要体现在jdk版本，HA等）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-HDFS相关的例子？"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 HDFS相关的例子？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Yarn架构？（资源管理）"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 Yarn架构？（资源管理）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-ResourceManager（RM）"><span class="nav-number">2.5.1.</span> <span class="nav-text">1.5.1 ResourceManager（RM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-NodeManager（NM）"><span class="nav-number">2.5.2.</span> <span class="nav-text">1.5.2 NodeManager（NM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-ApplicationMaster（AM）"><span class="nav-number">2.5.3.</span> <span class="nav-text">1.5.3 ApplicationMaster（AM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-4-Container"><span class="nav-number">2.5.4.</span> <span class="nav-text">1.5.4 Container</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-MapReduce过程？"><span class="nav-number">2.6.</span> <span class="nav-text">1.6 MapReduce过程？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-1-Map阶段"><span class="nav-number">2.6.1.</span> <span class="nav-text">1.6.1 Map阶段:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-2-Reduce阶段"><span class="nav-number">2.6.2.</span> <span class="nav-text">1.6.2  Reduce阶段:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-3-案例-4"><span class="nav-number">2.6.3.</span> <span class="nav-text">1.6.3 案例[4]</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-Yarn-调度MapReduce？"><span class="nav-number">2.7.</span> <span class="nav-text">1.7 Yarn 调度MapReduce？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-hdfs写流程？"><span class="nav-number">2.8.</span> <span class="nav-text">1.8 hdfs写流程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-hdfs读流程？"><span class="nav-number">2.9.</span> <span class="nav-text">1.8 hdfs读流程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-hdfs创建一个文件的流程？-类的调用过程"><span class="nav-number">2.10.</span> <span class="nav-text">1.9 hdfs创建一个文件的流程？(类的调用过程)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-hadoop1-x-和hadoop-2-x-的区别？"><span class="nav-number">2.11.</span> <span class="nav-text">1.10 hadoop1.x 和hadoop 2.x 的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10-1-hadoop1-x："><span class="nav-number">2.11.1.</span> <span class="nav-text">1.10.1 hadoop1.x：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10-2-hadoop2-x："><span class="nav-number">2.11.2.</span> <span class="nav-text">1.10.2 hadoop2.x：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-11-hadoop-HA介绍？"><span class="nav-number">2.12.</span> <span class="nav-text">1.11 hadoop HA介绍？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-12-hadoop的常用配置文件？"><span class="nav-number">2.13.</span> <span class="nav-text">1.12 hadoop的常用配置文件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-13-小文件过多会有什么危害-如何避免？"><span class="nav-number">2.14.</span> <span class="nav-text">1.13 小文件过多会有什么危害,如何避免？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-14-启动hadoop集群会分别启动哪些进程-各自的作用？"><span class="nav-number">2.15.</span> <span class="nav-text">1.14 启动hadoop集群会分别启动哪些进程,各自的作用？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-HIVE"><span class="nav-number">3.</span> <span class="nav-text">2. HIVE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-介绍"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-HIVE架构"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 HIVE架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-hive的数据类型"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 hive的数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-SQL和JDBC"><span class="nav-number">3.4.</span> <span class="nav-text">2.4 SQL和JDBC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-hive-内部表和外部表的区别？"><span class="nav-number">3.5.</span> <span class="nav-text">2.5 hive 内部表和外部表的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Hive中-sort-by-order-by-cluster-by-distribute-by-的区别？"><span class="nav-number">3.6.</span> <span class="nav-text">2.6 Hive中 sort by / order by / cluster by / distribute by 的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-hive的metastore的三种模式？"><span class="nav-number">3.7.</span> <span class="nav-text">2.7 hive的metastore的三种模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-hive-中-join都有哪些？"><span class="nav-number">3.8.</span> <span class="nav-text">2.8 hive 中 join都有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-Impala-和-hive-的查询有哪些区别？"><span class="nav-number">3.9.</span> <span class="nav-text">2.9 Impala 和 hive 的查询有哪些区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-Hive中大表join小表的优化方法？"><span class="nav-number">3.10.</span> <span class="nav-text">2.10 Hive中大表join小表的优化方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-Hive-Sql-是怎样解析成MR-job的"><span class="nav-number">3.11.</span> <span class="nav-text">2.11 Hive Sql 是怎样解析成MR job的?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-12-Hive-UDF简单介绍？"><span class="nav-number">3.12.</span> <span class="nav-text">2.12 Hive UDF简单介绍？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-13-SQL题-按照学生科目分组-取每个科目的TopN？"><span class="nav-number">3.13.</span> <span class="nav-text">2.13 SQL题: 按照学生科目分组, 取每个科目的TopN？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-14-SQL题-获取每个用户的前1-4次的数据？"><span class="nav-number">3.14.</span> <span class="nav-text">2.14 SQL题: 获取每个用户的前1/4次的数据？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Spark"><span class="nav-number">4.</span> <span class="nav-text">3. Spark</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-spark-的运行架构？"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 spark 的运行架构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-一个spark程序的执行流程？"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 一个spark程序的执行流程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-spark的shuffle介绍？"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 spark的shuffle介绍？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三种Writer的分类"><span class="nav-number">4.3.0.1.</span> <span class="nav-text">三种Writer的分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-Spark的-partitioner-都有哪些"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 Spark的 partitioner 都有哪些?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-spark-有哪几种join？"><span class="nav-number">4.5.</span> <span class="nav-text">3.5 spark 有哪几种join？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-RDD有哪些特点？"><span class="nav-number">4.6.</span> <span class="nav-text">3.6 RDD有哪些特点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-讲一下宽依赖和窄依赖？"><span class="nav-number">4.7.</span> <span class="nav-text">3.7 讲一下宽依赖和窄依赖？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-8-Spark中的算子都有哪些？"><span class="nav-number">4.8.</span> <span class="nav-text">3.8 Spark中的算子都有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Value数据类型的Transformation算子"><span class="nav-number">4.8.0.1.</span> <span class="nav-text">1. Value数据类型的Transformation算子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Key-Value数据类型的Transfromation算子"><span class="nav-number">4.8.0.2.</span> <span class="nav-text">2. Key-Value数据类型的Transfromation算子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Action算子"><span class="nav-number">4.8.0.3.</span> <span class="nav-text">3. Action算子</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-9-RDD的缓存级别都有哪些？"><span class="nav-number">4.9.</span> <span class="nav-text">3.9 RDD的缓存级别都有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-10-RDD-懒加载？"><span class="nav-number">4.10.</span> <span class="nav-text">3.10 RDD 懒加载？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-11-spark的几种部署方式？"><span class="nav-number">4.11.</span> <span class="nav-text">3.11 spark的几种部署方式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-12-spark-on-yarn-模式下的-cluster模式和-client模式有什么区别？"><span class="nav-number">4.12.</span> <span class="nav-text">3.12 spark on yarn 模式下的 cluster模式和 client模式有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-13-spark运行原理-从提交一个jar到最后返回结果-整个过程？"><span class="nav-number">4.13.</span> <span class="nav-text">3.13 spark运行原理,从提交一个jar到最后返回结果,整个过程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-14-spark的stage是如何划分的？"><span class="nav-number">4.14.</span> <span class="nav-text">3.14 spark的stage是如何划分的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-15-spark的rpc-spark2-0为什么放弃了akka-而用netty？"><span class="nav-number">4.15.</span> <span class="nav-text">3.15 spark的rpc: spark2.0为什么放弃了akka 而用netty？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-16-spark的各种HA"><span class="nav-number">4.16.</span> <span class="nav-text">3.16 spark的各种HA?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Master异常"><span class="nav-number">4.16.0.1.</span> <span class="nav-text">Master异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Worker异常"><span class="nav-number">4.16.0.2.</span> <span class="nav-text">Worker异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Executor异常"><span class="nav-number">4.16.0.3.</span> <span class="nav-text">Executor异常</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-17-spark的内存管理机制-spark-1-6前后分析对比-spark2-0-做出来哪些优化？"><span class="nav-number">4.17.</span> <span class="nav-text">3.17 spark的内存管理机制,spark 1.6前后分析对比, spark2.0 做出来哪些优化？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-17-1-1-6版本以前的问题"><span class="nav-number">4.17.1.</span> <span class="nav-text">3.17.1 1.6版本以前的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-17-2-新方案的改进"><span class="nav-number">4.17.2.</span> <span class="nav-text">3.17.2 新方案的改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-18-spark-中的广播变量？"><span class="nav-number">4.18.</span> <span class="nav-text">3.18 spark 中的广播变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：为什么只能-broadcast-只读的变量？"><span class="nav-number">4.18.1.</span> <span class="nav-text">问题：为什么只能 broadcast 只读的变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：broadcast-到节点而不是-broadcast-到每个-task？"><span class="nav-number">4.18.2.</span> <span class="nav-text">问题：broadcast 到节点而不是 broadcast 到每个 task？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：-具体怎么用-broadcast？"><span class="nav-number">4.18.3.</span> <span class="nav-text">问题： 具体怎么用 broadcast？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：怎么实现-broadcast？"><span class="nav-number">4.18.4.</span> <span class="nav-text">问题：怎么实现 broadcast？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：broadcast-RDD-会怎样"><span class="nav-number">4.18.5.</span> <span class="nav-text">问题：broadcast RDD 会怎样?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Discussion"><span class="nav-number">4.18.5.1.</span> <span class="nav-text">Discussion</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-19-数据倾斜-怎样去处理数据倾斜？"><span class="nav-number">4.19.</span> <span class="nav-text">3.19 数据倾斜,怎样去处理数据倾斜？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据倾斜主要分为两类-聚合倾斜-和-join倾斜"><span class="nav-number">4.19.1.</span> <span class="nav-text">数据倾斜主要分为两类: 聚合倾斜 和 join倾斜</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-20-Spark经典程序"><span class="nav-number">4.20.</span> <span class="nav-text">3.20 Spark经典程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-20-1-wordcount"><span class="nav-number">4.20.1.</span> <span class="nav-text">3.20.1 wordcount</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-20-2-pagerank"><span class="nav-number">4.20.2.</span> <span class="nav-text">3.20.2 pagerank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-20-3-TF-IDF"><span class="nav-number">4.20.3.</span> <span class="nav-text">3.20.3 TF-IDF</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Flink"><span class="nav-number">5.</span> <span class="nav-text">4. Flink</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-讲一下flink的运行架构？"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 讲一下flink的运行架构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-讲一下flink的作业执行流程？"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 讲一下flink的作业执行流程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-flink具体是如何实现exactly-once-语义？"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 flink具体是如何实现exactly once 语义？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#状态-Exactly-Once"><span class="nav-number">5.3.0.1.</span> <span class="nav-text">状态 Exactly-Once</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#端到端（end-to-end）Exactly-Once"><span class="nav-number">5.3.0.2.</span> <span class="nav-text">端到端（end-to-end）Exactly-Once</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-flink-的-window-实现机制？"><span class="nav-number">5.4.</span> <span class="nav-text">4.4 flink 的 window 实现机制？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-的实现"><span class="nav-number">5.4.1.</span> <span class="nav-text">Window 的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flink的window分类？"><span class="nav-number">5.4.2.</span> <span class="nav-text">flink的window分类？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-flink-的-state-存储？"><span class="nav-number">5.5.</span> <span class="nav-text">4.5 flink 的 state 存储？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-flink是如何实现反压的？"><span class="nav-number">5.6.</span> <span class="nav-text">4.6 flink是如何实现反压的？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于-TCP-的反压"><span class="nav-number">5.6.0.1.</span> <span class="nav-text">基于 TCP 的反压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于-Credit-的反压"><span class="nav-number">5.6.0.2.</span> <span class="nav-text">基于 Credit 的反压</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-flink的部署模式都有哪些？"><span class="nav-number">5.7.</span> <span class="nav-text">4.7 flink的部署模式都有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-1-讲一下flink-on-yarn的部署？"><span class="nav-number">5.7.1.</span> <span class="nav-text">4.7.1 讲一下flink on yarn的部署？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#yarn-session"><span class="nav-number">5.7.1.1.</span> <span class="nav-text">yarn session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flink-run-Per-Job"><span class="nav-number">5.7.1.2.</span> <span class="nav-text">Flink run(Per-Job)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-8-flink中的时间概念-eventTime-和-processTime的区别？"><span class="nav-number">5.8.</span> <span class="nav-text">4.8 flink中的时间概念 , eventTime 和 processTime的区别？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Processing-Time"><span class="nav-number">5.8.0.1.</span> <span class="nav-text">Processing Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Event-Time"><span class="nav-number">5.8.0.2.</span> <span class="nav-text">Event Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ingestion-Time"><span class="nav-number">5.8.0.3.</span> <span class="nav-text">Ingestion Time</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-9-flink中的session-Window怎样使用？"><span class="nav-number">5.9.</span> <span class="nav-text">4.9 flink中的session Window怎样使用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-10-flink中的session-Window怎样使用"><span class="nav-number">5.10.</span> <span class="nav-text">4.10 flink中的session Window怎样使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-HBase"><span class="nav-number">6.</span> <span class="nav-text">5. HBase</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Hbase-架构"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 Hbase 架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-hbase-如何设计-rowkey？"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 hbase 如何设计 rowkey？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-hbase的存储结构"><span class="nav-number">6.3.</span> <span class="nav-text">5.3 hbase的存储结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-hbase的HA实现-zookeeper在其中的作用？"><span class="nav-number">6.4.</span> <span class="nav-text">5.4 hbase的HA实现,zookeeper在其中的作用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-HMaster宕机的时候-哪些操作还能正常工作？"><span class="nav-number">6.5.</span> <span class="nav-text">5.5 HMaster宕机的时候,哪些操作还能正常工作？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-hbase的写数据的流程？"><span class="nav-number">6.6.</span> <span class="nav-text">5.6 hbase的写数据的流程？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-hbase读数据的流程？"><span class="nav-number">6.7.</span> <span class="nav-text">5.7 hbase读数据的流程？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Kafka"><span class="nav-number">7.</span> <span class="nav-text">6. Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-kafka-的架构？"><span class="nav-number">7.1.</span> <span class="nav-text">6.1 kafka 的架构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-kafka-与其他消息组件对比？"><span class="nav-number">7.2.</span> <span class="nav-text">6.2 kafka 与其他消息组件对比？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-kafka-实现高吞吐的原理？"><span class="nav-number">7.3.</span> <span class="nav-text">6.3 kafka 实现高吞吐的原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-kafka怎样保证不重复消费？"><span class="nav-number">7.4.</span> <span class="nav-text">6.4 kafka怎样保证不重复消费？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-kafka怎样保证不丢失消息？"><span class="nav-number">7.5.</span> <span class="nav-text">6.5 kafka怎样保证不丢失消息？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消费端弄丢了数据"><span class="nav-number">7.5.1.</span> <span class="nav-text">消费端弄丢了数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka-弄丢了数据"><span class="nav-number">7.5.2.</span> <span class="nav-text">Kafka 弄丢了数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者会不会弄丢数据？"><span class="nav-number">7.5.3.</span> <span class="nav-text">生产者会不会弄丢数据？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-kafka-与-spark-streaming-集成-如何保证-exactly-once-语义？"><span class="nav-number">7.6.</span> <span class="nav-text">6.6 kafka 与 spark streaming 集成,如何保证 exactly once 语义？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-Streaming上游对接kafka时保证Exactly-Once"><span class="nav-number">7.6.1.</span> <span class="nav-text">Spark Streaming上游对接kafka时保证Exactly Once</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-Streaming输出下游保证Exactly-once"><span class="nav-number">7.6.2.</span> <span class="nav-text">Spark Streaming输出下游保证Exactly once</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-ack-有哪几种-生产中怎样选择？"><span class="nav-number">7.7.</span> <span class="nav-text">6.7 ack 有哪几种, 生产中怎样选择？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-如何通过-offset-寻找数据？"><span class="nav-number">7.8.</span> <span class="nav-text">6.8 如何通过 offset 寻找数据？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-如何清理过期数据？（删除-amp-压缩）"><span class="nav-number">7.9.</span> <span class="nav-text">6.9 如何清理过期数据？（删除&amp;压缩）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#删除"><span class="nav-number">7.9.0.1.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩"><span class="nav-number">7.9.0.2.</span> <span class="nav-text">压缩</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-1条message中包含哪些信息？"><span class="nav-number">7.10.</span> <span class="nav-text">6.10 1条message中包含哪些信息？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-讲一下zookeeper在kafka中的作用？"><span class="nav-number">7.11.</span> <span class="nav-text">6.11 讲一下zookeeper在kafka中的作用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#kafka-可以脱离-zookeeper-单独使用吗？"><span class="nav-number">7.11.1.</span> <span class="nav-text">kafka 可以脱离 zookeeper 单独使用吗？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Zookeeper"><span class="nav-number">8.</span> <span class="nav-text">7. Zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-zookeeper是什么-都有哪些功能？"><span class="nav-number">8.1.</span> <span class="nav-text">7.1 zookeeper是什么,都有哪些功能？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-zk-有几种部署模式？"><span class="nav-number">8.2.</span> <span class="nav-text">7.2 zk 有几种部署模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-zk-是怎样保证主从节点的状态同步？"><span class="nav-number">8.3.</span> <span class="nav-text">7.3 zk 是怎样保证主从节点的状态同步？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-说一下-zk-的通知机制？"><span class="nav-number">8.4.</span> <span class="nav-text">7.4 说一下 zk 的通知机制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-zk-的分布式锁实现方式？"><span class="nav-number">8.5.</span> <span class="nav-text">7.5 zk 的分布式锁实现方式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">8.6.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></div>
             
 
           </div>
