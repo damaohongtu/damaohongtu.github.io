@@ -109,25 +109,36 @@
 
 
 
-  <meta name="description" content="对于信息渠道的收集。">
-<meta name="keywords" content="报告">
+  <meta name="description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
+<meta name="keywords" content="架构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="行业前瞻">
-<meta property="og:url" content="https://damaoguo.github.io/2019/11/20/行业前瞻/index.html">
+<meta property="og:title" content="容量设计">
+<meta property="og:url" content="https://damaoguo.github.io/2021/10/06/容量设计/index.html">
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
-<meta property="og:description" content="对于信息渠道的收集。">
+<meta property="og:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-09T05:36:56.000Z">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic2.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic3.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic4.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic5.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic6.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic7.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic8.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic9.png">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic10.png">
+<meta property="og:updated_time" content="2021-10-30T08:42:01.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="行业前瞻">
-<meta name="twitter:description" content="对于信息渠道的收集。">
+<meta name="twitter:title" content="容量设计">
+<meta name="twitter:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
+<meta name="twitter:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://damaoguo.github.io/2019/11/20/行业前瞻/"/>
+  <link rel="canonical" href="https://damaoguo.github.io/2021/10/06/容量设计/"/>
 
 
 
@@ -137,7 +148,7 @@
   };
 </script>
 
-  <title>行业前瞻 | MaoGuo's Blog</title>
+  <title>容量设计 | MaoGuo's Blog</title>
   
 
 
@@ -360,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://damaoguo.github.io/2019/11/20/行业前瞻/">
+    <link itemprop="mainEntityOfPage" href="https://damaoguo.github.io/2021/10/06/容量设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="袤锅">
@@ -377,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">行业前瞻
+          <h1 class="post-title" itemprop="name headline">容量设计
               
             
           </h1>
@@ -402,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2019-11-20 15:37:25" itemprop="dateCreated datePublished" datetime="2019-11-20T15:37:25+08:00">2019-11-20</time>
+              <time title="创建时间：2021-10-06 21:35:01" itemprop="dateCreated datePublished" datetime="2021-10-06T21:35:01+08:00">2021-10-06</time>
             
 
             
@@ -419,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-09 13:36:56" itemprop="dateModified" datetime="2019-12-09T13:36:56+08:00">2019-12-09</time>
+                <time title="修改时间：2021-10-30 16:42:01" itemprop="dateModified" datetime="2021-10-30T16:42:01+08:00">2021-10-30</time>
               
             
           </span>
@@ -437,7 +448,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/智库/" itemprop="url" rel="index"><span itemprop="name">智库</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计/" itemprop="url" rel="index"><span itemprop="name">设计</span></a></span>
 
                 
                 
@@ -480,392 +491,330 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>对于信息渠道的收集。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，用户请求的处理将受到影响，如响应变慢，或者干脆返回空白页。因此，8000万PV的访问量便是这个网站的容量。可见，网站的容量规划极其重要，如果因为容量不足而影响网站业务的话，对于互联网公司来说，给公司带来的损失很可能是很惨重的。对于一个公司来说，服务运维是保证业务稳定的核心，规划好服务的容量是保证业务稳定的前提。</p>
 <a id="more"></a>
-<h2 id="会议-期刊"><a href="#会议-期刊" class="headerlink" title="会议/期刊"></a>会议/期刊</h2><h3 id="会议-CCF-A"><a href="#会议-CCF-A" class="headerlink" title="会议(CCF-A)"></a>会议(CCF-A)</h3><div class="table-container">
+<p>系统设计整体至少考虑应对5到10倍或近1到3年系统规模增长，要保障后续通过增加机器资源等快速方式能实现系统水平扩容。 例如分库分表的规模提前设计好提前量，避免临时数据库能力不足导致需要临时重构扩容（增加分库分表以及修改路由以及迁移数据）；服务<strong>逻辑层设计持有数据状态</strong>导致无法加机器做服务层扩容。互联网产品发展变化较快，不一定会如期爆发，容量架构设计上也要注意不要过度提前设计，避免提前复杂化引发研发效率以及机器成本问题。针对线上流量峰值，建议系统常态保持近期峰值3倍左右容量余量，上线前和上线后要定期做压测摸高，写流量可用影子表等方式做压测，压测可单接口以及模拟线上流量分布压测结合，根据压测结果优化架构或扩容，持续保持容量富余。对于可能超过系统现有容量的突发峰值，限流策略是线上要配置的策略。入口侧入口流量调用 、不同渠道服务依赖调用、对依赖服务的调用都要评估可极限调研的上限值，通过中间件等合适方式限制超过阈值调用，避免引发雪崩效应。特定业务系统，对于超过峰值流量，可以通过消息架构以及合适体验设计做削峰填谷；针对恶意攻击流量也要考虑在入口层部署防DDOS攻击的流量清洗层。</p>
+<p>通过容量设计，回答以下问题：单台节点到底最大处理能力是多少？目前线上有多少容量正在被使用？在一次大促前当前的机器数是否能够支撑？什么时候需要增加机器，加多少？考虑到特定的硬件配置，数据库服务器每秒可管理多少个查询？在性能降低到影响终端用户体验之前，它每秒可应答多少次查询？</p>
+<h1 id="1-容量设计的目标"><a href="#1-容量设计的目标" class="headerlink" title="1. 容量设计的目标"></a>1. 容量设计的目标</h1><p>如表1所示，SLA（Service Level Agreement，服务级别协议）是指提供服务的企业与客户之间就服务的品质、水准、性能等方面所达成的双方共同认可的协议或契约。对互联网公司来说就是网站服务可用性的一个保证。如表1所示，一般提供服务提供商都会以几个 9 来恒定自己的服务质量，即有 99.9 / 99.99 / 99.999 几个标准，这里的 9 越多代表一年下来产品的可用时间越长质量更可靠。容量规划是保障服务可用性的重要前提。</p>
+<p><strong>表1: 可用性时间表</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>序号</th>
-<th>方向</th>
-<th>名称</th>
-<th>备注</th>
+<th><strong>水平</strong></th>
+<th><strong>允许不可用的时间窗口</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td><strong>计算机体系结构/并行与分布计算/存储系统</strong></td>
-<td><strong><font color="red">PPoPP：</font></strong>ACM SIGPLAN Symposium on Principles &amp; Practice of Parallel Programming<br><strong><font color="red">FAST</font></strong>：Conference on File and Storage Technologies<br><strong><font color="red">DAC：</font></strong>Design Automation Conference<br><strong><font color="red">HPCA：</font></strong>High Performance Computer Architecture<br><strong><font color="red">MICRO：</font></strong>IEEE/ACM International Symposium on Microarchitecture<br><strong><font color="red">SC：</font></strong>International Conference for High Performance Computing, Networking, Storage, and Analysis<br><strong><font color="red">ASPLOS：</font></strong> International Conference on Architectural Support for Programming Languages and Operating Systems<br><strong><font color="red">ISCA：</font></strong> International Symposium on Computer Architecture<br>USENIX： ATC USENIX Annul Technical Conference</td>
 <td></td>
+<td><strong>每年</strong></td>
+<td><strong>每季度</strong></td>
+<td><strong>每月</strong></td>
+<td><strong>每周</strong></td>
+<td><strong>每天</strong></td>
+<td><strong>每小时</strong></td>
 </tr>
 <tr>
-<td>2</td>
-<td><strong>计算机网络</strong></td>
-<td><strong><font color="red">SIGCOMM：</font></strong>ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication<br><strong><font color="red">MobiCom：</font></strong>ACM International Conference on Mobile Computing and Networking<br><strong><font color="red">INFOCOM：</font></strong> IEEE International Conference on Computer Communications<br><strong><font color="red">NSDI：</font></strong>Symposium on Network System Design and Implementation</td>
-<td></td>
+<td>99%</td>
+<td>3.65days</td>
+<td>21.6hours</td>
+<td>7.2hours</td>
+<td>1.68hours</td>
+<td>14.4minutes</td>
+<td>36seconds</td>
 </tr>
 <tr>
-<td>3</td>
-<td><strong>网络与信息安全</strong></td>
-<td><strong><font color="red">CCS：</font></strong> ACM Conference on Computer and Communications Security<br><strong><font color="red">EUROCRYPT：</font></strong> European Cryptology Conference<br><strong><font color="red">S&amp;P：</font></strong> IEEE Symposium on Security and Privacy<br><strong><font color="red">CRYPTO：</font></strong> International Cryptology Conference<br><strong><font color="red">USENIX：</font></strong> Security Usenix Security Symposium</td>
-<td></td>
+<td>99.9%</td>
+<td>8.67hours</td>
+<td>2.16hours</td>
+<td>43.2minutes</td>
+<td>10.1minutes</td>
+<td>1.44minutes</td>
+<td>3.6seconds</td>
 </tr>
 <tr>
-<td>4</td>
-<td><strong>软件工程/系统软件/程序设计语言</strong></td>
-<td><strong><font color="red">PLDI：</font></strong> ACM SIGPLAN Conference on Programming Language Design &amp; Implementation<br><strong><font color="red">POPL：</font></strong> ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages<br><strong><font color="red">FSE/ESEC：</font></strong> ACM SIGSOFT Symposium on the Foundation of Software Engineering/ European Software Engineering Conference<br><strong><font color="red">SOSP</font></strong>： ACM Symposium on Operating Systems Principles<br><strong><font color="red">OOPSLA：</font></strong> Conference on Object-Oriented Programming Systems, Languages, and Applications<br><strong><font color="red">ASE：</font></strong> International Conference on Automated Software Engineering<br><strong><font color="red">ICSE：</font></strong> International Conference on Software Engineering<br><strong><font color="red">ISSTA：</font></strong> International Symposium on Software Testing and Analysis<br><strong><font color="red">OSDI：</font></strong> USENIX Symposium on Operating Systems Design and Implementations</td>
-<td></td>
+<td>99.99%</td>
+<td>52.6minutes</td>
+<td>12.96minutes</td>
+<td>4.32minutes</td>
+<td>60.5seconds</td>
+<td>8.64seconds</td>
+<td>0.36seconds</td>
 </tr>
 <tr>
-<td>5</td>
-<td><strong>数据库／数据挖掘／内容检索</strong></td>
-<td><strong><font color="red">SIGMOD：</font></strong> ACM Conference on Management of Data<br><strong><font color="red">SIGKDD：</font></strong> ACM Knowledge Discovery and Data Mining<br><strong><font color="red">ICDE：</font></strong> IEEE International Conference on Data Engineering<br><strong><font color="red">SIGIR：</font></strong> International Conference on Research on Development in Information Retrieval<br><strong><font color="red">VLDB：</font></strong> International Conference on Very Large Data Bases</td>
-<td></td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>计算机科学理论</strong></td>
-<td><strong><font color="red">STOC：</font></strong> ACM Symposium on the Theory of Computing<br><strong><font color="red">SODA：</font></strong> ACM-SIAM Symposium on Discrete Algorithms<br><strong><font color="red">CAV：</font></strong> Computer Aided Verification<br><strong><font color="red">FOCS：</font></strong> IEEE Annual Symposium on Foundations of Computer Science<br><strong><font color="red">LICS：</font></strong> IEEE Symposium on Logic in Computer Science</td>
-<td></td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>计算机图形学与多媒体</strong></td>
-<td><strong><font color="red">ACM MM：</font></strong> ACM International Conference on Multimedia<br><strong><font color="red">SIGGRAPH:</font></strong> ACM SIGGRAPH Annual Conference<br><strong><font color="red">VR:</font></strong> IEEE Virtual Reality<br><strong><font color="red">IEEE VIS:</font></strong> IEEE Visualization Conference</td>
-<td></td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>人工智能</strong></td>
-<td><strong><font color="red">AAAI:</font></strong> AAAI Conference on Artificial Intelligence<br><strong><font color="red">NeurIPS:</font></strong> Annual Conference on Neural Information Processing Systems<br><strong><font color="red">ACL:</font></strong> Annual Meeting of the Association for Computational Linguistic<br><strong><font color="red">CVPR:</font></strong> IEEE Conference on Computer Vision and Pattern Recognition<br><strong><font color="red">ICCV:</font></strong> International Conference on Computer Vision<br><strong><font color="red">ICML:</font></strong> International Conference on Machine Learning<br><strong><font color="red">IJCAI：</font></strong> International Joint Conference on Artificial Intelligence</td>
-<td></td>
-</tr>
-<tr>
-<td>9</td>
-<td><strong>人机交互与普适计算</strong></td>
-<td><strong><font color="red">CSCW：</font></strong> ACM Conference on Computer Supported Cooperative Work and Social Computing<br><strong><font color="red">CHI：</font></strong> ACM Conference on Human Factors in Computing Systems<br><strong><font color="red">UbiComp：</font></strong> ACM International Conference on Ubiquitous Computing</td>
-<td></td>
-</tr>
-<tr>
-<td>10</td>
-<td><strong>交叉/综合/新兴</strong></td>
-<td><strong><font color="red">WWW：</font></strong> International World Wide Web Conferences<br><strong><font color="red">RTSS：</font></strong> Real-Time Systems Symposium</td>
+<td>99.999%</td>
+<td>5.26minutes</td>
+<td>1.30minutes</td>
+<td>25.6seconds</td>
+<td>6.05seconds</td>
+<td>0.87seconds</td>
+<td>0.04seonds</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="期刊-CCF-A"><a href="#期刊-CCF-A" class="headerlink" title="期刊(CCF-A)"></a>期刊(CCF-A)</h3><div class="table-container">
+<p>一般情况下，公司服务器的总体资源利用率长期处在较低水平，CPU利用率都在20%左右，总的来看，我们有大量的计算资源和存储资源闲置，造成巨大浪费，这也直接导致我们的服务成本偏高。因此做容量设计是有必要的。部分系统峰值变化较大且需要持续尽可能承载保障，可考虑引入弹性伸缩策略，预约 或根据流量变化触发系统自动扩缩容，以确保以尽量小成本来自动化满足变化峰值。</p>
+<p>容量设计的基本目标有两个，一是使运维人员了解系统的承载力，二是以合理的成本来满足业务的需求。用运筹学中的优化命题来定义，优化命题的目标是集群实际负荷 &lt;=集群理想负荷(见公式1)，求解这样一个不等式优化命题，同时系统需要满足一定的不等式约束条件.</p>
+<h1 id="2-容量影响因素"><a href="#2-容量影响因素" class="headerlink" title="2. 容量影响因素"></a>2. 容量影响因素</h1><p>这里讨论容量设计的一些因素，重点关注并发性，每秒事务数（TPS），每笔事务完成的工作量等因素如何在其中发挥作用。 当然，许多其他因素可以决定系统的容量，包括事务的复杂性，延迟和外部服务调用，内存分配和利用率等。</p>
+<h2 id="2-1-吞吐量和TPS"><a href="#2-1-吞吐量和TPS" class="headerlink" title="2.1 **吞吐量和TPS"></a>2.1 **吞吐量和TPS</h2><p>通常，吞吐量定义为在给定时间间隔内处理的消息数。 吞吐量是对单位时间操作数的度量，时间单位可以是秒，分钟，小时等。TPS是原子操作数，在这种情况下是每秒的“事务”。 对于无状态服务器，这将是影响服务器容量的主要特征。从理论上讲，如果用户在一分钟内执行60次事务，则TPS应该为60/60 TPS = 1 TPS。 当然，由于已登录系统的所有并发用户不一定在给定时间使用该系统，因此这可能并不准确。 另外，还要考虑用户的思考时间和节奏时间。 但是，如果不考虑上述因素，考虑到用户在60秒钟内统一访问系统，则可以将其视为平均1 TPS； 当然呢如果所有用户在一秒钟内到达，这意味着最大峰值负载为60 TPS。</p>
+<h2 id="2-2-Work-done-per-transaction"><a href="#2-2-Work-done-per-transaction" class="headerlink" title="2.2 Work done per transaction"></a>2.2 <strong>Work done per transaction</strong></h2><h2 id="2-3-Think-Time"><a href="#2-3-Think-Time" class="headerlink" title="2.3 Think Time"></a>2.3 <strong>Think Time</strong></h2><p>用户提交请求，然后在返回给用户之前在服务器端对其进行处理。 然后，用户等待响应，并在再次提交之前对其进行“处理”。 这种延迟是用户认为介于请求之间的时间，可以在计算最佳系统负载时加以考虑。 对于容量规划，平均思考时间对于获得准确的吞吐量数字很有用。</p>
+<h2 id="2-4-活跃用户和并发"><a href="#2-4-活跃用户和并发" class="headerlink" title="2.4 活跃用户和并发"></a>2.4 <strong>活跃用户和并发</strong></h2><p>系统存在一个准确或者不准确的用户总数（如直播商家总数为近20w的ICBU卖家数）-这可能不会直接影响服务器容量，但是是数据库大小确定中的重要指标。</p>
+<p>并发活动用户是在任何给定时间同时并发访问系统的不同用户的数量。如图1所示，并发用户是在给定时间使用系统的活跃用户的子集。如果200个活动用户登录到系统中，并具有10秒的思考时间，则大约有20个实际并发用户命中系统。每个并发用户都会消耗一定级别的内存，需要将其考虑在内，系统的吞吐量会随着并发用户数量的增加而增加，直到达到如图所示的峰值容量为止。之后，系统将经历性能下降，因此系统可以处理的最大并发性对容量设计非常重要。</p>
+<p><img src="/2021/10/06/容量设计/pic1.png" style="zoom:50%;"></p>
+<p><strong>图1：吞吐量随时间的变化图</strong></p>
+<h2 id="2-5-消息大小"><a href="#2-5-消息大小" class="headerlink" title="2.5 消息大小"></a>2.5 消息大小</h2><p>消息的大小也是确定系统所需容量的重要因素。 较大的消息意味着更多的处理能力要求，更多的内存要求。 作为容量规划的基础，表2提供了对消息大小评估的标准。</p>
+<p> <strong>表2：消息大小</strong></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>序号</th>
-<th>刊物简称</th>
-<th>刊物全称</th>
-<th>出版社</th>
-<th>网址</th>
+<th><strong>消息大小</strong></th>
+<th><strong>消息大小评估</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">计算机体系结构 并行与分布计算 存储系统</font></strong></td>
-<td>-</td>
-<td>-</td>
+<td>Less than 50 KB</td>
+<td>Small</td>
 </tr>
 <tr>
-<td>1</td>
-<td>TOCS</td>
-<td>ACM Transactions on Computer Systems</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tocs/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tocs/</a></td>
+<td>Between 50 KB and 1 MB</td>
+<td>Moderate</td>
 </tr>
 <tr>
-<td>2</td>
-<td>TOS</td>
-<td>ACM Transactions on Storage</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tos/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tos/</a></td>
+<td>Between 1 MB and 5 MB</td>
+<td>Large</td>
 </tr>
 <tr>
-<td>3</td>
-<td>TCAD</td>
-<td>IEEE Transactions on Computer-Aided Design of Integrated Circuits And System</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tcad/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tcad/</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>TC</td>
-<td>IEEE Transactions on Computers</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tc/index.html" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tc/index.html</a></td>
-</tr>
-<tr>
-<td>5</td>
-<td>TPDS</td>
-<td>IEEE Transactions on Parallel and Distributed Systems</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tpds/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tpds/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">计算机网络</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>JSAC</td>
-<td>IEEE Journal of Selected Areas in Communications</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/jsac/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/jsac/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TMC</td>
-<td>IEEE Transactions on Mobile Computing</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tmc/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tmc/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>TON</td>
-<td>IEEE/ACM Transactions on Networking</td>
-<td>IEEE/ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/ton/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/ton/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">网络与信息安全</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TDSC</td>
-<td>IEEE Transactions on Dependable and Secure Computing</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tdsc/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tdsc/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TIFS</td>
-<td>IEEE Transactions on Information Forensics and Security</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tifs/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tifs/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td></td>
-<td>Journal of Cryptology</td>
-<td>Springer</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/joc/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/joc/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">软件工程 系统软件 程序设计语言</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TOPLAS</td>
-<td>ACM Transactions on Programming Languages &amp; Systems</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/toplas/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/toplas/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TOSEM</td>
-<td>ACM Transactions on Software Engineering and Methodology</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tosem/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tosem/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>TSE</td>
-<td>IEEE Transactions on Software Engineering</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tse/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tse/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">数据库 数据挖掘 内容检索</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TODS</td>
-<td>ACM Transactions on Database Systems</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tods/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tods/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TOIS</td>
-<td>ACM Transactions on Information Systems</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tois/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tois/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>TKDE</td>
-<td>IEEE Transactions on Knowledge and Data Engineering</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tkde/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tkde/</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>VLDBJ</td>
-<td>The VLDB Journal</td>
-<td>Springer</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/vldb/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/vldb/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">计算机科学理论</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TIT</td>
-<td>IEEE Transactions on Information Theory</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tit/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tit/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>IANDC</td>
-<td>Information and Computation</td>
-<td>Elsevier</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/iandc/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/iandc/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>SICOMP</td>
-<td>SIAM Journal on Computing</td>
-<td>SIAM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/siamcomp/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/siamcomp/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">计算机图形学与多媒体</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TOG</td>
-<td>ACM Transactions on Graphics</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tog/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tog/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TIP</td>
-<td>IEEE Transactions on Image Processing</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tip/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tip/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>TVCG</td>
-<td>IEEE Transactions on Visualization and Computer Graphics</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tvcg/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tvcg/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">人工智能</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>AI</td>
-<td>Artificial Intelligence</td>
-<td>Elsevier</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/ai/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/ai/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>TPAMI</td>
-<td>IEEE Trans on Pattern Analysis and Machine Intelligence</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/pami/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/pami/</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>IJCV</td>
-<td>International Journal of Computer Vision</td>
-<td>Springer</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/ijcv/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/ijcv/</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>JMLR</td>
-<td>Journal of Machine Learning Research</td>
-<td>MIT Press</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/jmlr/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/jmlr/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">人机交互与普适计算</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>TOCHI</td>
-<td>ACM Transactions on Computer-Human Interaction</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/tochi/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/tochi/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>IJHCS</td>
-<td>International Journal of Human Computer Studies</td>
-<td>Elsevier</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/ijmms/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/ijmms/</a></td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td><strong><font color="red">交叉 综合 新兴</font></strong></td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>JACM</td>
-<td>Journal of the ACM</td>
-<td>ACM</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/jacm/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/jacm/</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Proc. IEEE</td>
-<td>Proceedings of the IEEE</td>
-<td>IEEE</td>
-<td><a href="http://dblp.uni-trier.de/db/journals/pieee/" target="_blank" rel="noopener">http://dblp.uni-trier.de/db/journals/pieee/</a></td>
+<td>Larger than 5 MB</td>
+<td>Extra Large</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="行业报告"><a href="#行业报告" class="headerlink" title="行业报告"></a>行业报告</h2><ul>
-<li><a href="https://resources.distilnetworks.com/analyst-reports" target="_blank" rel="noopener">https://resources.distilnetworks.com/analyst-reports</a></li>
+<h2 id="2-6-延时"><a href="#2-6-延时" class="headerlink" title="2.6 延时"></a>2.6 <strong>延时</strong></h2><p><img src="/2021/10/06/容量设计/pic2.png" style="zoom:50%;"></p>
+<p><strong>图2：延时随并发数变化图</strong></p>
+<h1 id="3-测量"><a href="#3-测量" class="headerlink" title="3. 测量"></a>3. 测量</h1><p>没有测量系统、应用层度量指标的历史数据，则容量设计无法存在。不知道系统的最高性能上限从而避免接近它们，则规划也是没有效果的。 要找到基础架构每部分的上限。</p>
+<h2 id="3-1-测量工具"><a href="#3-1-测量工具" class="headerlink" title="3.1 测量工具"></a><strong>3.1 测量工具</strong></h2><h2 id="3-2-测量标准"><a href="#3-2-测量标准" class="headerlink" title="3.2 测量标准"></a><strong>3.2 测量标准</strong></h2><h3 id="3-2-1-计算密集型"><a href="#3-2-1-计算密集型" class="headerlink" title="3.2.1 计算密集型"></a><strong>3.2.1 计算密集型</strong></h3><p>计算主要消耗的是CPU资源，计算密集型也称为CPU bound，业务处理过程中主要使用了CPU资源，CPU资源随着业务的繁忙程度而发生变化，此类业务对处理器的要求非常高。针对计算密集型业务，一般使用CPU使用率衡量容量。</p>
+<h3 id="3-2-2-I-O密集型"><a href="#3-2-2-I-O密集型" class="headerlink" title="3.2.2 I/O密集型"></a><strong>3.2.2 I/O密集型</strong></h3><p>I/O密集型称为I/O bound，在业务处理的过程中，主要使用的是I/O资源，比如硬盘读写、使用网卡上传和下载，因此CPU的利用率不高，即使在业务繁忙的时段，CPU负载也很低。针对I/O密集型业务，一般使用磁盘使用率衡量容量。</p>
+<h3 id="3-2-3-数据密集型"><a href="#3-2-3-数据密集型" class="headerlink" title="3.2.3 数据密集型"></a><strong>3.2.3 数据密集型</strong></h3><p>数据密集型业务也称为Data Intensive，主要体现在大数据应用中，比如搜索引擎从海量的数据中找到有用的信息，通常这类业务非常占用内存资源。缓存也是数据密集型业务。</p>
+<h3 id="3-2-4-传输密集型"><a href="#3-2-4-传输密集型" class="headerlink" title="3.2.4 传输密集型"></a><strong>3.2.4 传输密集型</strong></h3><p>针对传输密集型业务，一般采用网卡使用率来衡量容量。</p>
+<h3 id="3-2-5-缓存密集型"><a href="#3-2-5-缓存密集型" class="headerlink" title="3.2.5 缓存密集型"></a><strong>3.2.5 缓存密集型</strong></h3><p>针对缓存密集型业务，一般使用内存来衡量容量。</p>
+<h2 id="3-3-测量对象"><a href="#3-3-测量对象" class="headerlink" title="3.3 测量对象"></a><strong>3.3 测量对象</strong></h2><h3 id="3-3-1-应用服务器"><a href="#3-3-1-应用服务器" class="headerlink" title="3.3.1 应用服务器"></a>3.3.1 <strong>应用服务器</strong></h3><p>如表3，应用服务器是服务的入口，请求流量从这里进入系统，数据库、缓存和消息队列的访问量取决于应用服务器的访问量，对应用服务器的访问量进行评估至关重要。</p>
+<p><strong>表3: 应用服务器容量指标</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>指标分类</strong></th>
+<th>负载均衡策略、高可用策略、IO模型(NIO/BIO)、线程池模型、线程池线程数量、是否业务混布</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>容量和性能</strong></td>
+<td>每天请求量、各接口访问峰值、平均请求响应时间、最大请求响应时间、在线用户数量、请求大小、网卡IO流量、磁盘IO流量、内存使用情况、  CPU使用情况</td>
+</tr>
+<tr>
+<td><strong>其他</strong></td>
+<td>请求的内容是否包含大对象、GC收集器选型和配置</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-3-2-数据库"><a href="#3-3-2-数据库" class="headerlink" title="3.3.2 数据库"></a>3.3.2 <strong>数据库</strong></h3><p>如表4，数据库资源的QPS、TPS，每天的数据总量等，由此来评估所需数据库资源的数量和配置、部署结构等。</p>
+<p><strong>表4: 数据库容量指标</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>指标分类</strong></th>
+<th>复制模型、失效转移策略、容灾策略、归档策略、读写分离策略、分库分表策略，是否考虑缓存穿透情况、缓存失效和缓存数据预热策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>容量和性能</strong></td>
+<td>当前数据容量、每天的数据增量（预估容量）、每秒写峰值、事务数</td>
+</tr>
+<tr>
+<td><strong>其他</strong></td>
+<td>查询是否走索引，有没有大数据的查询、有没有表关联、关联是否走索引、事务和一致性级别，JDBC连接数配置，是否开启JDBC诊断日志，有没有存储过程，伸缩策略（分区表、自然时间分表、水平分库分表），分库分表的实现（客户端、代理）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-3-3-缓存"><a href="#3-3-3-缓存" class="headerlink" title="3.3.3 缓存"></a>3.3.3 <strong>缓存</strong></h3><p>如表5，根据应用层的访问量和访问峰值，通过评估热数据占比，计算出缓存资源的大小，存取缓存资源的峰值，由此来计算所需缓存资源的数量和配置、部署结构等。</p>
+<p><strong>表5: 缓存容量指标</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>指标分类</strong></th>
+<th>复制模型、失效转移、持久策略、淘汰策略、线程模型、预热方法、分片Hash策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>容量和性能</strong></td>
+<td>缓存内容大小、缓存内容数量、缓存内容呢的过期时间、缓存的数据结构、每秒读峰值，每秒写峰值</td>
+</tr>
+<tr>
+<td><strong>其他</strong></td>
+<td>冷热数据比例、是否可能缓存穿透、是否有大对象、是否使用缓存实现分布式锁、是否使用缓存支持的脚本、是否避免了Race  Condition，缓存的分片方法</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-3-4-消息队列"><a href="#3-3-4-消息队列" class="headerlink" title="3.3.4 消息队列"></a>3.3.4 <strong>消息队列</strong></h3><p><strong>表6: 消息队列容量指标</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>指标分类</strong></th>
+<th>复制模型，失效转移，持久策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>容量和性能</strong></td>
+<td>每天平均数据增量、消息持久过期时间、每秒读峰值、每秒写峰值、每条消息大小、平均延迟</td>
+</tr>
+<tr>
+<td><strong>其他</strong></td>
+<td>消费线程池模型、分片策略、消息的可靠性投递</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="3-4-趋势预测"><a href="#3-4-趋势预测" class="headerlink" title="3.4 趋势预测"></a>3.4 <strong>趋势预测</strong></h2><p>预测容量需求部分靠直觉，部分靠数学。通过<strong>曲线拟合</strong>的方式来进行预估是进行容量评估较为有效的手段： 首先确定测量和绘制对每个资源定义的度量指标，例如：磁盘消耗；然后对拥有的资源应用约束限制 例如：总可用磁盘空间；最后使用趋势分析（曲线拟合）说明何时你的使用量会超出限制，例如：找出磁盘空间耗尽的日期。</p>
+<h2 id="3-5-经验值"><a href="#3-5-经验值" class="headerlink" title="3.5 经验值"></a><strong>3.5 经验值</strong></h2><p>如表7提供了PC X86机器的经验值，仅供参考。</p>
+<p><strong>表7：容量经验值</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>通用标准</strong></th>
+<th><strong>MySQL</strong></th>
+<th><strong>Redis</strong></th>
+<th><strong>Kafka</strong></th>
+<th><strong>DB2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>容量按照峰值5倍冗余计算。    分库分表后的容量一般可存储30年的数据。    第三方查询接口5000        QPS。    单条数据库记录占用大约1K空间。</td>
+<td>单端口读：1000 QPS    单端口写：700 TPS    单表容量：5000万条</td>
+<td>单端口读：4万 QPS    单端口写：4万 TPS    单端口内存容量：32G</td>
+<td>单机读：3万 QPS    单机写：5000 TPS</td>
+<td>单机读峰值：20000    单机写峰值：20000    单表容量：1亿数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="4-容量计算"><a href="#4-容量计算" class="headerlink" title="4. 容量计算"></a>4. <strong>容量计算</strong></h1><h2 id="4-1-流程"><a href="#4-1-流程" class="headerlink" title="4.1 流程"></a>4.1 <strong>流程</strong></h2><p>图3表示容量计算的流程，分为8个步骤。</p>
+<p><img src="/2021/10/06/容量设计/pic3.png" style="zoom:50%;"></p>
+<p><strong>图 3：容量计算流程</strong></p>
+<h2 id="4-2-压力测试"><a href="#4-2-压力测试" class="headerlink" title="4.2 压力测试"></a>4.2 <strong>压力测试</strong></h2><p>压力测试这件事情没有最好只有更好，如图4所示，压力测试可以对单机容量、集群容量、DB容量等进行评估，同时还能够测试监控警告的有效性。为了评估线上的系统容量，理想的压力测试方案是在线上环境做系统全链路的压测。但是线上全链路压测的时间、人力成本比较高（做一次线上全链路压测要参与或周知的人数要30+）。线上压测有一定风险，为了评估系统容量把线上服务压挂了是一件得不偿失的事情。另外，全链路线上压测可以发现系统的瓶颈，但是不能得到每个应用节点的单机容量。我们最终采用的压测方案基本原则是在保证压测数据有效性的基础上，做性价比最高的压力测试。</p>
+<p><img src="/2021/10/06/容量设计/pic4.png" style="zoom:50%;"></p>
+<p><strong>图4：压力测试的目标</strong></p>
+<h3 id="4-2-1-压力测试方法"><a href="#4-2-1-压力测试方法" class="headerlink" title="4.2.1 压力测试方法"></a>4.2.1 <strong>压力测试方法</strong></h3><h4 id="4-2-1-1-线上压力测试"><a href="#4-2-1-1-线上压力测试" class="headerlink" title="4.2.1.1 线上压力测试"></a>4.2.1.1 <strong>线上压力测试</strong></h4><ul>
+<li>逐个摘机器，使得单台的访问量不断提升，达到压测的目的。优点是应用无需读写接口分离，缺点是风险很高。</li>
+<li>线上TCPCopy，在集群中挑选A、B两台机器，A为被压机，B为施压机。     将A配置一个泳道（机器不对外提供服务），通过TCPCopy将B的流量逐渐放大至A。     优点是流量比例真实、风险小。可以随时调整比例，模拟梯度加压。缺点是要求被压的服务只能是纯读服务，不能有写接口，否则会带来脏数据。</li>
+</ul>
+<h4 id="4-2-1-2-线下压力测试"><a href="#4-2-1-2-线下压力测试" class="headerlink" title="4.2.1.2 线下压力测试"></a>4.2.1.2 <strong>线下压力测试</strong></h4><h3 id="4-2-2-压测结果采集"><a href="#4-2-2-压测结果采集" class="headerlink" title="4.2.2 压测结果采集"></a>4.2.2 <strong>压测结果采集</strong></h3><ul>
+<li>CAT     Heartbeat/Transaction</li>
+<li>监控报告</li>
+<li>JVM：jstack/jstat/jmap</li>
+</ul>
+<h1 id="5-扩容"><a href="#5-扩容" class="headerlink" title="5. 扩容"></a>5. 扩容</h1><h2 id="5-1-“状态”讨论"><a href="#5-1-“状态”讨论" class="headerlink" title="5.1 “状态”讨论"></a>5.1 <strong>“状态”讨论</strong></h2><h3 id="5-1-1-集群化"><a href="#5-1-1-集群化" class="headerlink" title="5.1.1 集群化"></a><strong>5.1.1 集群化</strong></h3><p><strong>表8：集群化方式</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>分类</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无状态主备集群</td>
+<td>仅有一台主机完成任务，且没有本地状态，其余从机机器待命，一旦主机宕机，从机选主成为主机。</td>
+</tr>
+<tr>
+<td>有状态主备集群</td>
+<td>仅有一台主机完成任务，有本地状态，其余从机机器待命，一旦主机宕机，从机选主成为主机。</td>
+</tr>
+<tr>
+<td>无状态的主从集群</td>
+<td>所有机器没有本地状态，理论上机器可以无限叠加，共同向外界提供同一服务。解决方案就是dubbo+zookeeper。</td>
+</tr>
+<tr>
+<td>有状态的主从集群</td>
+<td>所有机器都有本地状态，共同向外界提供同一服务。一旦某台机器宕机，需要主机协调其他从机代理其本地状态的任务。Paxos、raft和ZAB等一众分布式一致性算法的终极目标就是解决该问题。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="5-1-2-stateful-和-stateless"><a href="#5-1-2-stateful-和-stateless" class="headerlink" title="5.1.2 stateful 和 stateless"></a><strong>5.1.2 stateful 和 stateless</strong></h3><h4 id="5-1-2-1-概念"><a href="#5-1-2-1-概念" class="headerlink" title="5.1.2.1 概念"></a><strong>5.1.2.1 概念</strong></h4><p>如表9所示，分别对有状态和无状态的概念及其优缺点进行了比较。</p>
+<p><strong>表9：有状态和无状态服务比较</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>服务的状态</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>优点</strong></th>
+<th><strong>缺点</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无状态的服务</td>
+<td>客户端的每次请求必须具备自描述信息，通过这些信息识别客户端身份。服务端不保存任何客户端请求者信息。</td>
+<td>客户端请求不依赖服务端的信息，任何多次请求不需要必须访问到同一台服务    服务端的集群和状态对客户端透明        =-服务端可以任意的迁移和伸缩 =-减小服务端存储压力</td>
+<td></td>
+</tr>
+<tr>
+<td>有状态的服务</td>
+<td>有状态服务，即服务端需要记录每次会话的客户端信息，从而识别客户端身份，根据用户身份进行请求的处理，典型的设计如 tomcat  中的 session。</td>
+<td>有状态服务可以很容易地实现<strong>事务</strong>，所以也是有价值的。</td>
+<td>• 服务端保存大量数据，增加服务端压力  • 服务端保存用户状态，无法进行水平扩展  • 客户端请求依赖服务端，多次请求必须访问同一台服务器</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>但是「有状态」不利于系统的易伸缩性和可维护性。针对分布式系统，保证那些被服务化的程序都不要有状态。除了能提高可维护性，也大大有利于做灰度发布、A/B测试。如图5所示，最理想的状态存放点是要么在最前端，要么在最底层的存储层。</p>
+<p><img src="/2021/10/06/容量设计/pic5.png" style="zoom:50%;"></p>
+<p><strong>图5：状态存放点</strong></p>
+<h4 id="5-1-2-2-「无状态」化处理"><a href="#5-1-2-2-「无状态」化处理" class="headerlink" title="5.1.2.2 「无状态」化处理"></a>5.1.2.2 <strong>「无状态」化处理</strong></h4><p>如图所示，将「有状态」的服务转变为「无状态」的思路较为简单，如图6(a)所示，将状态信息前置，丰富入参，将处理所需要的数据尽可能通过上游的客户端传递进来，当然这种方式的一个缺点是网络数据包大小会大一些。如图6(b)所示，客户端与服务端交互中涉及到多次的交互，需要来回传递服务端程序处理所需要的数据，<strong>需要避免在服务端暂存。</strong></p>
+<p><img src="/2021/10/06/容量设计/pic6.png" style="zoom:50%;"></p>
+<p><strong>图6：无状态化处理方法</strong></p>
+<h2 id="5-2-扩容案例"><a href="#5-2-扩容案例" class="headerlink" title="5.2 扩容案例"></a>5.2 <strong>扩容案例</strong></h2><h3 id="5-2-1-水平扩展"><a href="#5-2-1-水平扩展" class="headerlink" title="5.2.1 水平扩展"></a><strong>5.2.1 水平扩展</strong></h3><p>水平扩展的一个比较易见的问题是<strong>规则变化和数据的迁移</strong>。如果控制分库分表的规则是通过应用程序内完成的，规则的变化意味着必须重新发布使用新规则的应用集群。而数据迁移带来的麻烦则更加严重，在数据没有完成迁移之前，需要编写专门的脚本来处理数据的导出导入，不同的业务不同的表关系，都会使得这个脚本变得极其的复杂，而且还要同时兼顾增量数据同步，时间点，数据一致性等问题，稍有不慎，便会对用户的数据造成影响。</p>
+<h4 id="5-2-1-1-数据库平滑扩容"><a href="#5-2-1-1-数据库平滑扩容" class="headerlink" title="5.2.1.1 数据库平滑扩容"></a><strong>5.2.1.1 数据库平滑扩容</strong></h4><p>当逻辑库对应的底层存储已经达到物理瓶颈，需要进行水平扩展，比如磁盘余量接近30%，那么可以通过平滑扩容来改善。平滑扩容是一种在线水平扩容方式，既把原有的分库平滑迁移到新添加的私有RDS实例上，通过增加私有RDS实例的数量来提升总体数据存储容量，从而降低单个私有RDS实例的处理压力。如图7所示，平滑扩容流程分为配置、迁移、切换、清理四个步骤。</p>
+<p><img src="/2021/10/06/容量设计/pic7.png" style="zoom:50%;"></p>
+<p><strong>图7：数据库平滑扩容示意图</strong></p>
+<h4 id="5-2-1-2-数据库热点扩容"><a href="#5-2-1-2-数据库热点扩容" class="headerlink" title="5.2.1.2 数据库热点扩容"></a><strong>5.2.1.2 数据库热点扩容</strong></h4><p>数据表通过分库分表进行水平拆分后，部分过热的数据会占用大部分存储空间与负载压力。如图8所示，热点扩容流程也分为配置、迁移、切换、清理四个步骤。</p>
+<p><img src="/2021/10/06/容量设计/pic8.png" style="zoom:50%;"></p>
+<p><strong>图8：数据库热点扩容示意图</strong></p>
+<h3 id="5-2-2-大促前的准备"><a href="#5-2-2-大促前的准备" class="headerlink" title="5.2.2 大促前的准备"></a><strong>5.2.2 大促前的准备</strong></h3><p>流量模型分析是流量预算的关键，只有清楚了系统的流量模型，才可能对系统每个节点的峰值流量做准确的评估。如图9所示，左边是平时流量，右边是大促时候的流量分布，可以发现核心链路的流量会出现呢暴涨，远大于其他链路的流量。因此在容量设计的时候也需要<strong>重点保障核心链路的容量</strong>。</p>
+<p><img src="/2021/10/06/容量设计/pic9.png" style="zoom: 33%;"></p>
+<p>为了制定扩容计划，我们需要知道分子“活动峰值流量”和分母“单机容量”。大促活动准备期间，运营会根据活动预算、Push发送量和Push转化率等数据，推算出活动页的PV和UV；根据往期活动的经验数据，推算出用户点击量，以此数据作为系统的入口峰值访问量。有了入口峰值访问量，结合系统的流量模型，就可以推算出每个应用节点的活动峰值流量。通过对系统的压力测试，可以得出每个应用节点的单机容量极限值。</p>
+<p>图10反映了流量预算和容量评估之间的关系，为了获取扩容的机器数，需要做这两件事情：首先会进行一个基于流量模型的流量预算，以获取扩容公式的分子——即从上到下评估流量；然后制定压力测试策略、执行压力测试、输出压力测试报告，对每个应用进行单机容量极限评估，以获取扩容公式的分母——即从下到上提供能力。</p>
+<p><img src="/2021/10/06/容量设计/pic10.png" style="zoom: 33%;"></p>
+<p><strong>图10：流量预算和容量评估关系</strong></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a><strong>参考资料</strong></h1><ul>
+<li><a href="https://blog.csdn.net/universsky2015/article/details/105677992" target="_blank" rel="noopener">分布式系统中的“无状态”和“有状态”详解</a></li>
+<li><a href="https://help.aliyun.com/document_detail/113452.html?spm=a2c4g.11186623.2.2.2c84f45a9VIQhE" target="_blank" rel="noopener">阿里云分布式数据库平滑迁移和热点迁移</a></li>
+<li><a href="https://wso2.com/whitepapers/capacity-planning-for-application-design-part-1/" target="_blank" rel="noopener">Capacity Planning      for Application Design</a></li>
+<li>美团技术团队《<a href="https://tech.meituan.com/2016/09/28/stress-test-before-promotion.html" target="_blank" rel="noopener">大促活动前团购系统流量预算和容量评估</a>》</li>
+<li>郑钢、贺亚涛、尤胜涛《大型网站服务容量规划》</li>
 </ul>
 
       
@@ -935,7 +884,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/报告/" rel="tag"><i class="fa fa-tag"></i> 报告</a>
+            <a href="/tags/架构/" rel="tag"><i class="fa fa-tag"></i> 架构</a>
           
         </div>
       
@@ -948,8 +897,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/20/Java总结-4/" rel="next" title="Java总结-4">
-                <i class="fa fa-chevron-left"></i> Java总结-4
+              <a href="/2021/07/18/大袤锅架构师之路/" rel="next" title="大袤锅架构师之路">
+                <i class="fa fa-chevron-left"></i> 大袤锅架构师之路
               </a>
             
           </div>
@@ -958,8 +907,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/20/光影心得/" rel="prev" title="光影心得">
-                光影心得 <i class="fa fa-chevron-right"></i>
+              <a href="/2030/03/07/规划工具/" rel="prev" title="规划工具">
+                规划工具 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1510,7 +1459,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#会议-期刊"><span class="nav-number">1.</span> <span class="nav-text">会议/期刊</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#会议-CCF-A"><span class="nav-number">1.1.</span> <span class="nav-text">会议(CCF-A)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#期刊-CCF-A"><span class="nav-number">1.2.</span> <span class="nav-text">期刊(CCF-A)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行业报告"><span class="nav-number">2.</span> <span class="nav-text">行业报告</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-容量影响因素"><span class="nav-number">2.</span> <span class="nav-text">2. 容量影响因素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-吞吐量和TPS"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 **吞吐量和TPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Work-done-per-transaction"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Work done per transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Think-Time"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Think Time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-活跃用户和并发"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 活跃用户和并发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-消息大小"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 消息大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-延时"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 延时</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-测量"><span class="nav-number">3.</span> <span class="nav-text">3. 测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-测量工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 测量工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-测量标准"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 测量标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-计算密集型"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 计算密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-I-O密集型"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 I/O密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-数据密集型"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3 数据密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-传输密集型"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.2.4 传输密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-缓存密集型"><span class="nav-number">3.2.5.</span> <span class="nav-text">3.2.5 缓存密集型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-测量对象"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 测量对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-应用服务器"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 应用服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-数据库"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-缓存"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3.3 缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-消息队列"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.3.4 消息队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-趋势预测"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 趋势预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-经验值"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 经验值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-容量计算"><span class="nav-number">4.</span> <span class="nav-text">4. 容量计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-流程"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-压力测试"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 压力测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-压力测试方法"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.2.1 压力测试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-1-线上压力测试"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">4.2.1.1 线上压力测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-2-线下压力测试"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">4.2.1.2 线下压力测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-压测结果采集"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.2.2 压测结果采集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-扩容"><span class="nav-number">5.</span> <span class="nav-text">5. 扩容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-“状态”讨论"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 “状态”讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-集群化"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 集群化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-stateful-和-stateless"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 stateful 和 stateless</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-1-概念"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">5.1.2.1 概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-2-「无状态」化处理"><span class="nav-number">5.1.2.2.</span> <span class="nav-text">5.1.2.2 「无状态」化处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-扩容案例"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 扩容案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-水平扩展"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 水平扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-1-数据库平滑扩容"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">5.2.1.1 数据库平滑扩容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-2-数据库热点扩容"><span class="nav-number">5.2.1.2.</span> <span class="nav-text">5.2.1.2 数据库热点扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-大促前的准备"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 大促前的准备</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
