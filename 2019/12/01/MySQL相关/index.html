@@ -118,7 +118,10 @@
 <meta property="og:description" content="MySQL相关知识总结积累MySQL相关原理和操作。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://damaoguo.github.io/2019/12/01/MySQL相关/load-data-text.png">
-<meta property="og:updated_time" content="2021-10-31T08:27:46.102Z">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/01/MySQL相关/transaction-fail-same.png">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/01/MySQL相关/transaction-fail-not-public.png">
+<meta property="og:image" content="https://damaoguo.github.io/2019/12/01/MySQL相关/transaction-fail-try-catch.png">
+<meta property="og:updated_time" content="2021-10-31T08:43:20.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL相关">
 <meta name="twitter:description" content="MySQL相关知识总结积累MySQL相关原理和操作。">
@@ -421,7 +424,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-31 16:27:46" itemprop="dateModified" datetime="2021-10-31T16:27:46+08:00">2021-10-31</time>
+                <time title="修改时间：2021-10-31 16:43:20" itemprop="dateModified" datetime="2021-10-31T16:43:20+08:00">2021-10-31</time>
               
             
           </span>
@@ -696,19 +699,19 @@
     <tr>
         <td>3</td>
         <td>使用了@Transactional的方法，<font color="red">对同一个类里面的方法调用</font>， @Transactional无效。比如有一个类Test，它的一个方法A，A再调用Test本类的方法B（不管B是否public还是private），但A没有声明注解事务，而B有。则外部调用A之后，B的事务是不会起作用的。原因是在同一个类之中，方法互相调用，切面无效 ，而不仅仅是事务。这里事务之所以无效，是因为spring的事务是通过aop实现的。</td>
-        <td>Spring在扫描Bean的时候会自动为标注了@Transactional注解的类生成一个代理类（proxy）,当有注解的方法被调用的时候，实际上是代理类调用的，代理类在调用之前会开启事务，执行事务的操作，但是同类中的方法互相调用，相当于this.B()，此时的B方法并非是代理类调用，而是直接通过原有的Bean直接调用，所以注解会失效。<br><image src="MySQL相关/transaction-fail-same.png" style="zoom:30%;"></image></td>
+        <td>Spring在扫描Bean的时候会自动为标注了@Transactional注解的类生成一个代理类（proxy）,当有注解的方法被调用的时候，实际上是代理类调用的，代理类在调用之前会开启事务，执行事务的操作，但是同类中的方法互相调用，相当于this.B()，此时的B方法并非是代理类调用，而是直接通过原有的Bean直接调用，所以注解会失效。<br><img src="/2019/12/01/MySQL相关/transaction-fail-same.png" style="zoom:30%;"></td>
     </tr>    
     <tr>
         <td>4</td>
         <td>使用了@Transactional的方法，只能是public，@Transactional注解的方法都是被外部其他类调用才有效，故只能是public。道理和上面的有关联。故在<font color="red">protected、private 或者 package-visible 的方法上</font>使用 @Transactional 注解，它也不会报错，但事务无效。
         </td>
         <td>@Transactional注解使用的是AOP，在使用动态代理的时候只能针对public方法进行代理，源码依据在AbstractFallbackTransactionAttributeSource类中的computeTransactionAttribute方法中，如下：<br>
-            <image src="MySQL相关/transaction-fail-not-public.png"></image></td>
+            <img src="/2019/12/01/MySQL相关/transaction-fail-not-public.png"></td>
     </tr>
     <tr>
         <td>5</td>
         <td>如果在加有事务的方法内，使用了<font color="red">try...catch..语句</font>块对异常进行了捕获，而catch语句块没有throw  new RuntimeExecption异常，事务也不会回滚。</td>
-        <td><image src="MySQL相关/transaction-fail-try-catch.png" style="zoom:30%;"></image></td>
+        <td><img src="/2019/12/01/MySQL相关/transaction-fail-try-catch.png" style="zoom:30%;"></td>
     </tr>  
 </table>
 
