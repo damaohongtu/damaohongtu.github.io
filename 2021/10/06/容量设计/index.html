@@ -117,6 +117,7 @@
 <meta property="og:site_name" content="MaoGuo&#39;s Blog">
 <meta property="og:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/simple-architecture.png">
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic2.png">
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic3.png">
@@ -127,11 +128,11 @@
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic8.png">
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic9.png">
 <meta property="og:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic10.png">
-<meta property="og:updated_time" content="2021-10-30T08:42:01.260Z">
+<meta property="og:updated_time" content="2022-01-23T06:35:10.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容量设计">
 <meta name="twitter:description" content="人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，">
-<meta name="twitter:image" content="https://damaoguo.github.io/2021/10/06/容量设计/pic1.png">
+<meta name="twitter:image" content="https://damaoguo.github.io/2021/10/06/容量设计/simple-architecture.png">
 
 
 
@@ -374,7 +375,7 @@
     <link itemprop="mainEntityOfPage" href="https://damaoguo.github.io/2021/10/06/容量设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="袤锅">
+      <meta itemprop="name" content="大袤锅">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/boy.jpg">
     </span>
@@ -430,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-10-30 16:42:01" itemprop="dateModified" datetime="2021-10-30T16:42:01+08:00">2021-10-30</time>
+                <time title="修改时间：2022-01-23 14:35:10" itemprop="dateModified" datetime="2022-01-23T14:35:10+08:00">2022-01-23</time>
               
             
           </span>
@@ -493,7 +494,8 @@
       
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>人无远虑，必有近忧，容量设计（capacity planning）就是远虑。无论是什么业务，都是用计算机来承载，必然可以用计算机的物理资源消耗量作为业务量的度量，这体现在处理器、硬盘、内存、网卡、网络链接数等方面。容量是指一个系统可处理容纳的最大能力，业务量与计算机资源消耗量整体上是呈正相关的，这个能力可以简单理解为访问量，即流量。如某个网站正常情况下可承载的流量是8000万PV，超过了这个流量，用户请求的处理将受到影响，如响应变慢，或者干脆返回空白页。因此，8000万PV的访问量便是这个网站的容量。可见，网站的容量规划极其重要，如果因为容量不足而影响网站业务的话，对于互联网公司来说，给公司带来的损失很可能是很惨重的。对于一个公司来说，服务运维是保证业务稳定的核心，规划好服务的容量是保证业务稳定的前提。</p>
 <a id="more"></a>
-<p>系统设计整体至少考虑应对5到10倍或近1到3年系统规模增长，要保障后续通过增加机器资源等快速方式能实现系统水平扩容。 例如分库分表的规模提前设计好提前量，避免临时数据库能力不足导致需要临时重构扩容（增加分库分表以及修改路由以及迁移数据）；服务<strong>逻辑层设计持有数据状态</strong>导致无法加机器做服务层扩容。互联网产品发展变化较快，不一定会如期爆发，容量架构设计上也要注意不要过度提前设计，避免提前复杂化引发研发效率以及机器成本问题。针对线上流量峰值，建议系统常态保持近期峰值3倍左右容量余量，上线前和上线后要定期做压测摸高，写流量可用影子表等方式做压测，压测可单接口以及模拟线上流量分布压测结合，根据压测结果优化架构或扩容，持续保持容量富余。对于可能超过系统现有容量的突发峰值，限流策略是线上要配置的策略。入口侧入口流量调用 、不同渠道服务依赖调用、对依赖服务的调用都要评估可极限调研的上限值，通过中间件等合适方式限制超过阈值调用，避免引发雪崩效应。特定业务系统，对于超过峰值流量，可以通过消息架构以及合适体验设计做削峰填谷；针对恶意攻击流量也要考虑在入口层部署防DDOS攻击的流量清洗层。</p>
+<p>系统设计整体至少考虑应对5到10倍或近1到3年系统规模增长，要保障后续通过增加机器资源等快速方式能实现系统水平扩容。 例如分库分表的规模提前设计好提前量，避免临时数据库能力不足导致需要临时重构扩容（增加分库分表以及修改路由以及迁移数据）；服务<strong>逻辑层设计持有数据状态</strong>导致无法加机器做服务层扩容。互联网产品发展变化较快，不一定会如期爆发，容量架构设计上也要注意不要过度提前设计，避免提前复杂化引发研发效率以及机器成本问题。针对线上流量峰值，建议系统常态保持近期峰值n倍左右容量余量，上线前和上线后要定期做压测摸高，写流量可用影子表等方式做压测，压测可单接口以及模拟线上流量分布压测结合，根据压测结果优化架构或扩容，持续保持容量富余。对于可能超过系统现有容量的突发峰值，限流策略是线上要配置的策略。入口侧入口流量调用 、不同渠道服务依赖调用、对依赖服务的调用都要评估可极限调研的上限值，通过中间件等合适方式限制超过阈值调用，避免引发雪崩效应。特定业务系统，对于超过峰值流量，可以通过消息架构以及合适体验设计做削峰填谷；针对恶意攻击流量也要考虑在入口层部署防DDOS攻击的流量清洗层。</p>
+<p><img src="/2021/10/06/容量设计/simple-architecture.png" style="zoom:15%;"></p>
 <p>通过容量设计，回答以下问题：单台节点到底最大处理能力是多少？目前线上有多少容量正在被使用？在一次大促前当前的机器数是否能够支撑？什么时候需要增加机器，加多少？考虑到特定的硬件配置，数据库服务器每秒可管理多少个查询？在性能降低到影响终端用户体验之前，它每秒可应答多少次查询？</p>
 <h1 id="1-容量设计的目标"><a href="#1-容量设计的目标" class="headerlink" title="1. 容量设计的目标"></a>1. 容量设计的目标</h1><p>如表1所示，SLA（Service Level Agreement，服务级别协议）是指提供服务的企业与客户之间就服务的品质、水准、性能等方面所达成的双方共同认可的协议或契约。对互联网公司来说就是网站服务可用性的一个保证。如表1所示，一般提供服务提供商都会以几个 9 来恒定自己的服务质量，即有 99.9 / 99.99 / 99.999 几个标准，这里的 9 越多代表一年下来产品的可用时间越长质量更可靠。容量规划是保障服务可用性的重要前提。</p>
 <p><strong>表1: 可用性时间表</strong></p>
@@ -562,7 +564,7 @@
 <p>一般情况下，公司服务器的总体资源利用率长期处在较低水平，CPU利用率都在20%左右，总的来看，我们有大量的计算资源和存储资源闲置，造成巨大浪费，这也直接导致我们的服务成本偏高。因此做容量设计是有必要的。部分系统峰值变化较大且需要持续尽可能承载保障，可考虑引入弹性伸缩策略，预约 或根据流量变化触发系统自动扩缩容，以确保以尽量小成本来自动化满足变化峰值。</p>
 <p>容量设计的基本目标有两个，一是使运维人员了解系统的承载力，二是以合理的成本来满足业务的需求。用运筹学中的优化命题来定义，优化命题的目标是集群实际负荷 &lt;=集群理想负荷(见公式1)，求解这样一个不等式优化命题，同时系统需要满足一定的不等式约束条件.</p>
 <h1 id="2-容量影响因素"><a href="#2-容量影响因素" class="headerlink" title="2. 容量影响因素"></a>2. 容量影响因素</h1><p>这里讨论容量设计的一些因素，重点关注并发性，每秒事务数（TPS），每笔事务完成的工作量等因素如何在其中发挥作用。 当然，许多其他因素可以决定系统的容量，包括事务的复杂性，延迟和外部服务调用，内存分配和利用率等。</p>
-<h2 id="2-1-吞吐量和TPS"><a href="#2-1-吞吐量和TPS" class="headerlink" title="2.1 **吞吐量和TPS"></a>2.1 **吞吐量和TPS</h2><p>通常，吞吐量定义为在给定时间间隔内处理的消息数。 吞吐量是对单位时间操作数的度量，时间单位可以是秒，分钟，小时等。TPS是原子操作数，在这种情况下是每秒的“事务”。 对于无状态服务器，这将是影响服务器容量的主要特征。从理论上讲，如果用户在一分钟内执行60次事务，则TPS应该为60/60 TPS = 1 TPS。 当然，由于已登录系统的所有并发用户不一定在给定时间使用该系统，因此这可能并不准确。 另外，还要考虑用户的思考时间和节奏时间。 但是，如果不考虑上述因素，考虑到用户在60秒钟内统一访问系统，则可以将其视为平均1 TPS； 当然呢如果所有用户在一秒钟内到达，这意味着最大峰值负载为60 TPS。</p>
+<h2 id="2-1-吞吐量和TPS"><a href="#2-1-吞吐量和TPS" class="headerlink" title="2.1 吞吐量和TPS"></a>2.1 吞吐量和TPS</h2><p>通常，吞吐量定义为在给定时间间隔内处理的消息数。 吞吐量是对单位时间操作数的度量，时间单位可以是秒，分钟，小时等。TPS是原子操作数，在这种情况下是每秒的“事务”。 对于无状态服务器，这将是影响服务器容量的主要特征。从理论上讲，如果用户在一分钟内执行60次事务，则TPS应该为60/60 TPS = 1 TPS。 当然，由于已登录系统的所有并发用户不一定在给定时间使用该系统，因此这可能并不准确。 另外，还要考虑用户的思考时间和节奏时间。 但是，如果不考虑上述因素，考虑到用户在60秒钟内统一访问系统，则可以将其视为平均1 TPS； 当然呢如果所有用户在一秒钟内到达，这意味着最大峰值负载为60 TPS。</p>
 <h2 id="2-2-Work-done-per-transaction"><a href="#2-2-Work-done-per-transaction" class="headerlink" title="2.2 Work done per transaction"></a>2.2 <strong>Work done per transaction</strong></h2><h2 id="2-3-Think-Time"><a href="#2-3-Think-Time" class="headerlink" title="2.3 Think Time"></a>2.3 <strong>Think Time</strong></h2><p>用户提交请求，然后在返回给用户之前在服务器端对其进行处理。 然后，用户等待响应，并在再次提交之前对其进行“处理”。 这种延迟是用户认为介于请求之间的时间，可以在计算最佳系统负载时加以考虑。 对于容量规划，平均思考时间对于获得准确的吞吐量数字很有用。</p>
 <h2 id="2-4-活跃用户和并发"><a href="#2-4-活跃用户和并发" class="headerlink" title="2.4 活跃用户和并发"></a>2.4 <strong>活跃用户和并发</strong></h2><p>系统存在一个准确或者不准确的用户总数（如直播商家总数为近20w的ICBU卖家数）-这可能不会直接影响服务器容量，但是是数据库大小确定中的重要指标。</p>
 <p>并发活动用户是在任何给定时间同时并发访问系统的不同用户的数量。如图1所示，并发用户是在给定时间使用系统的活跃用户的子集。如果200个活动用户登录到系统中，并具有10秒的思考时间，则大约有20个实际并发用户命中系统。每个并发用户都会消耗一定级别的内存，需要将其考虑在内，系统的吞吐量会随着并发用户数量的增加而增加，直到达到如图所示的峰值容量为止。之后，系统将经历性能下降，因此系统可以处理的最大并发性对容量设计非常重要。</p>
@@ -605,6 +607,11 @@
 <h3 id="3-2-2-I-O密集型"><a href="#3-2-2-I-O密集型" class="headerlink" title="3.2.2 I/O密集型"></a><strong>3.2.2 I/O密集型</strong></h3><p>I/O密集型称为I/O bound，在业务处理的过程中，主要使用的是I/O资源，比如硬盘读写、使用网卡上传和下载，因此CPU的利用率不高，即使在业务繁忙的时段，CPU负载也很低。针对I/O密集型业务，一般使用磁盘使用率衡量容量。</p>
 <h3 id="3-2-3-数据密集型"><a href="#3-2-3-数据密集型" class="headerlink" title="3.2.3 数据密集型"></a><strong>3.2.3 数据密集型</strong></h3><p>数据密集型业务也称为Data Intensive，主要体现在大数据应用中，比如搜索引擎从海量的数据中找到有用的信息，通常这类业务非常占用内存资源。缓存也是数据密集型业务。</p>
 <h3 id="3-2-4-传输密集型"><a href="#3-2-4-传输密集型" class="headerlink" title="3.2.4 传输密集型"></a><strong>3.2.4 传输密集型</strong></h3><p>针对传输密集型业务，一般采用网卡使用率来衡量容量。</p>
+<ul>
+<li>带宽</li>
+</ul>
+<p>通过信道传输的信号频率范围大小就是信道的带宽， 信道容量就是指在信道上进行无差错传输所能达到的最大传输速率。对于只有一个信源和一个信宿的单用户信道，它是一个数，单位是比特每秒或比特每符号。它代表每秒或每个信道符号能传送的最大信息量，或者说小于这个数的信息率必能在此信道中无错误地传送。</p>
+<p>信道容量是信道的一个参数，它和信源的大小并无必然联系。信道容量有时也表示为单位时间内可传输的二进制位的位数（称信道的数据传输速率，位速率），以位/秒（b/s）形式予以表示，简记为bps。</p>
 <h3 id="3-2-5-缓存密集型"><a href="#3-2-5-缓存密集型" class="headerlink" title="3.2.5 缓存密集型"></a><strong>3.2.5 缓存密集型</strong></h3><p>针对缓存密集型业务，一般使用内存来衡量容量。</p>
 <h2 id="3-3-测量对象"><a href="#3-3-测量对象" class="headerlink" title="3.3 测量对象"></a><strong>3.3 测量对象</strong></h2><h3 id="3-3-1-应用服务器"><a href="#3-3-1-应用服务器" class="headerlink" title="3.3.1 应用服务器"></a>3.3.1 <strong>应用服务器</strong></h3><p>如表3，应用服务器是服务的入口，请求流量从这里进入系统，数据库、缓存和消息队列的访问量取决于应用服务器的访问量，对应用服务器的访问量进行评估至关重要。</p>
 <p><strong>表3: 应用服务器容量指标</strong></p>
@@ -858,14 +865,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="袤锅 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="大袤锅 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="袤锅 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="大袤锅 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -1220,17 +1227,12 @@
 })();
 </script>
 -->
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjEzNC8xMjY2OQ=="></div>
-    </div>
+          <!--
 
   
 
 
-
+-->
         </div>
         
           
@@ -1266,9 +1268,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/boy.jpg"
-                alt="袤锅" />
+                alt="大袤锅" />
             
-              <p class="site-author-name" itemprop="name">袤锅</p>
+              <p class="site-author-name" itemprop="name">大袤锅</p>
               <p class="site-description motion-element" itemprop="description">我尽我力，我尽我心</p>
           </div>
 
@@ -1279,7 +1281,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1459,7 +1461,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-容量影响因素"><span class="nav-number">2.</span> <span class="nav-text">2. 容量影响因素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-吞吐量和TPS"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 **吞吐量和TPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Work-done-per-transaction"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Work done per transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Think-Time"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Think Time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-活跃用户和并发"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 活跃用户和并发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-消息大小"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 消息大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-延时"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 延时</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-测量"><span class="nav-number">3.</span> <span class="nav-text">3. 测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-测量工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 测量工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-测量标准"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 测量标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-计算密集型"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 计算密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-I-O密集型"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 I/O密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-数据密集型"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3 数据密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-传输密集型"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.2.4 传输密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-缓存密集型"><span class="nav-number">3.2.5.</span> <span class="nav-text">3.2.5 缓存密集型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-测量对象"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 测量对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-应用服务器"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 应用服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-数据库"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-缓存"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3.3 缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-消息队列"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.3.4 消息队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-趋势预测"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 趋势预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-经验值"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 经验值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-容量计算"><span class="nav-number">4.</span> <span class="nav-text">4. 容量计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-流程"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-压力测试"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 压力测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-压力测试方法"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.2.1 压力测试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-1-线上压力测试"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">4.2.1.1 线上压力测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-2-线下压力测试"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">4.2.1.2 线下压力测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-压测结果采集"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.2.2 压测结果采集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-扩容"><span class="nav-number">5.</span> <span class="nav-text">5. 扩容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-“状态”讨论"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 “状态”讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-集群化"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 集群化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-stateful-和-stateless"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 stateful 和 stateless</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-1-概念"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">5.1.2.1 概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-2-「无状态」化处理"><span class="nav-number">5.1.2.2.</span> <span class="nav-text">5.1.2.2 「无状态」化处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-扩容案例"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 扩容案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-水平扩展"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 水平扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-1-数据库平滑扩容"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">5.2.1.1 数据库平滑扩容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-2-数据库热点扩容"><span class="nav-number">5.2.1.2.</span> <span class="nav-text">5.2.1.2 数据库热点扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-大促前的准备"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 大促前的准备</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容量设计的目标"><span class="nav-number">1.</span> <span class="nav-text">1. 容量设计的目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-容量影响因素"><span class="nav-number">2.</span> <span class="nav-text">2. 容量影响因素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-吞吐量和TPS"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 吞吐量和TPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Work-done-per-transaction"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Work done per transaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Think-Time"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Think Time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-活跃用户和并发"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 活跃用户和并发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-消息大小"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 消息大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-延时"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 延时</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-测量"><span class="nav-number">3.</span> <span class="nav-text">3. 测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-测量工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 测量工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-测量标准"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 测量标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-计算密集型"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 计算密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-I-O密集型"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 I/O密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-数据密集型"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3 数据密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-传输密集型"><span class="nav-number">3.2.4.</span> <span class="nav-text">3.2.4 传输密集型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-缓存密集型"><span class="nav-number">3.2.5.</span> <span class="nav-text">3.2.5 缓存密集型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-测量对象"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 测量对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-应用服务器"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 应用服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-数据库"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-缓存"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3.3 缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-消息队列"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.3.4 消息队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-趋势预测"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 趋势预测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-经验值"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 经验值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-容量计算"><span class="nav-number">4.</span> <span class="nav-text">4. 容量计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-流程"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-压力测试"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 压力测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-压力测试方法"><span class="nav-number">4.2.1.</span> <span class="nav-text">4.2.1 压力测试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-1-线上压力测试"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">4.2.1.1 线上压力测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-2-线下压力测试"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">4.2.1.2 线下压力测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-压测结果采集"><span class="nav-number">4.2.2.</span> <span class="nav-text">4.2.2 压测结果采集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-扩容"><span class="nav-number">5.</span> <span class="nav-text">5. 扩容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-“状态”讨论"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 “状态”讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-集群化"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 集群化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-stateful-和-stateless"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 stateful 和 stateless</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-1-概念"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">5.1.2.1 概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-2-「无状态」化处理"><span class="nav-number">5.1.2.2.</span> <span class="nav-text">5.1.2.2 「无状态」化处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-扩容案例"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 扩容案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-水平扩展"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 水平扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-1-数据库平滑扩容"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">5.2.1.1 数据库平滑扩容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-2-数据库热点扩容"><span class="nav-number">5.2.1.2.</span> <span class="nav-text">5.2.1.2 数据库热点扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-大促前的准备"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 大促前的准备</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1489,7 +1491,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">袤锅</span>
+  <span class="author" itemprop="copyrightHolder">大袤锅</span>
 
   
 
@@ -1500,11 +1502,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
 
@@ -1638,7 +1636,7 @@
 
 
 
-  
+  <!--
 
 
 
@@ -1655,17 +1653,6 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
 
 
 
@@ -1675,7 +1662,7 @@
 
 
 
-
+-->
   
 
   <script type="text/javascript">
