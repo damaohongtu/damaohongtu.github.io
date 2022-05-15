@@ -113,23 +113,23 @@
 <meta name="keywords" content="负载均衡">
 <meta property="og:type" content="article">
 <meta property="og:title" content="负载均衡算法">
-<meta property="og:url" content="https://damaoguo.github.io/2020/08/29/负载均衡算法/index.html">
-<meta property="og:site_name" content="MaoGuo&#39;s Blog">
+<meta property="og:url" content="https://damaohongtu.github.io/2020/08/29/负载均衡算法/index.html">
+<meta property="og:site_name" content="大袤宏图&#39;s Blog">
 <meta property="og:description" content="​    负载均衡是实现高可用的一项重要技术，我的理解是一种将请求“均衡”分配到不同的机器上的技术，目的是提升系统整体的负载能力。从单机网站到分布式网站，解决了大型网站访问量大，并发量高，海量数据的问题。然而每个部署的独立业务面临单点问题和访问统一入口问题，需要通过负载均衡技术来实现流量分发。 ​    最直接的分类方式可以将负载均衡分为基于硬件的负载均衡和基于软件的负载均衡；根据处理的对象不同，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://damaoguo.github.io/2020/08/29/负载均衡算法/the-five-most-common-balancing-methods.jpg">
+<meta property="og:image" content="https://damaohongtu.github.io/2020/08/29/负载均衡算法/the-five-most-common-balancing-methods.jpg">
 <meta property="og:updated_time" content="2020-08-29T11:14:50.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="负载均衡算法">
 <meta name="twitter:description" content="​    负载均衡是实现高可用的一项重要技术，我的理解是一种将请求“均衡”分配到不同的机器上的技术，目的是提升系统整体的负载能力。从单机网站到分布式网站，解决了大型网站访问量大，并发量高，海量数据的问题。然而每个部署的独立业务面临单点问题和访问统一入口问题，需要通过负载均衡技术来实现流量分发。 ​    最直接的分类方式可以将负载均衡分为基于硬件的负载均衡和基于软件的负载均衡；根据处理的对象不同，">
-<meta name="twitter:image" content="https://damaoguo.github.io/2020/08/29/负载均衡算法/the-five-most-common-balancing-methods.jpg">
+<meta name="twitter:image" content="https://damaohongtu.github.io/2020/08/29/负载均衡算法/the-five-most-common-balancing-methods.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://damaoguo.github.io/2020/08/29/负载均衡算法/"/>
+  <link rel="canonical" href="https://damaohongtu.github.io/2020/08/29/负载均衡算法/"/>
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>负载均衡算法 | MaoGuo's Blog</title>
+  <title>负载均衡算法 | 大袤宏图's Blog</title>
   
 
 
@@ -209,7 +209,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">MaoGuo's Blog</span>
+        <span class="site-title">大袤宏图's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -362,16 +362,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://damaoguo.github.io/2020/08/29/负载均衡算法/">
+    <link itemprop="mainEntityOfPage" href="https://damaohongtu.github.io/2020/08/29/负载均衡算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="大袤锅">
+      <meta itemprop="name" content="大袤宏图">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/boy.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MaoGuo's Blog">
+      <meta itemprop="name" content="大袤宏图's Blog">
     </span>
 
     
@@ -564,7 +564,7 @@
 <h2 id="2-5-加权轮询之场景5"><a href="#2-5-加权轮询之场景5" class="headerlink" title="2.5 加权轮询之场景5 　"></a><strong>2.5 加权轮询之场景5</strong> 　</h2><p>​    某用户有3台 机器 用于处理若干长连接请求，且这3太服务器的计算能力比例为4：2：1（按CPU、内存换算）。 此时性能最好的服务器处理请求较多，用户不希望过载此服务器，<font color="orange" size="5">希望能够将新的请求分配到空闲服务器上</font>。在此场景下，可以采用加权最小连接数的均衡方式，并适当降低繁忙服务器的权重，便于 SLB 将请求分配到活跃数较少的 机器 上，实现负载均衡。</p>
 <h1 id="3-负载均衡实战"><a href="#3-负载均衡实战" class="headerlink" title="3. 负载均衡实战"></a>3. 负载均衡实战</h1><h2 id="3-1-Ngnix"><a href="#3-1-Ngnix" class="headerlink" title="3.1. Ngnix"></a>3.1. Ngnix</h2><h3 id="3-1-1-七层负载均衡"><a href="#3-1-1-七层负载均衡" class="headerlink" title="3.1.1. 七层负载均衡"></a>3.1.1. 七层负载均衡</h3><p>​    根据<font color="orange" size="5">端口+应用层协议(如HTTP协议的主机名，URL)</font>转发报文到上游服务器<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="《亿级流量网站架设核心技术---张开涛》p.19">[2]</span></a></sup>。</p>
 <h3 id="3-1-2-四层负载均衡"><a href="#3-1-2-四层负载均衡" class="headerlink" title="3.1.2. 四层负载均衡"></a>3.1.2. 四层负载均衡</h3><p>​    根据<font color="orange" size="5">端口</font>将报文转发报文到上游服务器<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="《亿级流量网站架设核心技术---张开涛》p.19">[2]</span></a></sup>。</p>
-<h2 id="3-2-Dubbo"><a href="#3-2-Dubbo" class="headerlink" title="3.2. Dubbo"></a>3.2. Dubbo</h2><h3 id="3-3-Haproxy"><a href="#3-3-Haproxy" class="headerlink" title="3.3. Haproxy"></a>3.3. Haproxy</h3><p>​    在之前的<a href="https://damaoguo.github.io/2018/12/08/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">博客</a>里讲述了如何使用docker搭建一个软件应用栈，使用到的配置文件如下：</p>
+<h2 id="3-2-Dubbo"><a href="#3-2-Dubbo" class="headerlink" title="3.2. Dubbo"></a>3.2. Dubbo</h2><h3 id="3-3-Haproxy"><a href="#3-3-Haproxy" class="headerlink" title="3.3. Haproxy"></a>3.3. Haproxy</h3><p>​    在之前的<a href="https://damaoguo.github.io/2018/12/08/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" target="_blank" rel="noopener">博客</a>里讲述了如何使用docker搭建一个软件应用栈，使用到的配置文件如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">global</span><br><span class="line">    <span class="built_in">log</span> 127.0.0.1 local0</span><br><span class="line">    maxconn 4096</span><br><span class="line">    chroot /usr/<span class="built_in">local</span>/sbin</span><br><span class="line">    daemon</span><br><span class="line">    nbproc 4</span><br><span class="line">    pidfile /usr/<span class="built_in">local</span>/sbin/haproxy.pid</span><br><span class="line"></span><br><span class="line">defaults</span><br><span class="line">    <span class="built_in">log</span> 127.0.0.1 local3</span><br><span class="line">    mode http</span><br><span class="line">    option dontlognull</span><br><span class="line">    option redispatch</span><br><span class="line">    retries 2</span><br><span class="line">    maxconn 2000</span><br><span class="line">    balance roundrobin</span><br><span class="line">    </span><br><span class="line">    timeout connect 5000ms</span><br><span class="line">    timeout client 50000ms</span><br><span class="line">    timeout server 50000ms</span><br><span class="line"></span><br><span class="line">listen status</span><br><span class="line">    <span class="built_in">bind</span> 0.0.0.0:6301</span><br><span class="line">    stats <span class="built_in">enable</span></span><br><span class="line">    stats uri /haproxy-stats</span><br><span class="line">        server APP1 APP1:8001 check inter 2000 rise 2 fall 5</span><br><span class="line">        server APP2 APP2:8002 check inter 2000 rise 2 fall 5</span><br><span class="line">listen admin_status</span><br><span class="line">    <span class="built_in">bind</span> 0.0.0.0:32795</span><br><span class="line">    mode http</span><br><span class="line">    stats uri /haproxy</span><br><span class="line">    stats realm Global\ statistics</span><br><span class="line">    stats auth admin:admin</span><br></pre></td></tr></table></figure>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://docs.ksyun.com/documents/1145<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">《亿级流量网站架设核心技术---张开涛》p.19<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
       
@@ -608,14 +608,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="大袤锅 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="大袤宏图 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="大袤锅 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="大袤宏图 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -1011,9 +1011,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/boy.jpg"
-                alt="大袤锅" />
+                alt="大袤宏图" />
             
-              <p class="site-author-name" itemprop="name">大袤锅</p>
+              <p class="site-author-name" itemprop="name">大袤宏图</p>
               <p class="site-description motion-element" itemprop="description">我尽我力，我尽我心</p>
           </div>
 
@@ -1220,7 +1220,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">大袤锅</span>
+  <span class="author" itemprop="copyrightHolder">大袤宏图</span>
 
   
 
